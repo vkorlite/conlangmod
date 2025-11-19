@@ -1,0 +1,44 @@
+\doxysection{var.\+h}
+\hypertarget{var_8h_source}{}\label{var_8h_source}\index{include/vcb/var.h@{include/vcb/var.h}}
+\mbox{\hyperlink{var_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}};\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ map<string,\ vector<Var>>\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}};\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}};\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{treeWrite}};\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}};\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}},\ vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}},\ map<string,\ string>\ parentVarNames\_needValues,\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga48457f3cbdf3dce0a37ea252a076f0b8}{set}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga049d356950832850339c6bfb26ed1048}{irrSet}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}{addDependency}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \textcolor{keywordtype}{string}\ varName);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603}{addDependencies}}(map<\textcolor{keywordtype}{string},\ vector<string>>\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}});}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11}{removeDependency}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \textcolor{keywordtype}{string}\ varName);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41}{removeDependencies}}(map<\textcolor{keywordtype}{string},\ vector<string>>\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}});}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga0d1a986e562b7bff4abdc6b82c1daf4c}{addValue}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31}{addvalues}}(vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}});}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga6decb4ce3a6708ccf953a298674bca68}{removeValue}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga5876b5378926e99482056777c2ff81c7}{removeValues}}(vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{valueDependency}}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{valueDependency}}(\textcolor{keywordtype}{string}\ varName);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(\textcolor{keywordtype}{string}\ varName);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{get}}();}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_gac23b26317bcdb30f3c33a90ebfe87644}{remove}}();}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVar_a53cbe3fa525b32014ab026b42cc1c29b}{makeTree}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00186\ \};}
+
+\end{DoxyCode}

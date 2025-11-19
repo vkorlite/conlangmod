@@ -1,0 +1,29 @@
+\doxysection{st\+\_\+\+Object.\+h}
+\hypertarget{st__Object_8h_source}{}\label{st__Object_8h_source}\index{include/vcb/st\_Object.h@{include/vcb/st\_Object.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{var_8h}{vcb/var.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }st\_Object\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ language;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ vector<Var>\ properties;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ value;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//constructors}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ st\_Object(\textcolor{keywordtype}{string}\ language,\ vector<Var>\ properties);}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ st\_Object(\textcolor{keywordtype}{string}\ language);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//accessors}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ getPropertyValue(\textcolor{keywordtype}{string}\ varName);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ vector<Var>\ treeTraversal();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ equals(st\_Object\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mutator}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addProperties(vector<Var>\ newProperties);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ get();}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

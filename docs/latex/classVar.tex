@@ -1,0 +1,163 @@
+\doxysection{Var Class Reference}
+\hypertarget{classVar}{}\label{classVar}\index{Var@{Var}}
+
+
+encapsulates information about vars  
+
+
+
+
+{\ttfamily \#include $<$var.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}} (string \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}, vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}, map$<$ string, string $>$ parent\+Var\+Names\+\_\+need\+Values, string \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})
+\begin{DoxyCompactList}\small\item\em constructor for a new var Constructor for an entirely new var \end{DoxyCompactList}\item 
+{\bfseries Var} (string \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}, string \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})
+\begin{DoxyCompactList}\small\item\em constructor for an existing var Constructor for an existing var \end{DoxyCompactList}\item 
+void {\bfseries set} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em sets the value of the \doxylink{classVar}{Var} object If the value is in this-\/\texorpdfstring{$>$}{>}values, it sets it, otherwise it "{}throws"{} it \end{DoxyCompactList}\item 
+void {\bfseries irr\+Set} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em sets the value of the \doxylink{classVar}{Var} object If the value is in this-\/\texorpdfstring{$>$}{>}values, it sets it, otherwise it adds the value to this-\/\texorpdfstring{$>$}{>}values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}{add\+Dependency}} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}, string var\+Name)
+\begin{DoxyCompactList}\small\item\em adds a dependency to this-\/\texorpdfstring{$>$}{>}dependencies If the dependency isn\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds it, otherwise it does nothing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603}{add\+Dependencies}} (map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})
+\begin{DoxyCompactList}\small\item\em adds dependencies to this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds them, otherwise it does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11}{remove\+Dependency}} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}, string var\+Name)
+\begin{DoxyCompactList}\small\item\em removes a dependency from this-\/\texorpdfstring{$>$}{>}dependencies If the dependency is in this-\/\texorpdfstring{$>$}{>}dependencies, it removes it, otherwise it does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41}{remove\+Dependencies}} (map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})
+\begin{DoxyCompactList}\small\item\em removes dependencies from this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies are in this-\/\texorpdfstring{$>$}{>}dependencies, it removes them, otherwise it does nothing. \end{DoxyCompactList}\item 
+void {\bfseries add\+Value} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em adds a value to this-\/\texorpdfstring{$>$}{>}values If the value isn\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}values, it adds it, otherwise it does nothing. It also adds a key accordingly to this-\/\texorpdfstring{$>$}{>}dependencies \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31}{addvalues}} (vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})
+\begin{DoxyCompactList}\small\item\em adds values to this-\/\texorpdfstring{$>$}{>}values If the values aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}values, it adds them, otherwise it does nothing. It also adds keys accordingly to this-\/\texorpdfstring{$>$}{>}dependencies \end{DoxyCompactList}\item 
+void {\bfseries remove\+Value} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em removes a value from this-\/\texorpdfstring{$>$}{>}values If the value is in this-\/\texorpdfstring{$>$}{>}values, it removes it, otherwise it does nothing. It also removes a key accordingly from this-\/\texorpdfstring{$>$}{>}dependencies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga5876b5378926e99482056777c2ff81c7}{remove\+Values}} (vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})
+\begin{DoxyCompactList}\small\item\em removes values from this-\/\texorpdfstring{$>$}{>}values If the values are in this-\/\texorpdfstring{$>$}{>}values, it removes them, otherwise it does nothing. It also removes keys accordingly from this-\/\texorpdfstring{$>$}{>}dependencies. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{value\+Dependency}} (\mbox{\hyperlink{classVar}{Var}} var)
+\begin{DoxyCompactList}\small\item\em gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{group__accessor_ga82fcf3e7824f2e86824df70ec2b782c8}{value\+Dependency}} (string var\+Name)
+\begin{DoxyCompactList}\small\item\em gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{has\+Dependent}} (\mbox{\hyperlink{classVar}{Var}} var)
+\begin{DoxyCompactList}\small\item\em checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__accessor_gaff2792603b938140116ed5a2ac6bd5ae}{has\+Dependent}} (string var\+Name)
+\begin{DoxyCompactList}\small\item\em checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{get}} ()
+\begin{DoxyCompactList}\small\item\em gets the information from vars\+\_\+raw Gets all the information about a var from vars\+\_\+raw Makes the var cannonical. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}} ()
+\begin{DoxyCompactList}\small\item\em writes the information of this var to vars\+\_\+raw Writes the information of this var to vars\+\_\+raw Makes the var cannonical. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__file_gac23b26317bcdb30f3c33a90ebfe87644}{remove}} ()
+\begin{DoxyCompactList}\small\item\em removes the var from vars\+\_\+raw Removes the current var from vars\+\_\+raw, removing it from the language. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classVar_a53cbe3fa525b32014ab026b42cc1c29b}{make\+Tree}} (string \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})
+\begin{DoxyCompactList}\small\item\em updates the vars\+\_\+tree file Updates the vars\+\_\+tree file from the dual vars\+\_\+raw file. Sets tree\+Write to true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}
+\item 
+string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}
+\item 
+map$<$ string, vector$<$ \mbox{\hyperlink{classVar}{Var}} $>$ $>$ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}
+\item 
+string \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}
+\item 
+bool \mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{tree\+Write}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+encapsulates information about vars 
+
+The \doxylink{classVar}{Var} class contains information about vars, and a way to interface with vars\+\_\+raw and vars\+\_\+tree. A cannonical (yes it is misspelled, deal with it) \doxylink{classVar}{Var} is one that defines how all vars with that name should work. Unless you are trying to change the vars\+\_\+raw file or need to know every last bit of information about a var, it\textquotesingle{}s not a good idea to cannonize it. Cannonizing a var involves calling the functions \doxylink{group__file_gae6175771ecd2ad72240d87c926069762}{get()} or \doxylink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update()}.
+
+\begin{DoxyAuthor}{Author}
+vkorlite 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/25 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{classVar_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVar_a53cbe3fa525b32014ab026b42cc1c29b}\index{Var@{Var}!makeTree@{makeTree}}
+\index{makeTree@{makeTree}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{makeTree()}{makeTree()}}
+{\footnotesize\ttfamily \label{classVar_a53cbe3fa525b32014ab026b42cc1c29b} 
+void Var\+::make\+Tree (\begin{DoxyParamCaption}\item[{string}]{language}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+updates the vars\+\_\+tree file Updates the vars\+\_\+tree file from the dual vars\+\_\+raw file. Sets tree\+Write to true. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classst__Exception}{st\+\_\+\+Exception}} & for file input/output errors. \\
+\hline
+\end{DoxyExceptions}
+
+
+\label{doc-variable-members}
+\Hypertarget{classVar_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classVar_a816fba922e414d6e901bd7622e4e308d}\index{Var@{Var}!cannon@{cannon}}
+\index{cannon@{cannon}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{cannon}{cannon}}
+{\footnotesize\ttfamily \label{classVar_a816fba922e414d6e901bd7622e4e308d} 
+bool Var\+::cannon}
+
+is this var cannonical? \Hypertarget{classVar_a5fcb1ad7f015c13b214800e1a9249813}\index{Var@{Var}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily \label{classVar_a5fcb1ad7f015c13b214800e1a9249813} 
+map$<$string, vector$<$\mbox{\hyperlink{classVar}{Var}}$>$ $>$ Var\+::dependencies}
+
+map of dependencies of the var, where the key is a possible value and the value is a list of dependent Vars \Hypertarget{classVar_ae0b16646c02650f550654b4475de29ed}\index{Var@{Var}!language@{language}}
+\index{language@{language}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{language}{language}}
+{\footnotesize\ttfamily \label{classVar_ae0b16646c02650f550654b4475de29ed} 
+string Var\+::language}
+
+the language that the var is applicable to \Hypertarget{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}\index{Var@{Var}!name@{name}}
+\index{name@{name}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{classVar_a4f203af1d57ced7e80b3c02e2120e7c4} 
+string Var\+::name}
+
+name of the var \Hypertarget{classVar_a34bb26dd552d8c9817c128a96be4d2b1}\index{Var@{Var}!treeWrite@{treeWrite}}
+\index{treeWrite@{treeWrite}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{treeWrite}{treeWrite}}
+{\footnotesize\ttfamily \label{classVar_a34bb26dd552d8c9817c128a96be4d2b1} 
+bool Var\+::tree\+Write = false\hspace{0.3cm}{\ttfamily [static]}}
+
+is the tree up to date? \Hypertarget{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}\index{Var@{Var}!value@{value}}
+\index{value@{value}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{classVar_ac55fe32f8d1625be8a8235d70a5fe59c} 
+string Var\+::value}
+
+current value of the var \Hypertarget{classVar_a5fcfc4a7d7821f1b40d192b78752937b}\index{Var@{Var}!values@{values}}
+\index{values@{values}!Var@{Var}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily \label{classVar_a5fcfc4a7d7821f1b40d192b78752937b} 
+vector$<$string$>$ Var\+::values}
+
+list of possible values of the var 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/vcb/\mbox{\hyperlink{var_8h}{var.\+h}}\item 
+src/vcb/var.\+cpp\end{DoxyCompactItemize}

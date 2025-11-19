@@ -1,0 +1,131 @@
+ConLangMod documentation
+
+3. Language
+This section will outline the Structure of a language, as ConLangMod sees it. 
+Everything in this program is seen as an object: sounds, words, sentences, syllables, etc.
+Everything is able to be split appart into its individual parts, creating a hierarchy of objects, with the Language object at the top.
+
+A Language in ConLangMod is made up of its parts, its: phonology, orthography, morphology, lexicon and grammar.
+Phonology describes the sound of a language.
+Orthography describes how the language is written.
+Morphology describes how the language forms words.
+Lexicon describes the words and their meanings.
+Grammar describes how the language changes words and how it puts them together in the context of a sentence.
+
+1.1 Vars and Coms
+Vars and Coms are the lingua franca of the different parts of the code. Each part of the language interracts with other parts. Sounds change due to grammar for example.
+Therefore it is needed to establish variables that are accessible to the whole language.
+Essentially Vars are properties that objects of a language have.
+And Coms are statements that can be checked to see if they are true.
+
+1.1.1. Vars
+Vars have these properties: name, value and dependencies. A var has a name and a var has a value.
+The simplest example would be the var: ConsonantVowel. ConsonantVowel can have two values: Consonant or Vowel.
+As expected it is the property that allows us to know whether something is a consonant or a vowel
+However more complicated Vars only make sense if other vars are true.
+Therefore some, and in fact most, vars are subvalues of other Vars.
+It doesn't make sense to check if a sound is a consonant or a vowel, if the object isn't even a sound.
+Therefore each var has dependencies, which tell the program what values other vars are required to have for the var to be needed
+These dependencies are in a hierarchy, so as to be able to throw out useless vars as early as possible.
+Vars can have the same name but have different dependencies and thus different values. For example, Syllables and Vowels are different object types, however they both have the var: WordPosition
+To access an objects Var, you use the format: OBJECT.VARNAME
+For example, to get which letter of a word a sound is you would write Object.WordPosition.
+
+1.1.2 Coms
+Coms are statements made about objects.
+
+They use standard logical operations
+AND=&
+OR=|
+NOT=!
+
+To denote an enclosed logical operation, we surround it with parentheses.
+
+Their format is such:
+{Domain}{Options}{Condition}
+
+For a Com to be proper, it has to have all 3 brackets, even if they are empty.
+
+1.1.2.1 Domain
+The Domain is what the Com looks at for its operation. 
+It is expressed through logical expressions, which provide a list for all the objects that are then checked against the condition.
+For example, a Com that works with words would have a domain as such: {ObjectType = Word}. All the words in the input will be then checked against the condition.
+
+The Domain generates a list of objects, however each element of that list doesn't have to be a single one.
+Multiple objects are written as such {Condition for Object 1, Condition for Object 2, ...}
+
+Each object in the Domain is used as a Var, that is formated as : #n, where n  is the index of the object. 
+They are processed one after another so you can refference previous Domain objects in subsequent conditions.
+For example if you want to compare words that are next to each other the Domain would be:
+{(#0.ObjectType=Word),(#0.ObjectType=Word)&(#0.SentencePosition=(#1.SentencePosition+1))}
+
+Note that the var always comes first in a comparison
+
+1.1.2.2 Options
+The Options define what is the return value.
+The options "A" and "E", short for "For all" and "Exists", are based on the universal and existential quantifiers in logic.
+If the option is "A", then if all the elements in the domain sustain the condition, the Com returns true.
+If the option is "E", then if at least one element in the domain sustains the condition, the Com returns true.
+Other options include "N", which returns the number of objects that fit the condition, and "L" which returns a list of all the objects that sustain the condition.
+If no options are provided the automatic option is "L".
+
+1.1.2.3 Condition
+A Condition is a logical expression, which is applied to all the objects in the Domain.
+If the logical statement is true, the condition passes the object along to the output.
+It is emportant to note that an empty condition is true.
+
+1.1.3 Custom Vars and Coms
+ConLangMod allows for a lot of customization through vars and coms.
+Creating a Com is as simple as writing the Com out and putting it in the place where you want it to take effect.
+Creating a Var is a little more complicated, as you have to list out all the possible values of a var and its dependencies. 
+However it usually is a matter of just appending it to another Var that describes the object.
+Further instructions can be found in later sections.
+
+1.2 Phonology
+The phonology of a language is made up of two parts: phonetics and phonotactics.
+The phonetics of a language describes what sounds a language has.
+The phonotactics of a language describes how sounds can come together.
+
+1.2.1 Phonetics
+All sounds of a language have a var, named ObjectType, with the value Sound.
+They are divided into two groups, consonants an vowels, described by the var ConsonantVowel.
+Vowels have further Vars depending on the tongues position, its openness and roundedness, described by the vars: Position, Open, and Round.
+Consonants have Vars depending on whether they are Pulmonic or Non-pulmonic, described by Pulmonic.
+Pulmonics are divided by co-articulation, place and manner of articulation, and voicedness. Described by: Articulation, Place, Manner, and Voiced.
+Non-Pulmonics are categorized by whether they are Click, Ejective or Implosive, then place and manner of articulation and voicedness. Described by: Ejection, Place, Manner, and Voiced.
+
+1.2.2 Phonotactics
+The phonotactics of a language is described entirely by Coms.
+It's a list of conditions, that if met allow a string of sounds to be in the language.
+It also provides a definition for a syllable for the specific language.
+
+1.3 Orthography
+The orthography of a language is the way a language is written.
+there are lots of different ways to write a language, however all of it is taken care of by the Var and Coms framework.
+Each symbol in an orthography has a symbol and a Com, when the Com returns true, the symbol is used for that object.
+For syllibarys,
+
+1.4 Morphology
+The morphology describes how a language puts together words.
+This is where a lot more customization is recommended by ConLangMod.
+You are expected to create vars and coms to describe morphological pieces, like roots and affixes.
+You can start to ascribe what affixes of a word mean for its role in a sentence, or how roots should be combined.
+Vowel harmony, metathesis, palatalization, ablauts, etc. everything is up to you.
+You have the option of deciding that a language is the most complicated synthetic language out there, or a morphologically simple analytical language.
+The only thing that is required from a morphology in ConLangMod is to provide a structure for words, the rest is up to you.
+
+1.5 Lexicon
+A lexicon in ConLangMod is not just a list of words, it also encapsulates semantics. You can ascribe meaning to not just words, but also roots and affixes.
+The lexicon is the easiest part of the language to add to, which is convenient as it is the one you will have to add to the most.
+ConLangMod allows for mass additions of words through files, whose formats are described later.
+
+1.6 Grammar
+The grammar of a language shows us how words behave in a sentence. 
+Using vars and coms, you are expected to fully describe the inflections of words, sentence structure, and how it affects how words sound, how their written, how their made, and their meaning.
+
+2. Evolving Languages
+Now that we understand how ConLangMod understands languages, we can learn how it changes them as well, to facillitate which, this program was made.
+Using Coms and Vars you can provide rules how languages are change.
+It provides capabilities in doing so in a timeline, and a hierarchy.
+Meaning you can set how a language evolves over long periods of time, while also making sure that your changes interract in the way you want them too.
+This requires a lot of testing though.

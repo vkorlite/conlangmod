@@ -1,0 +1,100 @@
+\doxysection{Accessor functions }
+\hypertarget{group__accessor}{}\label{group__accessor}\index{Accessor functions@{Accessor functions}}
+
+
+Accessor functions for the \doxylink{classVar}{Var} class Accessor functions for the \doxylink{classVar}{Var} class. Since all of the properties in the \doxylink{classVar}{Var} class are public, they are wrapper functions for common operations with vars dealing with dependencies.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{Var\+::value\+Dependency}} (\mbox{\hyperlink{classVar}{Var}} var)
+\begin{DoxyCompactList}\small\item\em gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{group__accessor_ga82fcf3e7824f2e86824df70ec2b782c8}{Var\+::value\+Dependency}} (string var\+Name)
+\begin{DoxyCompactList}\small\item\em gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{Var\+::has\+Dependent}} (\mbox{\hyperlink{classVar}{Var}} var)
+\begin{DoxyCompactList}\small\item\em checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__accessor_gaff2792603b938140116ed5a2ac6bd5ae}{Var\+::has\+Dependent}} (string var\+Name)
+\begin{DoxyCompactList}\small\item\em checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Accessor functions for the \doxylink{classVar}{Var} class Accessor functions for the \doxylink{classVar}{Var} class. Since all of the properties in the \doxylink{classVar}{Var} class are public, they are wrapper functions for common operations with vars dealing with dependencies. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{group__accessor_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__accessor_gaff2792603b938140116ed5a2ac6bd5ae}\index{Accessor functions@{Accessor functions}!hasDependent@{hasDependent}}
+\index{hasDependent@{hasDependent}!Accessor functions@{Accessor functions}}
+\doxysubsubsection{\texorpdfstring{hasDependent()}{hasDependent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{group__accessor_gaff2792603b938140116ed5a2ac6bd5ae} 
+bool Var\+::has\+Dependent (\begin{DoxyParamCaption}\item[{string}]{var\+Name}{}\end{DoxyParamCaption})}
+
+
+
+checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & the dependent var name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is dependent false if it isn\textquotesingle{}t 
+\end{DoxyReturn}
+\Hypertarget{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}\index{Accessor functions@{Accessor functions}!hasDependent@{hasDependent}}
+\index{hasDependent@{hasDependent}!Accessor functions@{Accessor functions}}
+\doxysubsubsection{\texorpdfstring{hasDependent()}{hasDependent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa} 
+bool Var\+::has\+Dependent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVar}{Var}}}]{var}{}\end{DoxyParamCaption})}
+
+
+
+checks if the var is dependent on this var Checks if the var is dependent on this var. It uses recursion to find indirect dependencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & the dependent \doxylink{classVar}{Var} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it is dependent false if it isn\textquotesingle{}t 
+\end{DoxyReturn}
+\Hypertarget{group__accessor_ga82fcf3e7824f2e86824df70ec2b782c8}\index{Accessor functions@{Accessor functions}!valueDependency@{valueDependency}}
+\index{valueDependency@{valueDependency}!Accessor functions@{Accessor functions}}
+\doxysubsubsection{\texorpdfstring{valueDependency()}{valueDependency()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{group__accessor_ga82fcf3e7824f2e86824df70ec2b782c8} 
+string Var\+::value\+Dependency (\begin{DoxyParamCaption}\item[{string}]{var\+Name}{}\end{DoxyParamCaption})}
+
+
+
+gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & the dependent var name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value needed to beget the var, or to beget the vars that the var is dependent on. An empty string if it is not dependent. 
+\end{DoxyReturn}
+\Hypertarget{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}\index{Accessor functions@{Accessor functions}!valueDependency@{valueDependency}}
+\index{valueDependency@{valueDependency}!Accessor functions@{Accessor functions}}
+\doxysubsubsection{\texorpdfstring{valueDependency()}{valueDependency()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{group__accessor_ga3256be6d1da048eff4a270d7075b01e5} 
+string Var\+::value\+Dependency (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVar}{Var}}}]{var}{}\end{DoxyParamCaption})}
+
+
+
+gets the value needed to beget the dependent var Gets the value needed to beget the dependent var. It uses recursion so that even if the var is indirectly dependent, it still gives an answer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & the dependent \doxylink{classVar}{Var} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value needed to beget the var, or to beget the vars that the var is dependent on. An empty string if it is not dependent. 
+\end{DoxyReturn}

@@ -1,0 +1,28 @@
+var classVar =
+[
+    [ "Var", "group__constructors.html#gab1f31d86f79c1a0a9fcfd61ae4164877", null ],
+    [ "Var", "group__constructors.html#ga6f866a56caa99f7650d22491eefb15d2", null ],
+    [ "addDependencies", "group__mutators.html#gadd245f7c11fed8e6257255dd5f9c6603", null ],
+    [ "addDependency", "group__mutators.html#ga3151ba51c0689645a4a572cf3ae6254f", null ],
+    [ "addValue", "group__mutators.html#ga0d1a986e562b7bff4abdc6b82c1daf4c", null ],
+    [ "addvalues", "group__mutators.html#gaf02db72ada5b0cce3e1232d732c36a31", null ],
+    [ "get", "group__file.html#gae6175771ecd2ad72240d87c926069762", null ],
+    [ "hasDependent", "group__accessor.html#gaff2792603b938140116ed5a2ac6bd5ae", null ],
+    [ "hasDependent", "group__accessor.html#gafa8ebf59a8dae0fef317f27e21d3d7aa", null ],
+    [ "irrSet", "group__mutators.html#ga049d356950832850339c6bfb26ed1048", null ],
+    [ "remove", "group__file.html#gac23b26317bcdb30f3c33a90ebfe87644", null ],
+    [ "removeDependencies", "group__mutators.html#ga789c1b90c615f1aa408fc9b72c743f41", null ],
+    [ "removeDependency", "group__mutators.html#ga3dcb0b0a57b976f0e01f8b19402edd11", null ],
+    [ "removeValue", "group__mutators.html#ga6decb4ce3a6708ccf953a298674bca68", null ],
+    [ "removeValues", "group__mutators.html#ga5876b5378926e99482056777c2ff81c7", null ],
+    [ "set", "group__mutators.html#ga48457f3cbdf3dce0a37ea252a076f0b8", null ],
+    [ "update", "group__file.html#ga61756da973a8fae33e2b71891d094dd9", null ],
+    [ "valueDependency", "group__accessor.html#ga82fcf3e7824f2e86824df70ec2b782c8", null ],
+    [ "valueDependency", "group__accessor.html#ga3256be6d1da048eff4a270d7075b01e5", null ],
+    [ "cannon", "classVar.html#a816fba922e414d6e901bd7622e4e308d", null ],
+    [ "dependencies", "classVar.html#a5fcb1ad7f015c13b214800e1a9249813", null ],
+    [ "language", "classVar.html#ae0b16646c02650f550654b4475de29ed", null ],
+    [ "name", "classVar.html#a4f203af1d57ced7e80b3c02e2120e7c4", null ],
+    [ "value", "classVar.html#ac55fe32f8d1625be8a8235d70a5fe59c", null ],
+    [ "values", "classVar.html#a5fcfc4a7d7821f1b40d192b78752937b", null ]
+];

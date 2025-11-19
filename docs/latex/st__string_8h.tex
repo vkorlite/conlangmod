@@ -1,0 +1,282 @@
+\doxysection{include/st/st\+\_\+string.h File Reference}
+\hypertarget{st__string_8h}{}\label{st__string_8h}\index{include/st/st\_string.h@{include/st/st\_string.h}}
+
+
+header file for st\+\_\+string functions  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{st__string_8h_a4d130add5648b49ba6ad336a70ba218f}{st\+\_\+substr}} (std\+::string input, int startpos, int endpos)
+\begin{DoxyCompactList}\small\item\em substring from startpos to endpos, instead of startpos and length \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\+\_\+in}} (std\+::vector$<$ std\+::string $>$ input, std\+::string match)
+\begin{DoxyCompactList}\small\item\em finds the index of a string in a vector \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_a4636a3a776d227bf2fb9584b3d5b18d7}{st\+\_\+find}} (std\+::string input, char delimeter, int num)
+\begin{DoxyCompactList}\small\item\em finds the n\textquotesingle{}th occurance of a char delimeter \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_a5890a21a275ad0d2a4318abd8adb0968}{st\+\_\+find}} (std\+::string input, std\+::string delimeter, int num)
+\begin{DoxyCompactList}\small\item\em finds the n\textquotesingle{}th occurance of a string delimeter \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_a015fae869122e34bd588b08dc0c17715}{st\+\_\+match}} (std\+::string input, char delimeter)
+\begin{DoxyCompactList}\small\item\em finds how many times a char appears in a string \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_ab420f836a642f305a0fc5b4710f4a6de}{st\+\_\+match}} (std\+::string input, std\+::string delimeter)
+\begin{DoxyCompactList}\small\item\em finds how many times a substring appears in a string \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\+\_\+split}} (std\+::string input, char delimeter)
+\begin{DoxyCompactList}\small\item\em splits a string by char delimeter \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{st__string_8h_a1671897ed8751152bc04768cd5ea0737}{st\+\_\+split}} (std\+::string input, std\+::string delimeter)
+\begin{DoxyCompactList}\small\item\em splits string by string delimeter \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{st__string_8h_a7151cae36906732ad43c36668bfd1fdb}{st\+\_\+to\+Lower}} (std\+::string input)
+\begin{DoxyCompactList}\small\item\em lowers all chars in a string \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\+\_\+con}} (char \texorpdfstring{$\ast$}{*}input)
+\begin{DoxyCompactList}\small\item\em converts char\texorpdfstring{$\ast$}{*} to string \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a}{st\+\_\+con}} (std\+::string input)
+\begin{DoxyCompactList}\small\item\em converts string to char\texorpdfstring{$\ast$}{*} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{st__string_8h_a9b0e395410a8472182d43ed5d99c7880}{st\+\_\+compliment}} (std\+::string input, int pos)
+\begin{DoxyCompactList}\small\item\em finds the complimentary bracket of a given brackets in a string \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{st__string_8h_a538a5f9474d0b05c83f1dbe5acb14910}{st\+\_\+multi\+Split}} (std\+::string input, std\+::vector$<$ char $>$ delimeters)
+\begin{DoxyCompactList}\small\item\em splits the string by multiple delimeters \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{st__string_8h_ad32d81d1b91fe375e4eaf9f633fecbd7}{st\+\_\+multi\+Split}} (std\+::string input, std\+::vector$<$ std\+::string $>$ delimeters)
+\begin{DoxyCompactList}\small\item\em splits the string by multiple delimeters \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{st__string_8h_a0062de338db28595d99b8afa94561148}{st\+\_\+remove}} (std\+::string input, char remover)
+\begin{DoxyCompactList}\small\item\em removes all instances of a certain char in a string \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{st__string_8h_a77d6866e11d1a23d9ccd39de2b444bb1}{st\+\_\+remove}} (std\+::string input, std\+::string remover)
+\begin{DoxyCompactList}\small\item\em removes all instances of a certain substring in a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header file for st\+\_\+string functions 
+
+The header file for st\+\_\+string functions, which are utilities for strings that either don\textquotesingle{}t exist in the c++ standard library or are not as easy to use.
+
+\begin{DoxyAuthor}{Author}
+vkorlite 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/10-\/25 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{st__string_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{st__string_8h_a9b0e395410a8472182d43ed5d99c7880}\index{st\_string.h@{st\_string.h}!st\_compliment@{st\_compliment}}
+\index{st\_compliment@{st\_compliment}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_compliment()}{st\_compliment()}}
+{\footnotesize\ttfamily \label{st__string_8h_a9b0e395410a8472182d43ed5d99c7880} 
+int st\+\_\+compliment (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{int}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+finds the complimentary bracket of a given brackets in a string 
+
+The function finds a complimentary bracket of a given brackets in a string. The function takes all kinds of open brackets\+: (, \mbox{[}, \{ 
+\begin{DoxyParams}{Parameters}
+{\em pos} & which bracket in the string to find the compliment for. if pos = -\/1 then it finds the first open parentheses \\
+\hline
+\end{DoxyParams}
+\Hypertarget{st__string_8h_acd572467b6014f6f02a7e527cd12f660}\index{st\_string.h@{st\_string.h}!st\_con@{st\_con}}
+\index{st\_con@{st\_con}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_con()}{st\_con()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_acd572467b6014f6f02a7e527cd12f660} 
+std\+::string st\+\_\+con (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{input}{}\end{DoxyParamCaption})}
+
+
+
+converts char\texorpdfstring{$\ast$}{*} to string 
+
+the function converts char\texorpdfstring{$\ast$}{*} to string
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & char\texorpdfstring{$\ast$}{*} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a}\index{st\_string.h@{st\_string.h}!st\_con@{st\_con}}
+\index{st\_con@{st\_con}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_con()}{st\_con()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a} 
+char \texorpdfstring{$\ast$}{*} st\+\_\+con (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{}\end{DoxyParamCaption})}
+
+
+
+converts string to char\texorpdfstring{$\ast$}{*} 
+
+the function converts string to char\texorpdfstring{$\ast$}{*}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_a4636a3a776d227bf2fb9584b3d5b18d7}\index{st\_string.h@{st\_string.h}!st\_find@{st\_find}}
+\index{st\_find@{st\_find}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_find()}{st\_find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a4636a3a776d227bf2fb9584b3d5b18d7} 
+int st\+\_\+find (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{char}]{delimeter}{, }\item[{int}]{num}{}\end{DoxyParamCaption})}
+
+
+
+finds the n\textquotesingle{}th occurance of a char delimeter 
+
+The function finds the n\textquotesingle{}th occurance of a char delimeter in a string. 
+\begin{DoxyParams}{Parameters}
+{\em num} & Array numbers, i.\+e. num=0 -\/\texorpdfstring{$>$}{>} 1st occurance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{st__string_8h_a5890a21a275ad0d2a4318abd8adb0968}\index{st\_string.h@{st\_string.h}!st\_find@{st\_find}}
+\index{st\_find@{st\_find}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_find()}{st\_find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a5890a21a275ad0d2a4318abd8adb0968} 
+int st\+\_\+find (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::string}]{delimeter}{, }\item[{int}]{num}{}\end{DoxyParamCaption})}
+
+
+
+finds the n\textquotesingle{}th occurance of a string delimeter 
+
+the function finds the n\textquotesingle{}th occurance of a string delimeter in a string. If the delimeter is one character long, turn it into a char, as the other st\+\_\+find is more efficient. 
+\begin{DoxyParams}{Parameters}
+{\em num} & Array number. i.\+e. num=0 -\/\texorpdfstring{$>$}{>} 1st occurance. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}\index{st\_string.h@{st\_string.h}!st\_in@{st\_in}}
+\index{st\_in@{st\_in}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_in()}{st\_in()}}
+{\footnotesize\ttfamily \label{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89} 
+int st\+\_\+in (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{input}{, }\item[{std\+::string}]{match}{}\end{DoxyParamCaption})}
+
+
+
+finds the index of a string in a vector 
+
+The function finds at what index does the string first show up. \Hypertarget{st__string_8h_a015fae869122e34bd588b08dc0c17715}\index{st\_string.h@{st\_string.h}!st\_match@{st\_match}}
+\index{st\_match@{st\_match}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_match()}{st\_match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a015fae869122e34bd588b08dc0c17715} 
+int st\+\_\+match (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{char}]{delimeter}{}\end{DoxyParamCaption})}
+
+
+
+finds how many times a char appears in a string 
+
+the function finds how many times a char delimeter appears in a given string. \Hypertarget{st__string_8h_ab420f836a642f305a0fc5b4710f4a6de}\index{st\_string.h@{st\_string.h}!st\_match@{st\_match}}
+\index{st\_match@{st\_match}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_match()}{st\_match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_ab420f836a642f305a0fc5b4710f4a6de} 
+int st\+\_\+match (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::string}]{delimeter}{}\end{DoxyParamCaption})}
+
+
+
+finds how many times a substring appears in a string 
+
+the function finds how many times a string delimeter appears in a string. \Hypertarget{st__string_8h_a538a5f9474d0b05c83f1dbe5acb14910}\index{st\_string.h@{st\_string.h}!st\_multiSplit@{st\_multiSplit}}
+\index{st\_multiSplit@{st\_multiSplit}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_multiSplit()}{st\_multiSplit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a538a5f9474d0b05c83f1dbe5acb14910} 
+std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ char $>$ $>$ st\+\_\+multi\+Split (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::vector$<$ char $>$}]{delimeters}{}\end{DoxyParamCaption})}
+
+
+
+splits the string by multiple delimeters 
+
+The function splits the string by a vector of char delimeters. \begin{DoxyReturn}{Returns}
+pair\texorpdfstring{$<$}{<}vector$<$string$>$, vector$<$char$>$\texorpdfstring{$>$}{>} the first is the list of all the strings, second is an ordered list of which delimeter was in that place 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_ad32d81d1b91fe375e4eaf9f633fecbd7}\index{st\_string.h@{st\_string.h}!st\_multiSplit@{st\_multiSplit}}
+\index{st\_multiSplit@{st\_multiSplit}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_multiSplit()}{st\_multiSplit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_ad32d81d1b91fe375e4eaf9f633fecbd7} 
+std\+::pair$<$ std\+::vector$<$ std\+::string $>$, std\+::vector$<$ std\+::string $>$ $>$ st\+\_\+multi\+Split (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::vector$<$ std\+::string $>$}]{delimeters}{}\end{DoxyParamCaption})}
+
+
+
+splits the string by multiple delimeters 
+
+The function splits the string by a vector of string delimeters \begin{DoxyReturn}{Returns}
+pair\texorpdfstring{$<$}{<}vector$<$string$>$, vector$<$char$>$\texorpdfstring{$>$}{>} the first is the list of all the split strings, second is an ordered list of which delimeter was in that place. 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_a0062de338db28595d99b8afa94561148}\index{st\_string.h@{st\_string.h}!st\_remove@{st\_remove}}
+\index{st\_remove@{st\_remove}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_remove()}{st\_remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a0062de338db28595d99b8afa94561148} 
+std\+::string st\+\_\+remove (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{char}]{remover}{}\end{DoxyParamCaption})}
+
+
+
+removes all instances of a certain char in a string 
+
+The function removes all instances of a char remover in a string \Hypertarget{st__string_8h_a77d6866e11d1a23d9ccd39de2b444bb1}\index{st\_string.h@{st\_string.h}!st\_remove@{st\_remove}}
+\index{st\_remove@{st\_remove}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_remove()}{st\_remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a77d6866e11d1a23d9ccd39de2b444bb1} 
+std\+::string st\+\_\+remove (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::string}]{remover}{}\end{DoxyParamCaption})}
+
+
+
+removes all instances of a certain substring in a string 
+
+The function removes all instances of a substring in a string \Hypertarget{st__string_8h_a51f770177c32e0907c898f7a21e2a288}\index{st\_string.h@{st\_string.h}!st\_split@{st\_split}}
+\index{st\_split@{st\_split}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_split()}{st\_split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a51f770177c32e0907c898f7a21e2a288} 
+std\+::vector$<$ std\+::string $>$ st\+\_\+split (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{char}]{delimeter}{}\end{DoxyParamCaption})}
+
+
+
+splits a string by char delimeter 
+
+The function splits a string by a delimeter (exclusive)
+
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_a1671897ed8751152bc04768cd5ea0737}\index{st\_string.h@{st\_string.h}!st\_split@{st\_split}}
+\index{st\_split@{st\_split}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_split()}{st\_split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{st__string_8h_a1671897ed8751152bc04768cd5ea0737} 
+std\+::vector$<$ std\+::string $>$ st\+\_\+split (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{std\+::string}]{delimeter}{}\end{DoxyParamCaption})}
+
+
+
+splits string by string delimeter 
+
+the function splits a string by a string delimeter (exclusive)
+
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ 
+\end{DoxyReturn}
+\Hypertarget{st__string_8h_a4d130add5648b49ba6ad336a70ba218f}\index{st\_string.h@{st\_string.h}!st\_substr@{st\_substr}}
+\index{st\_substr@{st\_substr}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_substr()}{st\_substr()}}
+{\footnotesize\ttfamily \label{st__string_8h_a4d130add5648b49ba6ad336a70ba218f} 
+std\+::string st\+\_\+substr (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{, }\item[{int}]{startpos}{, }\item[{int}]{endpos}{}\end{DoxyParamCaption})}
+
+
+
+substring from startpos to endpos, instead of startpos and length 
+
+A simple function that makes it easier to get substrings of strings. 
+\begin{DoxyParams}{Parameters}
+{\em startpos} & The position of the first char in the substring (inclusive) \\
+\hline
+{\em endpos} & The position of the last char in the substring (exclusive) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{st__string_8h_a7151cae36906732ad43c36668bfd1fdb}\index{st\_string.h@{st\_string.h}!st\_toLower@{st\_toLower}}
+\index{st\_toLower@{st\_toLower}!st\_string.h@{st\_string.h}}
+\doxysubsubsection{\texorpdfstring{st\_toLower()}{st\_toLower()}}
+{\footnotesize\ttfamily \label{st__string_8h_a7151cae36906732ad43c36668bfd1fdb} 
+std\+::string st\+\_\+to\+Lower (\begin{DoxyParamCaption}\item[{std\+::string}]{input}{}\end{DoxyParamCaption})}
+
+
+
+lowers all chars in a string 
+
+the function lowers every char in a string 

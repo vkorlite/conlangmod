@@ -1,0 +1,36 @@
+\doxysection{com.\+h}
+\hypertarget{com_8h_source}{}\label{com_8h_source}\index{include/vcb/com.h@{include/vcb/com.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}vcb/domain.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}vcb/condition.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}vcb/st\_Object.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ opt\{}
+\DoxyCodeLine{00009\ \ \ \ \ FORALL\_BOOL,}
+\DoxyCodeLine{00010\ \ \ \ \ EXISTS\_BOOL,}
+\DoxyCodeLine{00011\ \ \ \ \ STRICT\_BOOL,}
+\DoxyCodeLine{00012\ \ \ \ \ FORALL\_LIST,}
+\DoxyCodeLine{00013\ \ \ \ \ EXISTS\_LIST,}
+\DoxyCodeLine{00014\ \ \ \ \ NUMERIC}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }Com\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Com(\textcolor{keywordtype}{string}\ comstr,\ \textcolor{keywordtype}{string}\ language);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ comstr;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ language;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDomain}{Domain}}\ domain;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCondition}{Condition}}\ condition;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ opt\ option;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ get(vector<st\_Object>\ input);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ boolGet(vector<st\_Object>\ input);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ vector<vector<st\_Object>>\ listGet(vector<st\_Object>\ input);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ intGet(vector<st\_Object>\ input);}
+\DoxyCodeLine{00030\ \};}
+
+\end{DoxyCode}

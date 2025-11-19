@@ -1,0 +1,512 @@
+\doxysection{var.\+cpp}
+\hypertarget{var_8cpp_source}{}\label{var_8cpp_source}\index{src/vcb/var.cpp@{src/vcb/var.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{st__Exception_8h}{st/st\_Exception.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{st__string_8h}{st/st\_string.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{var_8h}{vcb/var.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//constructors}}
+\DoxyCodeLine{00013\ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var::Var}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}},\ vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}},\ map<string,\ string>\ parentVarNames\_needValues,\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})\{\ \textcolor{comment}{//create\ new\ var}}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{Var::treeWrite}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ this-\/>name\ =\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}};}
+\DoxyCodeLine{00016\ \ \ \ \ this-\/>values\ =\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}};}
+\DoxyCodeLine{00017\ \ \ \ \ this-\/>language\ =\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ parentVarName\_needValue\ :\ parentVarNames\_needValues)\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ parentVar(parentVarName\_needValue.first,\ this-\/>language);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ parentVar.\mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{get}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ parentVar.\mbox{\hyperlink{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}{addDependency}}(parentVarName\_needValue.second,\ this-\/>name);}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var::Var}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})\{\ \textcolor{comment}{//initialize\ existing\ var}}
+\DoxyCodeLine{00028\ \ \ \ \ this-\/>name\ =\ \mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}};}
+\DoxyCodeLine{00029\ \ \ \ \ this-\/>language\ =\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}};}
+\DoxyCodeLine{00030\ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//mutator\ functions}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga48457f3cbdf3dce0a37ea252a076f0b8}{Var::set}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ inValues\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size();\ i++)\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)\ ==\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>value=\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ inValues\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{if}(!inValues)\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}tried\ setting\ "{}}\ <<\ this-\/>\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ <<\ \textcolor{stringliteral}{"{}\ to\ "{}}\ <<\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}\ <<\ \textcolor{stringliteral}{"{}\ ERROR:\ INVALID\ VAR\ SET,\ THROWING"{}}\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga049d356950832850339c6bfb26ed1048}{Var::irrSet}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ inValues\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size();\ i++)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)\ ==\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>value=\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ inValues\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(!inValues)\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__mutators_ga0d1a986e562b7bff4abdc6b82c1daf4c}{addValue}}(value);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ this-\/>value\ =\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}};}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}{Var::addDependency}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \textcolor{keywordtype}{string}\ varName)\{}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var(varName,\ this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(varName))\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}].empty())\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}].push\_back(var);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ vector<Var>\ clump;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ clump.push\_back(var);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}]\ =\ clump;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}\ }
+\DoxyCodeLine{00074\ \}}
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603}{Var::addDependencies}}(map<\textcolor{keywordtype}{string},\ vector<string>>\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency:\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var(dependentVar,\ this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!this-\/>\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(dependentVar))\{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>dependencies[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}].push\_back(var);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \}\ \ \ \ \ }
+\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11}{Var::removeDependency}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \textcolor{keywordtype}{string}\ varName)\{}
+\DoxyCodeLine{00089\ \ \ \ \ vector<string>\ varNames;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependency:\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}])\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ varNames.push\_back(dependency.name);}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ indexOfVar\ =\ \mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(varNames,\ varName);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}(indexOfVar\ !=\ string::npos)\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}].erase(this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}].begin()+indexOfVar);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \}}
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41}{Var::removeDependencies}}(map<\textcolor{keywordtype}{string},\ vector<string>>\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency\ :\ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ varNames;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependency:\ this-\/>dependencies[dependency.first])\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ varNames.push\_back(dependency.name);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexOfVar\ =\ \mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(varNames,\ dependentVar);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(indexOfVar\ !=\ string::npos)\{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>dependencies[dependency.first].erase(this-\/>dependencies[dependency.first].begin()+indexOfVar);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \}}
+\DoxyCodeLine{00118\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga0d1a986e562b7bff4abdc6b82c1daf4c}{Var::addValue}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}},\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\ ==\ string::npos)\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.push\_back(\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}.insert(\{\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \{\}\});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \}}
+\DoxyCodeLine{00127\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31}{Var::addvalues}}(vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})\{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}\ :\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})\{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ \mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>values,\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\ ==\ string::npos)\{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>values.push\_back(\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}.insert(\{\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}},\ \{\}\});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \}}
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga6decb4ce3a6708ccf953a298674bca68}{Var::removeValue}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\{}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}},\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\ !=\ string::npos)\{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.erase(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.begin()+\mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}},\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}));}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}.erase(\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \}}
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__mutators_ga5876b5378926e99482056777c2ff81c7}{Var::removeValues}}(vector<string>\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})\{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}:\ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})\{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>values,\ \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})\ !=\ string::npos)\{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>values.erase(this-\/>values.begin()+\mbox{\hyperlink{st__string_8h_a93d1ec578ddec790101f3aba2ba3aa89}{st\_in}}(this-\/>values,\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}));}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}.erase(\mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}});}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}})\{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update}}();}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00158\ \textcolor{comment}{//accessor\ function}}
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{Var::valueDependency}}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var)\{\ \textcolor{comment}{//Given\ a\ dependent\ var,\ check\ which\ value\ is\ required\ from\ the\ Var\ to\ beget\ the\ dependent\ Var}}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency\ :\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dependentVar.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ==\ var.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ||\ dependentVar.\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(var))\{\ \textcolor{comment}{//Vars\ can\ be\ identified\ by\ name}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dependency.first;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00168\ \}}
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{group__accessor_ga3256be6d1da048eff4a270d7075b01e5}{Var::valueDependency}}(\textcolor{keywordtype}{string}\ varName)\{\ \textcolor{comment}{//Given\ a\ dependent\ var,\ check\ which\ value\ is\ required\ from\ the\ Var\ to\ beget\ the\ dependent\ Var}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency\ :\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dependentVar.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ==\ varName\ ||\ dependentVar.\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(varName))\{\ \textcolor{comment}{//Vars\ can\ be\ identified\ by\ name}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dependency.first;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00178\ \}}
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{Var::hasDependent}}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var)\{}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency\ :\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dependentVar.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ==\ var.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ||\ dependentVar.\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(var))\{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00188\ \}}
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{Var::hasDependent}}(\textcolor{keywordtype}{string}\ varName)\{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency\ :\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependentVar\ :\ dependency.second)\{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dependentVar.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ ==\ varName\ ||\ dependentVar.\mbox{\hyperlink{group__accessor_gafa8ebf59a8dae0fef317f27e21d3d7aa}{hasDependent}}(varName))\{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00198\ \}}
+\DoxyCodeLine{00199\ \textcolor{comment}{//file\ functions}}
+\DoxyCodeLine{00200\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{Var::get}}()\{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{string}\ inLine;}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ ifstream\ fin;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ fin.open(rec\_dir+this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}});}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fin.is\_open())\{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(fin,\ line))\{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(line,\ \textcolor{charliteral}{'\ '}).at(0)\ ==\ this-\/>\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}})\{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inLine\ =\ line;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ fin.close();}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ could\ not\ read\ vars\_raw"{}}));\}}
+\DoxyCodeLine{00215\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\{\ cout\ <<\ e.error\ <<\ endl;\}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{if}(inLine\ !=\ \textcolor{stringliteral}{"{}"{}})\{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}\ =\ \mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(\mbox{\hyperlink{st__string_8h_a4d130add5648b49ba6ad336a70ba218f}{st\_substr}}(inLine,\ inLine.find(\textcolor{charliteral}{'['})+1,\ inLine.find(\textcolor{charliteral}{']'})),\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ vector<string>\ dependenciesLine\ =\ \mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(\mbox{\hyperlink{st__string_8h_a4d130add5648b49ba6ad336a70ba218f}{st\_substr}}(inLine,\ \mbox{\hyperlink{st__string_8h_a4636a3a776d227bf2fb9584b3d5b18d7}{st\_find}}(inLine,\ \textcolor{charliteral}{'['},\ 1)+1,\ \mbox{\hyperlink{st__string_8h_a9b0e395410a8472182d43ed5d99c7880}{st\_compliment}}(inLine,\ \mbox{\hyperlink{st__string_8h_a4636a3a776d227bf2fb9584b3d5b18d7}{st\_find}}(inLine,\ \textcolor{charliteral}{'['},\ 1))),\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ dependenciesLine.size();\ i++)\{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dependencyStr\ =\ dependenciesLine.at(i);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dependencyStr\ !=\ \textcolor{stringliteral}{"{}"{}})\{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ dependencyVarNames\ =\ \mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(\mbox{\hyperlink{st__string_8h_a4d130add5648b49ba6ad336a70ba218f}{st\_substr}}(dependencyStr,\ 1,\ dependencyStr.length()-\/1),\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ dependencyVarName\ :\ dependencyVarNames)\{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ dependentVar(dependencyVarName,\ this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dependentVar.\mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{get}}();}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)].empty())\{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vector<Var>\ dependentVars;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dependentVars.push\_back(dependentVar);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)]\ =\ dependentVars;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)].push\_back(dependentVar);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00238\ \}}
+\DoxyCodeLine{00239\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_ga61756da973a8fae33e2b71891d094dd9}{Var::update}}()\{}
+\DoxyCodeLine{00240\ \ \ \ \ \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{Var::treeWrite}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00241\ \ \ \ \ vector<string>\ allLines;}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ ifstream\ fin;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ fin.open(rec\_dir+this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}},\ ios::in);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fin.is\_open())\{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\ getline(fin,\ line))\{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(line,\ \textcolor{charliteral}{'\ '}).at(0)\ !=\ this-\/>\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}})\{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allLines.push\_back(line);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ fin.close();}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ could\ not\ open\ vars\_raw"{}}));\}}
+\DoxyCodeLine{00255\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\{\ cout\ <<\ e.error\ <<\ endl;\}}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordtype}{string}\ outLine\ =\ this-\/>\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ +\ \textcolor{stringliteral}{"{}\ ["{}};}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size();\ i++)\{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ outLine\ +=\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i);}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size()-\/1)\{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ outLine+=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ outLine+=\textcolor{stringliteral}{"{}]\ "{}};}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size();\ i++)\{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}["{}};}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)].size();\ j++)\{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ outLine\ +=\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)].at(j).name;}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(j\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}}[this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.at(i)].size()-\/1)\{}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ this-\/>\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.size()-\/1)\{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ outLine+=\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ ofstream\ fout;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ fout.open(rec\_dir+this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}},\ ios::out);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fout.is\_open())\{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ line\ :\ allLines)\{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fout\ <<\ line\ <<\ endl;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ fout\ <<\ outLine;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ fout.close();}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ could\ not\ write\ to\ vars\_raw"{}}));\}}
+\DoxyCodeLine{00293\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\ \{cout\ <<\ e.error\ <<\ endl;\}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00296\ \}}
+\DoxyCodeLine{00297\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__file_gac23b26317bcdb30f3c33a90ebfe87644}{Var::remove}}()\{}
+\DoxyCodeLine{00298\ \ \ \ \ vector<string>\ allLines;}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ ifstream\ fin;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ fin.open(rec\_dir+this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}});}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fin.is\_open())\{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(fin,\ line))\{}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(line,\ \textcolor{charliteral}{'\ '}).at(0)\ !=\ this-\/>\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}})\{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allLines.push\_back(line);}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ fin.close();}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{\ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ could\ not\ open\ vars\_raw"{}}));\}}
+\DoxyCodeLine{00312\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\ \{\ cout\ <<\ e.error\ <<\ endl;\}}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ ofstream\ fout;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ fout.open(rec\_dir+this-\/>\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}},\ ios::out);}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fout.is\_open())\{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ allLines.size();\ i++)\{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fout\ <<\ allLines.at(i);}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ allLines.size()-\/1)\{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fout\ <<\ endl;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ fout.close();}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ could\ not\ open\ vars\_raw"{}}));\ \}}
+\DoxyCodeLine{00326\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\{\ cout\ <<\ e.error\ <<\ endl;\}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ this-\/>\mbox{\hyperlink{classVar_a816fba922e414d6e901bd7622e4e308d}{cannon}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00329\ \}}
+\DoxyCodeLine{00330\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{Var::treeWrite}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \textcolor{comment}{//tree\ functions}}
+\DoxyCodeLine{00333\ \textcolor{keywordtype}{string}\ makeTree\_rec\_helper(\mbox{\hyperlink{classVar}{Var}}\ var)\{}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordflow}{if}(var.\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}}.empty())\{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ values\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string}\ value\ :\ var.\mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})\{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ values\ +=\ \textcolor{stringliteral}{"{}\ "{}}\ +\ value\ +\ \textcolor{stringliteral}{"{}:[]"{}};}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}("{}}\ +\ var.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ +\ \textcolor{stringliteral}{"{})"{}}\ +\ values;}
+\DoxyCodeLine{00340\ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{string}\ values\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ dependency:\ var.\mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})\{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ values\ +=\ \textcolor{stringliteral}{"{}\ "{}}\ +\ dependency.first\ +\ \textcolor{stringliteral}{"{}:["{}};}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ dependency.second.size();\ i++)\{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ values\ +=\ makeTree\_rec\_helper(dependency.second.at(i));}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ dependency.second.size()-\/1)\{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values\ +=\ \textcolor{stringliteral}{"{},"{}};}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ values\ +=\ \textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{00351\ \ \ \ \ \}}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}("{}}\ +\ var.\mbox{\hyperlink{classVar_a4f203af1d57ced7e80b3c02e2120e7c4}{name}}\ +\ \textcolor{stringliteral}{"{})"{}}\ +\ values;}
+\DoxyCodeLine{00353\ \}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVar_a53cbe3fa525b32014ab026b42cc1c29b}{Var::makeTree}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}})\{}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{//add\ io\ write}}
+\DoxyCodeLine{00357\ \ \ \ \ ifstream\ fin;}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordtype}{bool}\ openWorked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00359\ \ \ \ \ vector<string>\ allLines;}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ fin.open(rec\_dir+\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_raw"{}},\ ios::in);}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fin.is\_open())\{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ openWorked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(getline(fin,\ line))\{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allLines.push\_back(line);}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ failed\ to\ open\ vars\_raw"{}}));}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ fin.close();}
+\DoxyCodeLine{00373\ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ cout\ <<\ e.error\ <<\ endl;}
+\DoxyCodeLine{00375\ \ \ \ \ \}}
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{keywordflow}{if}(openWorked)\{}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{comment}{//get\ all\ vars}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ vector<Var>\ allVars;}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ line\ :\ allLines)\{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ var(\mbox{\hyperlink{st__string_8h_a51f770177c32e0907c898f7a21e2a288}{st\_split}}(line,\ \textcolor{charliteral}{'\ '}).at(0),\ \mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}});}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ var.\mbox{\hyperlink{group__file_gae6175771ecd2ad72240d87c926069762}{get}}();}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ allVars.push\_back(var);}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \textcolor{comment}{//find\ top\ level\ vars}}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ vector<Var>\ parentVars;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ varChecking:\ allVars)\{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDependent\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{group__constructors_gab1f31d86f79c1a0a9fcfd61ae4164877}{Var}}\ varChecker:\ allVars)\{}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(varChecker.hasDependent(varChecking))\{}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isDependent\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!isDependent)\{}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ parentVars.push\_back(varChecking);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ outLine\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ parentVars.size();\ i++)\{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ outLine\ +=\ makeTree\_rec\_helper(parentVars.at(i));}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ parentVars.size()-\/1)\{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outLine\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ ofstream\ fout;}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ rec\_dir\ =\ \mbox{\hyperlink{st__string_8h_acd572467b6014f6f02a7e527cd12f660}{st\_con}}(getenv(\textcolor{stringliteral}{"{}CONLANGMOD\_REC\_DIR"{}}));}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ fout.open(rec\_dir+\mbox{\hyperlink{classVar_ae0b16646c02650f550654b4475de29ed}{language}}+\textcolor{stringliteral}{"{}/vars\_tree"{}});}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(fout.is\_open())\{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVar_a34bb26dd552d8c9817c128a96be4d2b1}{Var::treeWrite}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fout\ <<\ outLine;}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}(\textcolor{stringliteral}{"{}FILE\ IO\ ERROR:\ couldn't\ access\ vars\_tree"{}}));}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}(\mbox{\hyperlink{classst__Exception}{st\_Exception}}\ e)\{}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ e.error\ <<\ endl;}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ fout.close();}
+\DoxyCodeLine{00420\ \ \ \ \ \}}
+\DoxyCodeLine{00421\ \}}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \textcolor{comment}{//debug}}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \textcolor{comment}{//\ int\ main()\{}}
+\DoxyCodeLine{00426\ \textcolor{comment}{//\ \ \ \ \ map<string,\ string>\ needValues;}}
+\DoxyCodeLine{00427\ \textcolor{comment}{//\ \ \ \ \ needValues["{}DEPENDENT\_VARNAME1"{}]\ =\ "{}VALUE5"{};}}
+\DoxyCodeLine{00428\ \textcolor{comment}{//\ \ \ \ \ vector<string>\ values;}}
+\DoxyCodeLine{00429\ \textcolor{comment}{//\ \ \ \ \ values.push\_back("{}VALUE1"{});}}
+\DoxyCodeLine{00430\ \textcolor{comment}{//\ \ \ \ \ values.push\_back("{}VALUE2"{});}}
+\DoxyCodeLine{00431\ \textcolor{comment}{//\ \ \ \ \ Var\ var("{}DEPENDENT2\_VAR1"{},\ values,\ needValues,\ "{}format\_example\_language"{});}}
+\DoxyCodeLine{00432\ \textcolor{comment}{//\ \ \ \ \ Var::makeTree("{}format\_example\_language"{});}}
+\DoxyCodeLine{00433\ \textcolor{comment}{//\ \ \ \ \ return\ 0;}}
+\DoxyCodeLine{00434\ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \textcolor{comment}{//2025-\/10-\/13\ debug\ worked}}
+\DoxyCodeLine{00437\ \textcolor{comment}{//\ int\ main(int\ argc,\ char*\ argv[])\{}}
+\DoxyCodeLine{00438\ \textcolor{comment}{//\ \ \ \ \ if(argc\ >\ 1)\{}}
+\DoxyCodeLine{00439\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ if(strcmp(argv[1],\ "{}-\/h"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00440\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}var.cpp\ debug\ bin"{}\ <<\ endl;}}
+\DoxyCodeLine{00441\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Options:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00442\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/h:\ help"{}\ <<\ endl;}}
+\DoxyCodeLine{00443\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/i:\ Check\ if\ var.cpp\ correctly\ reads\ example\ file"{}\ <<\ endl;}}
+\DoxyCodeLine{00444\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/o:\ Check\ if\ var.cpp\ correctly\ writes\ into\ example\ files"{}\ \ <<\ endl;}}
+\DoxyCodeLine{00445\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/if\ [language\_name]:\ Check\ if\ var.cpp\ correctly\ reads\ specified\ file\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00446\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/of\ [language\_name]:\ Check\ if\ var.cpp\ correctly\ writes\ specified\ file\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00447\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}-\/t:\ Check\ if\ var.cpp\ correctly\ creates\ a\ tree"{}\ <<\ endl;}}
+\DoxyCodeLine{00448\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}\ else\ if(strcmp(argv[1],"{}-\/i"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00449\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Var\ test("{}NAME"{},\ "{}format\_example\_language"{});}}
+\DoxyCodeLine{00450\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ test.name\ <<\ endl;}}
+\DoxyCodeLine{00451\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00452\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Values:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00453\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ for(string\ value\ :\ test.values)\{}}
+\DoxyCodeLine{00454\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ value\ <<\ endl;}}
+\DoxyCodeLine{00455\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00456\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00457\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Dependencies:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00458\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ i\ =\ 0;\ i\ <\ test.dependencies.size();\ i++)\{}}
+\DoxyCodeLine{00459\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ test.values.at(i)\ <<\ "{}:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00460\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(Var\ var\ :\ test.dependencies[test.values.at(i)])\{}}
+\DoxyCodeLine{00461\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ var.name\ <<\ endl;}}
+\DoxyCodeLine{00462\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00463\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00464\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }}
+\DoxyCodeLine{00465\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}\ else\ if(strcmp(argv[1],"{}-\/o"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00466\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ values;}}
+\DoxyCodeLine{00467\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back("{}VALUE5"{});}}
+\DoxyCodeLine{00468\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back("{}VALUE9"{});}}
+\DoxyCodeLine{00469\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ map<string,\ string>\ depends;}}
+\DoxyCodeLine{00470\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ depends["{}VALUE1"{}]\ =\ "{}NAME"{};}}
+\DoxyCodeLine{00471\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Var\ test("{}DEPENDENT\_VARNAME1"{},\ values,\ depends,\ "{}format\_example\_language"{});}}
+\DoxyCodeLine{00472\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}\ else\ if(strcmp(argv[1],"{}-\/if"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00473\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ string\ languagename\ =\ "{}"{};}}
+\DoxyCodeLine{00474\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Var\ test("{}NAME"{},\ st\_con(argv[2]));}}
+\DoxyCodeLine{00475\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ test.name\ <<\ endl;}}
+\DoxyCodeLine{00476\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00477\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Values:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00478\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ for(string\ value\ :\ test.values)\{}}
+\DoxyCodeLine{00479\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ value\ <<\ endl;}}
+\DoxyCodeLine{00480\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00481\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00482\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Dependencies:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00483\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ for(int\ i\ =\ 0;\ i\ <\ test.dependencies.size();\ i++)\{}}
+\DoxyCodeLine{00484\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ test.values.at(i)\ <<\ "{}:\ "{}\ <<\ endl;}}
+\DoxyCodeLine{00485\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for(Var\ var\ :\ test.dependencies[test.values.at(i)])\{}}
+\DoxyCodeLine{00486\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ var.name\ <<\ endl;}}
+\DoxyCodeLine{00487\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00488\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ endl;}}
+\DoxyCodeLine{00489\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00490\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}\ else\ if(strcmp(argv[1],"{}-\/of"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00491\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ vector<string>\ values;}}
+\DoxyCodeLine{00492\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back("{}VALUE5"{});}}
+\DoxyCodeLine{00493\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ values.push\_back("{}VALUE9"{});}}
+\DoxyCodeLine{00494\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ map<string,\ string>\ depends;}}
+\DoxyCodeLine{00495\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ depends["{}VALUE1"{}]\ =\ "{}NAME"{};}}
+\DoxyCodeLine{00496\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Var\ test("{}DEPENDENT\_VARNAME1"{},\ values,\ depends,\ st\_con(argv[2]));}}
+\DoxyCodeLine{00497\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}\ else\ if(strcmp(argv[1],"{}-\/t"{})\ ==\ 0)\{}}
+\DoxyCodeLine{00498\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ Var::makeTree("{}format\_example\_language"{});}}
+\DoxyCodeLine{00499\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}else\ \{}}
+\DoxyCodeLine{00500\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}error:\ unknown\ argument,\ write\ '-\/h'\ for\ help"{}\ <<\ endl;}}
+\DoxyCodeLine{00501\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{00502\ \textcolor{comment}{//\ \ \ \ \ \}\ else\ \{}}
+\DoxyCodeLine{00503\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ cout\ <<\ "{}error:\ no\ arguments,\ write\ '-\/h'\ for\ help"{}\ <<\ endl;}}
+\DoxyCodeLine{00504\ \textcolor{comment}{//\ \ \ \ \ \}}}
+\DoxyCodeLine{00505\ \textcolor{comment}{//\ \ \ \ \ return\ 0;}}
+\DoxyCodeLine{00506\ \textcolor{comment}{//\ \}}}
+
+\end{DoxyCode}

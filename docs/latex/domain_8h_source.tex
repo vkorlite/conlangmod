@@ -1,0 +1,24 @@
+\doxysection{domain.\+h}
+\hypertarget{domain_8h_source}{}\label{domain_8h_source}\index{include/vcb/domain.h@{include/vcb/domain.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}vcb/st\_Object.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}vcb/condition.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Domain\{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ domstr;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ vector<Condition>\ subconditions;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ language;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ Domain(\textcolor{keywordtype}{string}\ domstr,\ \textcolor{keywordtype}{string}\ language);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ Domain();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ vector<vector<st\_Object>>\ get(vector<st\_Object>\ input);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ vector<Condition>\ getSubconditions();}
+\DoxyCodeLine{00018\ \};}
+
+\end{DoxyCode}

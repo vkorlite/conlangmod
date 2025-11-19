@@ -1,0 +1,134 @@
+\doxysection{Mutator functions }
+\hypertarget{group__mutators}{}\label{group__mutators}\index{Mutator functions@{Mutator functions}}
+
+
+Mutator functions of the \doxylink{classVar}{Var} class.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{group__mutators_ga48457f3cbdf3dce0a37ea252a076f0b8}\label{group__mutators_ga48457f3cbdf3dce0a37ea252a076f0b8} 
+void {\bfseries Var\+::set} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em sets the value of the \doxylink{classVar}{Var} object If the value is in this-\/\texorpdfstring{$>$}{>}values, it sets it, otherwise it "{}throws"{} it \end{DoxyCompactList}\item 
+\Hypertarget{group__mutators_ga049d356950832850339c6bfb26ed1048}\label{group__mutators_ga049d356950832850339c6bfb26ed1048} 
+void {\bfseries Var\+::irr\+Set} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em sets the value of the \doxylink{classVar}{Var} object If the value is in this-\/\texorpdfstring{$>$}{>}values, it sets it, otherwise it adds the value to this-\/\texorpdfstring{$>$}{>}values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}{Var\+::add\+Dependency}} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}, string var\+Name)
+\begin{DoxyCompactList}\small\item\em adds a dependency to this-\/\texorpdfstring{$>$}{>}dependencies If the dependency isn\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds it, otherwise it does nothing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603}{Var\+::add\+Dependencies}} (map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})
+\begin{DoxyCompactList}\small\item\em adds dependencies to this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds them, otherwise it does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11}{Var\+::remove\+Dependency}} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}}, string var\+Name)
+\begin{DoxyCompactList}\small\item\em removes a dependency from this-\/\texorpdfstring{$>$}{>}dependencies If the dependency is in this-\/\texorpdfstring{$>$}{>}dependencies, it removes it, otherwise it does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41}{Var\+::remove\+Dependencies}} (map$<$ string, vector$<$ string $>$ $>$ \mbox{\hyperlink{classVar_a5fcb1ad7f015c13b214800e1a9249813}{dependencies}})
+\begin{DoxyCompactList}\small\item\em removes dependencies from this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies are in this-\/\texorpdfstring{$>$}{>}dependencies, it removes them, otherwise it does nothing. \end{DoxyCompactList}\item 
+\Hypertarget{group__mutators_ga0d1a986e562b7bff4abdc6b82c1daf4c}\label{group__mutators_ga0d1a986e562b7bff4abdc6b82c1daf4c} 
+void {\bfseries Var\+::add\+Value} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em adds a value to this-\/\texorpdfstring{$>$}{>}values If the value isn\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}values, it adds it, otherwise it does nothing. It also adds a key accordingly to this-\/\texorpdfstring{$>$}{>}dependencies \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31}{Var\+::addvalues}} (vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})
+\begin{DoxyCompactList}\small\item\em adds values to this-\/\texorpdfstring{$>$}{>}values If the values aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}values, it adds them, otherwise it does nothing. It also adds keys accordingly to this-\/\texorpdfstring{$>$}{>}dependencies \end{DoxyCompactList}\item 
+\Hypertarget{group__mutators_ga6decb4ce3a6708ccf953a298674bca68}\label{group__mutators_ga6decb4ce3a6708ccf953a298674bca68} 
+void {\bfseries Var\+::remove\+Value} (string \mbox{\hyperlink{classVar_ac55fe32f8d1625be8a8235d70a5fe59c}{value}})
+\begin{DoxyCompactList}\small\item\em removes a value from this-\/\texorpdfstring{$>$}{>}values If the value is in this-\/\texorpdfstring{$>$}{>}values, it removes it, otherwise it does nothing. It also removes a key accordingly from this-\/\texorpdfstring{$>$}{>}dependencies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mutators_ga5876b5378926e99482056777c2ff81c7}{Var\+::remove\+Values}} (vector$<$ string $>$ \mbox{\hyperlink{classVar_a5fcfc4a7d7821f1b40d192b78752937b}{values}})
+\begin{DoxyCompactList}\small\item\em removes values from this-\/\texorpdfstring{$>$}{>}values If the values are in this-\/\texorpdfstring{$>$}{>}values, it removes them, otherwise it does nothing. It also removes keys accordingly from this-\/\texorpdfstring{$>$}{>}dependencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mutator functions of the \doxylink{classVar}{Var} class. 
+
+Mutator functions of the \doxylink{classVar}{Var} class, they call this-\/\texorpdfstring{$>$}{>}\doxylink{group__file_ga61756da973a8fae33e2b71891d094dd9}{update()} if the var is cannonical. 
+
+\label{doc-func-members}
+\Hypertarget{group__mutators_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603}\index{Mutator functions@{Mutator functions}!addDependencies@{addDependencies}}
+\index{addDependencies@{addDependencies}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{addDependencies()}{addDependencies()}}
+{\footnotesize\ttfamily \label{group__mutators_gadd245f7c11fed8e6257255dd5f9c6603} 
+void Var\+::add\+Dependencies (\begin{DoxyParamCaption}\item[{map$<$ string, vector$<$ string $>$ $>$}]{dependencies}{}\end{DoxyParamCaption})}
+
+
+
+adds dependencies to this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds them, otherwise it does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependencies} & a vector of the names of the dependencies to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f}\index{Mutator functions@{Mutator functions}!addDependency@{addDependency}}
+\index{addDependency@{addDependency}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{addDependency()}{addDependency()}}
+{\footnotesize\ttfamily \label{group__mutators_ga3151ba51c0689645a4a572cf3ae6254f} 
+void Var\+::add\+Dependency (\begin{DoxyParamCaption}\item[{string}]{value}{, }\item[{string}]{var\+Name}{}\end{DoxyParamCaption})}
+
+
+
+adds a dependency to this-\/\texorpdfstring{$>$}{>}dependencies If the dependency isn\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}dependencies, it adds it, otherwise it does nothing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Name} & The name of the dependent var \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31}\index{Mutator functions@{Mutator functions}!addvalues@{addvalues}}
+\index{addvalues@{addvalues}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{addvalues()}{addvalues()}}
+{\footnotesize\ttfamily \label{group__mutators_gaf02db72ada5b0cce3e1232d732c36a31} 
+void Var\+::addvalues (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{values}{}\end{DoxyParamCaption})}
+
+
+
+adds values to this-\/\texorpdfstring{$>$}{>}values If the values aren\textquotesingle{}t already in this-\/\texorpdfstring{$>$}{>}values, it adds them, otherwise it does nothing. It also adds keys accordingly to this-\/\texorpdfstring{$>$}{>}dependencies 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & a vector of values to be added \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41}\index{Mutator functions@{Mutator functions}!removeDependencies@{removeDependencies}}
+\index{removeDependencies@{removeDependencies}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{removeDependencies()}{removeDependencies()}}
+{\footnotesize\ttfamily \label{group__mutators_ga789c1b90c615f1aa408fc9b72c743f41} 
+void Var\+::remove\+Dependencies (\begin{DoxyParamCaption}\item[{map$<$ string, vector$<$ string $>$ $>$}]{dependencies}{}\end{DoxyParamCaption})}
+
+
+
+removes dependencies from this-\/\texorpdfstring{$>$}{>}dependencies If the dependencies are in this-\/\texorpdfstring{$>$}{>}dependencies, it removes them, otherwise it does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dependencies} & A vector of the names of the dependencies to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11}\index{Mutator functions@{Mutator functions}!removeDependency@{removeDependency}}
+\index{removeDependency@{removeDependency}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{removeDependency()}{removeDependency()}}
+{\footnotesize\ttfamily \label{group__mutators_ga3dcb0b0a57b976f0e01f8b19402edd11} 
+void Var\+::remove\+Dependency (\begin{DoxyParamCaption}\item[{string}]{value}{, }\item[{string}]{var\+Name}{}\end{DoxyParamCaption})}
+
+
+
+removes a dependency from this-\/\texorpdfstring{$>$}{>}dependencies If the dependency is in this-\/\texorpdfstring{$>$}{>}dependencies, it removes it, otherwise it does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Name} & The name of the dependent var to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mutators_ga5876b5378926e99482056777c2ff81c7}\index{Mutator functions@{Mutator functions}!removeValues@{removeValues}}
+\index{removeValues@{removeValues}!Mutator functions@{Mutator functions}}
+\doxysubsubsection{\texorpdfstring{removeValues()}{removeValues()}}
+{\footnotesize\ttfamily \label{group__mutators_ga5876b5378926e99482056777c2ff81c7} 
+void Var\+::remove\+Values (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{values}{}\end{DoxyParamCaption})}
+
+
+
+removes values from this-\/\texorpdfstring{$>$}{>}values If the values are in this-\/\texorpdfstring{$>$}{>}values, it removes them, otherwise it does nothing. It also removes keys accordingly from this-\/\texorpdfstring{$>$}{>}dependencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & a vector of values to be removed \\
+\hline
+\end{DoxyParams}
