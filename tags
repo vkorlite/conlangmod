@@ -88,6 +88,29 @@
 !_TAG_KIND_DESCRIPTION!Make	I,makefile	/makefiles/
 !_TAG_KIND_DESCRIPTION!Make	m,macro	/macros/
 !_TAG_KIND_DESCRIPTION!Make	t,target	/targets/
+!_TAG_KIND_DESCRIPTION!SQL	C,ccflag	/PLSQL_CCFLAGS/
+!_TAG_KIND_DESCRIPTION!SQL	D,domain	/domains/
+!_TAG_KIND_DESCRIPTION!SQL	E,field	/record fields/
+!_TAG_KIND_DESCRIPTION!SQL	L,label	/block label/
+!_TAG_KIND_DESCRIPTION!SQL	P,package	/packages/
+!_TAG_KIND_DESCRIPTION!SQL	R,service	/services/
+!_TAG_KIND_DESCRIPTION!SQL	S,schema	/schemas/
+!_TAG_KIND_DESCRIPTION!SQL	T,trigger	/triggers/
+!_TAG_KIND_DESCRIPTION!SQL	U,publication	/publications/
+!_TAG_KIND_DESCRIPTION!SQL	V,view	/views/
+!_TAG_KIND_DESCRIPTION!SQL	b,database	/database/
+!_TAG_KIND_DESCRIPTION!SQL	c,cursor	/cursors/
+!_TAG_KIND_DESCRIPTION!SQL	e,event	/events/
+!_TAG_KIND_DESCRIPTION!SQL	f,function	/functions/
+!_TAG_KIND_DESCRIPTION!SQL	i,index	/indexes/
+!_TAG_KIND_DESCRIPTION!SQL	n,synonym	/synonyms/
+!_TAG_KIND_DESCRIPTION!SQL	p,procedure	/procedures/
+!_TAG_KIND_DESCRIPTION!SQL	s,subtype	/subtypes/
+!_TAG_KIND_DESCRIPTION!SQL	t,table	/tables/
+!_TAG_KIND_DESCRIPTION!SQL	v,variable	/variables/
+!_TAG_KIND_DESCRIPTION!SQL	x,mltable	/MobiLink Table Scripts/
+!_TAG_KIND_DESCRIPTION!SQL	y,mlconn	/MobiLink Conn Scripts/
+!_TAG_KIND_DESCRIPTION!SQL	z,mlprop	/MobiLink Properties/
 !_TAG_KIND_DESCRIPTION!SVG	d,def	/ids in defs tags/
 !_TAG_KIND_DESCRIPTION!Sh	a,alias	/aliases/
 !_TAG_KIND_DESCRIPTION!Sh	f,function	/functions/
@@ -129,7 +152,7 @@
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	1.1	/current.age/
 !_TAG_PARSER_VERSION!C	1.1	/current.age/
-!_TAG_PARSER_VERSION!C++	1.1	/current.age/
+!_TAG_PARSER_VERSION!C++	2.2	/current.age/
 !_TAG_PARSER_VERSION!CMake	0.0	/current.age/
 !_TAG_PARSER_VERSION!CSS	0.0	/current.age/
 !_TAG_PARSER_VERSION!D	0.0	/current.age/
@@ -137,6 +160,7 @@
 !_TAG_PARSER_VERSION!JSON	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaScript	1.1	/current.age/
 !_TAG_PARSER_VERSION!Make	1.1	/current.age/
+!_TAG_PARSER_VERSION!SQL	0.0	/current.age/
 !_TAG_PARSER_VERSION!SVG	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PARSER_VERSION!Tex	0.0	/current.age/
@@ -148,7 +172,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	6.2.0	/v6.2.0/
+!_TAG_PROGRAM_VERSION	6.2.1	/v6.2.1/
 !_TAG_ROLE_DESCRIPTION!C!function	foreigndecl	/declared in foreign languages/
 !_TAG_ROLE_DESCRIPTION!C!header	local	/local header/
 !_TAG_ROLE_DESCRIPTION!C!header	system	/system header/
@@ -320,20 +344,13 @@
 #top	docs/html/doxygen.css	/^	#top { display: none; }$/;"	i
 $(MANUAL_FILE).pdf	docs/latex/Makefile	/^$(MANUAL_FILE).pdf: clean $(MANUAL_FILE).tex$/;"	t
 $(VERBOSE).SILENT	build/Makefile	/^$(VERBOSE).SILENT:$/;"	t
-$(VERBOSE).SILENT	build/vcb_test/Makefile	/^$(VERBOSE).SILENT:$/;"	t
 $(VERBOSE)MAKESILENT	build/Makefile	/^$(VERBOSE)MAKESILENT = -s$/;"	m
-$(VERBOSE)MAKESILENT	build/vcb_test/Makefile	/^$(VERBOSE)MAKESILENT = -s$/;"	m
 $.fn.smartmenus.defaults	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p
 %	build/Makefile	/^% : %,v$/;"	t
 %	build/Makefile	/^% : RCS\/%$/;"	t
 %	build/Makefile	/^% : RCS\/%,v$/;"	t
 %	build/Makefile	/^% : SCCS\/s.%$/;"	t
 %	build/Makefile	/^% : s.%$/;"	t
-%	build/vcb_test/Makefile	/^% : %,v$/;"	t
-%	build/vcb_test/Makefile	/^% : RCS\/%$/;"	t
-%	build/vcb_test/Makefile	/^% : RCS\/%,v$/;"	t
-%	build/vcb_test/Makefile	/^% : SCCS\/s.%$/;"	t
-%	build/vcb_test/Makefile	/^% : s.%$/;"	t
 &	docs/html/navtree.js	/^      '&': '&amp;',$/;"	p	variable:initNavTree.initPageToc.entityMap
 &#9670;&#160;Var()	docs/html/group__constructors.html	/^<h2 class="memtitle"><span class="permalink"><a href="#gab1f31d86f79c1a0a9fcfd61ae4164877">&#967/;"	i
 &#9670;&#160;addDependencies()	docs/html/group__mutators.html	/^<h2 class="memtitle"><span class="permalink"><a href="#gadd245f7c11fed8e6257255dd5f9c6603">&#967/;"	i
@@ -614,40 +631,34 @@ $.fn.smartmenus.defaults	docs/html/jquery.js	/^return this.each(function(){var d
 /	docs/html/navtree.js	/^      '\/': '&#x2F;',$/;"	p	variable:initNavTree.initPageToc.entityMap
 0	build/CMakeFiles/InstallScripts.json	/^		"\/home\/space\/Documents\/coding\/conlangmod\/build\/cmake_install.cmake"$/;"	s	array:InstallScripts
 0	build/compile_commands.json	/^{$/;"	o
-0	build/vcb_test/CMakeFiles/InstallScripts.json	/^		"\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test\/cmake_install.cmake"$/;"	s	array:InstallScripts
-0	build/vcb_test/compile_commands.json	/^{$/;"	o
 0	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	p	variable:anonymousObject4d6c64ac16005
 0	docs/html/search/searchdata.js	/^  0: "All",$/;"	p	variable:indexSectionLabels
 0	docs/html/search/searchdata.js	/^  0: "acdfghilmnrstuv",$/;"	p	variable:indexSectionsWithContent
 0	docs/html/search/searchdata.js	/^  0: "all",$/;"	p	variable:indexSectionNames
 1	build/compile_commands.json	/^{$/;"	o
-1	build/vcb_test/compile_commands.json	/^{$/;"	o
 1	docs/html/search/searchdata.js	/^  1: "Classes",$/;"	p	variable:indexSectionLabels
 1	docs/html/search/searchdata.js	/^  1: "cdsv",$/;"	p	variable:indexSectionsWithContent
 1	docs/html/search/searchdata.js	/^  1: "classes",$/;"	p	variable:indexSectionNames
 1223	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	p	variable:anonymousObject4d6c64ac16005
 2	build/compile_commands.json	/^{$/;"	o
-2	build/vcb_test/compile_commands.json	/^{$/;"	o
 2	docs/html/search/searchdata.js	/^  2: "Files",$/;"	p	variable:indexSectionLabels
 2	docs/html/search/searchdata.js	/^  2: "files",$/;"	p	variable:indexSectionNames
 2	docs/html/search/searchdata.js	/^  2: "sv",$/;"	p	variable:indexSectionsWithContent
 3	build/compile_commands.json	/^{$/;"	o
-3	build/vcb_test/compile_commands.json	/^{$/;"	o
 3	docs/html/search/searchdata.js	/^  3: "Functions",$/;"	p	variable:indexSectionLabels
 3	docs/html/search/searchdata.js	/^  3: "aghimrsuv",$/;"	p	variable:indexSectionsWithContent
 3	docs/html/search/searchdata.js	/^  3: "functions",$/;"	p	variable:indexSectionNames
 4	build/compile_commands.json	/^{$/;"	o
-4	build/vcb_test/compile_commands.json	/^{$/;"	o
 4	docs/html/search/searchdata.js	/^  4: "Variables",$/;"	p	variable:indexSectionLabels
 4	docs/html/search/searchdata.js	/^  4: "cdlntv",$/;"	p	variable:indexSectionsWithContent
 4	docs/html/search/searchdata.js	/^  4: "variables",$/;"	p	variable:indexSectionNames
 5	build/compile_commands.json	/^{$/;"	o
-5	build/vcb_test/compile_commands.json	/^{$/;"	o
 5	docs/html/search/searchdata.js	/^  5: "Modules"$/;"	p	variable:indexSectionLabels
 5	docs/html/search/searchdata.js	/^  5: "acfm"$/;"	p	variable:indexSectionsWithContent
 5	docs/html/search/searchdata.js	/^  5: "groups"$/;"	p	variable:indexSectionNames
 6	build/compile_commands.json	/^{$/;"	o
 7	build/compile_commands.json	/^{$/;"	o
+8	build/compile_commands.json	/^{$/;"	o
 ::-webkit-scrollbar	docs/html/doxygen.css	/^::-webkit-scrollbar {$/;"	s
 ::-webkit-scrollbar-corner	docs/html/doxygen.css	/^::-webkit-scrollbar-corner {$/;"	s
 ::-webkit-scrollbar-thumb	docs/html/doxygen.css	/^::-webkit-scrollbar-thumb {$/;"	s
@@ -660,15 +671,6 @@ A	docs/html/jquery.js	/^for(var n=[];e;e=e.nextSibling)1===e.nodeType&&e!==t&&n.
 ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
-ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
-ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 ATTR	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.preFilter
 ATTR	docs/html/jquery.js	/^).toLowerCase();return"*"===e?function(){return!0}:function(e){return e.nodeName&&e.nodeName.toL/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.filter
 ATTR	docs/html/jquery.js	/^O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r;n++)if(e[n]===t)return n;return-1},R="check/;"	p	variable:anonymousObject4d6c64ac1605
@@ -685,473 +687,149 @@ CHILD	docs/html/jquery.js	/^O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r
 CLASS	docs/html/jquery.js	/^).toLowerCase();return"*"===e?function(){return!0}:function(e){return e.nodeName&&e.nodeName.toL/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.filter
 CLASS	docs/html/jquery.js	/^O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r;n++)if(e[n]===t)return n;return-1},R="check/;"	p	variable:anonymousObject4d6c64ac1605
 CMAKE_AR	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
-CMAKE_AR	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
-CMAKE_AR	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
-CMAKE_AR	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_AR "\/sbin\/ar")$/;"	v
 CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/space\/Documents\/coding\/conlangmod\/build$/;"	m
-CMAKE_BINARY_DIR	build/vcb_test/Makefile	/^CMAKE_BINARY_DIR = \/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test$/;"	m
 CMAKE_C11_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")$/;"	v
-CMAKE_C11_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C11_COMPILE_FEATURES "c_std_11;c_static_assert")$/;"	v
 CMAKE_C17_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C17_COMPILE_FEATURES "c_std_17")$/;"	v
-CMAKE_C17_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C17_COMPILE_FEATURES "c_std_17")$/;"	v
 CMAKE_C23_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C23_COMPILE_FEATURES "c_std_23")$/;"	v
-CMAKE_C23_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C23_COMPILE_FEATURES "c_std_23")$/;"	v
 CMAKE_C90_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C90_COMPILE_FEATURES "c_std_90;c_function_prototypes")$/;"	v
-CMAKE_C90_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C90_COMPILE_FEATURES "c_std_90;c_function_prototypes")$/;"	v
 CMAKE_C99_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")$/;"	v
-CMAKE_C99_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C99_COMPILE_FEATURES "c_std_99;c_restrict;c_variadic_macros")$/;"	v
 CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_C_CL_SHOWINCLUDES_PREFIX}")$/;"	v
-CMAKE_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_CXX_CL_SHOWINCLUDES_PREFIX}")$/;"	v
-CMAKE_CL_SHOWINCLUDES_PREFIX	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_C_CL_SHOWINCLUDES_PREFIX}")$/;"	v
-CMAKE_CL_SHOWINCLUDES_PREFIX	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_CL_SHOWINCLUDES_PREFIX "${CMAKE_CXX_CL_SHOWINCLUDES_PREFIX}")$/;"	v
 CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/sbin\/cmake$/;"	m
-CMAKE_COMMAND	build/vcb_test/Makefile	/^CMAKE_COMMAND = \/sbin\/cmake$/;"	m
 CMAKE_COMPILER_IS_GNUCC	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCC 1)$/;"	v
-CMAKE_COMPILER_IS_GNUCC	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCC 1)$/;"	v
-CMAKE_COMPILER_IS_GNUCXX	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCXX 1)$/;"	v
-CMAKE_COMPILER_IS_GNUCXX	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_COMPILER_IS_GNUCXX 1)$/;"	v
 CMAKE_CROSSCOMPILING	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
 CMAKE_CROSSCOMPILING	build/cmake_install.cmake	/^  set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
-CMAKE_CROSSCOMPILING	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
-CMAKE_CROSSCOMPILING	build/vcb_test/cmake_install.cmake	/^  set(CMAKE_CROSSCOMPILING "FALSE")$/;"	v
-CMAKE_CXX11_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11;cxx_alias_templates;cxx_alignas;cxx_alignof;cxx_att/;"	v
-CMAKE_CXX11_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX11_COMPILE_FEATURES "cxx_std_11;cxx_alias_templates;cxx_alignas;cxx_alignof;cxx_att/;"	v
-CMAKE_CXX14_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14;cxx_aggregate_default_initializers;cxx_attribute_de/;"	v
-CMAKE_CXX14_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX14_COMPILE_FEATURES "cxx_std_14;cxx_aggregate_default_initializers;cxx_attribute_de/;"	v
-CMAKE_CXX17_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX17_COMPILE_FEATURES "cxx_std_17")$/;"	v
-CMAKE_CXX17_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX17_COMPILE_FEATURES "cxx_std_17")$/;"	v
-CMAKE_CXX20_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")$/;"	v
-CMAKE_CXX20_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX20_COMPILE_FEATURES "cxx_std_20")$/;"	v
-CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")$/;"	v
-CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")$/;"	v
-CMAKE_CXX23_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX23_COMPILE_FEATURES "cxx_std_23")$/;"	v
-CMAKE_CXX23_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX23_COMPILE_FEATURES "cxx_std_23")$/;"	v
-CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")$/;"	v
-CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")$/;"	v
-CMAKE_CXX26_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX26_COMPILE_FEATURES "cxx_std_26")$/;"	v
-CMAKE_CXX26_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX26_COMPILE_FEATURES "cxx_std_26")$/;"	v
-CMAKE_CXX98_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters")$/;"	v
-CMAKE_CXX98_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX98_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters")$/;"	v
-CMAKE_CXX_ABI_COMPILED	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_ABI_COMPILED TRUE)$/;"	v
-CMAKE_CXX_ABI_COMPILED	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_ABI_COMPILED TRUE)$/;"	v
-CMAKE_CXX_BYTE_ORDER	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
-CMAKE_CXX_BYTE_ORDER	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
-CMAKE_CXX_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "")$/;"	v
-CMAKE_CXX_CL_SHOWINCLUDES_PREFIX	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_CL_SHOWINCLUDES_PREFIX "")$/;"	v
-CMAKE_CXX_COMPILER	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER "\/sbin\/c++")$/;"	v
-CMAKE_CXX_COMPILER	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER "\/sbin\/c++")$/;"	v
-CMAKE_CXX_COMPILER_ABI	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ABI "ELF")$/;"	v
-CMAKE_CXX_COMPILER_ABI	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ABI "ELF")$/;"	v
-CMAKE_CXX_COMPILER_APPLE_SYSROOT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_APPLE_SYSROOT "")$/;"	v
-CMAKE_CXX_COMPILER_APPLE_SYSROOT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_APPLE_SYSROOT "")$/;"	v
-CMAKE_CXX_COMPILER_AR	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_AR "\/sbin\/gcc-ar")$/;"	v
-CMAKE_CXX_COMPILER_AR	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_AR "\/sbin\/gcc-ar")$/;"	v
-CMAKE_CXX_COMPILER_ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
-CMAKE_CXX_COMPILER_ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
-CMAKE_CXX_COMPILER_ARG1	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ARG1 "")$/;"	v
-CMAKE_CXX_COMPILER_ARG1	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ARG1 "")$/;"	v
-CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")$/;"	v
-CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")$/;"	v
-CMAKE_CXX_COMPILER_ENV_VAR	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ENV_VAR "CXX")$/;"	v
-CMAKE_CXX_COMPILER_ENV_VAR	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ENV_VAR "CXX")$/;"	v
-CMAKE_CXX_COMPILER_FRONTEND_VARIANT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
-CMAKE_CXX_COMPILER_FRONTEND_VARIANT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
-CMAKE_CXX_COMPILER_ID	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID "GNU")$/;"	v
-CMAKE_CXX_COMPILER_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID "GNU")$/;"	v
-CMAKE_CXX_COMPILER_ID_RUN	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID_RUN 1)$/;"	v
-CMAKE_CXX_COMPILER_ID_RUN	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_ID_RUN 1)$/;"	v
-CMAKE_CXX_COMPILER_IMPORT_STD	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_IMPORT_STD "")$/;"	v
-CMAKE_CXX_COMPILER_IMPORT_STD	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_IMPORT_STD "")$/;"	v
-CMAKE_CXX_COMPILER_LINKER	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_CXX_COMPILER_LINKER	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)$/;"	v
-CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)$/;"	v
-CMAKE_CXX_COMPILER_LINKER_ID	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_ID "GNU")$/;"	v
-CMAKE_CXX_COMPILER_LINKER_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_ID "GNU")$/;"	v
-CMAKE_CXX_COMPILER_LINKER_VERSION	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.45.0)$/;"	v
-CMAKE_CXX_COMPILER_LINKER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.45.0)$/;"	v
-CMAKE_CXX_COMPILER_LOADED	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LOADED 1)$/;"	v
-CMAKE_CXX_COMPILER_LOADED	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_LOADED 1)$/;"	v
-CMAKE_CXX_COMPILER_RANLIB	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_RANLIB "\/sbin\/gcc-ranlib")$/;"	v
-CMAKE_CXX_COMPILER_RANLIB	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_RANLIB "\/sbin\/gcc-ranlib")$/;"	v
-CMAKE_CXX_COMPILER_VERSION	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION "15.2.1")$/;"	v
-CMAKE_CXX_COMPILER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION "15.2.1")$/;"	v
-CMAKE_CXX_COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")$/;"	v
-CMAKE_CXX_COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")$/;"	v
-CMAKE_CXX_COMPILER_WORKS	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WORKS TRUE)$/;"	v
-CMAKE_CXX_COMPILER_WORKS	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WORKS TRUE)$/;"	v
-CMAKE_CXX_COMPILER_WRAPPER	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WRAPPER "")$/;"	v
-CMAKE_CXX_COMPILER_WRAPPER	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILER_WRAPPER "")$/;"	v
-CMAKE_CXX_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters;cxx_std_11;cxx_alias/;"	v
-CMAKE_CXX_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_COMPILE_FEATURES "cxx_std_98;cxx_template_template_parameters;cxx_std_11;cxx_alias/;"	v
-CMAKE_CXX_EXTENSIONS_COMPUTED_DEFAULT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
-CMAKE_CXX_EXTENSIONS_COMPUTED_DEFAULT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
-CMAKE_CXX_IGNORE_EXTENSIONS	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IGNORE_EXTENSIONS inl;h;hpp;HPP;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
-CMAKE_CXX_IGNORE_EXTENSIONS	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IGNORE_EXTENSIONS inl;h;hpp;HPP;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
-CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/include\/c++\/15.2.1;\/usr\/include\/c++\/15./;"	v
-CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/include\/c++\/15.2.1;\/usr\/include\/c++\/15./;"	v
-CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1;\/usr\/lib/;"	v
-CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1;\/usr\/lib/;"	v
-CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
-CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")$/;"	v
-CMAKE_CXX_IMPLICIT_LINK_LIBRARIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")$/;"	v
 CMAKE_CXX_INCLUDE_REGEX_COMPLAIN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_COMPLAIN ${CMAKE_C_INCLUDE_REGEX_COMPLAIN})$/;"	v
-CMAKE_CXX_INCLUDE_REGEX_COMPLAIN	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_COMPLAIN ${CMAKE_C_INCLUDE_REGEX_COMPLAIN})$/;"	v
 CMAKE_CXX_INCLUDE_REGEX_SCAN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_SCAN ${CMAKE_C_INCLUDE_REGEX_SCAN})$/;"	v
-CMAKE_CXX_INCLUDE_REGEX_SCAN	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_CXX_INCLUDE_REGEX_SCAN ${CMAKE_C_INCLUDE_REGEX_SCAN})$/;"	v
-CMAKE_CXX_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_CXX_LIBRARY_ARCHITECTURE	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_CXX_LINKER_DEPFILE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
-CMAKE_CXX_LINKER_DEPFILE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
-CMAKE_CXX_LINKER_PREFERENCE	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE 30)$/;"	v
-CMAKE_CXX_LINKER_PREFERENCE	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE 30)$/;"	v
-CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)$/;"	v
-CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)$/;"	v
-CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_CXX_PLATFORM_ID	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_PLATFORM_ID "Linux")$/;"	v
-CMAKE_CXX_PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_PLATFORM_ID "Linux")$/;"	v
-CMAKE_CXX_SIMULATE_ID	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_ID "")$/;"	v
-CMAKE_CXX_SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_ID "")$/;"	v
-CMAKE_CXX_SIMULATE_VERSION	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_VERSION "")$/;"	v
-CMAKE_CXX_SIMULATE_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIMULATE_VERSION "")$/;"	v
-CMAKE_CXX_SIZEOF_DATA_PTR	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIZEOF_DATA_PTR "8")$/;"	v
-CMAKE_CXX_SIZEOF_DATA_PTR	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SIZEOF_DATA_PTR "8")$/;"	v
-CMAKE_CXX_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;m;mm;mpp;CPP;ixx;cppm;ccm;cxxm;c++m)$/;"	v
-CMAKE_CXX_SOURCE_FILE_EXTENSIONS	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_SOURCE_FILE_EXTENSIONS C;M;c++;cc;cpp;cxx;m;mm;mpp;CPP;ixx;cppm;ccm;cxxm;c++m)$/;"	v
-CMAKE_CXX_STANDARD	CMakeLists.txt	/^set(CMAKE_CXX_STANDARD 20)$/;"	v
-CMAKE_CXX_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "17")$/;"	v
-CMAKE_CXX_STANDARD_COMPUTED_DEFAULT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "17")$/;"	v
-CMAKE_CXX_STANDARD_LATEST	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_STANDARD_LATEST "26")$/;"	v
-CMAKE_CXX_STANDARD_LATEST	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_CXX_STANDARD_LATEST "26")$/;"	v
 CMAKE_C_ABI_COMPILED	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_ABI_COMPILED TRUE)$/;"	v
-CMAKE_C_ABI_COMPILED	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_ABI_COMPILED TRUE)$/;"	v
 CMAKE_C_BYTE_ORDER	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
-CMAKE_C_BYTE_ORDER	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_BYTE_ORDER "LITTLE_ENDIAN")$/;"	v
 CMAKE_C_CL_SHOWINCLUDES_PREFIX	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")$/;"	v
-CMAKE_C_CL_SHOWINCLUDES_PREFIX	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")$/;"	v
 CMAKE_C_COMPILER	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER "\/sbin\/cc")$/;"	v
-CMAKE_C_COMPILER	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER "\/sbin\/cc")$/;"	v
 CMAKE_C_COMPILER_ABI	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ABI "ELF")$/;"	v
-CMAKE_C_COMPILER_ABI	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ABI "ELF")$/;"	v
 CMAKE_C_COMPILER_APPLE_SYSROOT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_APPLE_SYSROOT "")$/;"	v
-CMAKE_C_COMPILER_APPLE_SYSROOT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_APPLE_SYSROOT "")$/;"	v
 CMAKE_C_COMPILER_AR	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_AR "\/sbin\/gcc-ar")$/;"	v
-CMAKE_C_COMPILER_AR	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_AR "\/sbin\/gcc-ar")$/;"	v
 CMAKE_C_COMPILER_ARCHITECTURE_ID	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
-CMAKE_C_COMPILER_ARCHITECTURE_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARCHITECTURE_ID "x86_64")$/;"	v
 CMAKE_C_COMPILER_ARG1	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARG1 "")$/;"	v
-CMAKE_C_COMPILER_ARG1	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ARG1 "")$/;"	v
 CMAKE_C_COMPILER_ENV_VAR	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ENV_VAR "CC")$/;"	v
-CMAKE_C_COMPILER_ENV_VAR	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ENV_VAR "CC")$/;"	v
 CMAKE_C_COMPILER_FRONTEND_VARIANT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
-CMAKE_C_COMPILER_FRONTEND_VARIANT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")$/;"	v
 CMAKE_C_COMPILER_ID	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID "GNU")$/;"	v
-CMAKE_C_COMPILER_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID "GNU")$/;"	v
 CMAKE_C_COMPILER_ID_RUN	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID_RUN 1)$/;"	v
-CMAKE_C_COMPILER_ID_RUN	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_ID_RUN 1)$/;"	v
 CMAKE_C_COMPILER_LINKER	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_C_COMPILER_LINKER	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER "\/sbin\/ld")$/;"	v
 CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT GNU)$/;"	v
-CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT GNU)$/;"	v
 CMAKE_C_COMPILER_LINKER_ID	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ID "GNU")$/;"	v
-CMAKE_C_COMPILER_LINKER_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_ID "GNU")$/;"	v
 CMAKE_C_COMPILER_LINKER_VERSION	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_VERSION 2.45.0)$/;"	v
-CMAKE_C_COMPILER_LINKER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LINKER_VERSION 2.45.0)$/;"	v
 CMAKE_C_COMPILER_LOADED	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LOADED 1)$/;"	v
-CMAKE_C_COMPILER_LOADED	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_LOADED 1)$/;"	v
 CMAKE_C_COMPILER_RANLIB	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_RANLIB "\/sbin\/gcc-ranlib")$/;"	v
-CMAKE_C_COMPILER_RANLIB	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_RANLIB "\/sbin\/gcc-ranlib")$/;"	v
 CMAKE_C_COMPILER_VERSION	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION "15.2.1")$/;"	v
-CMAKE_C_COMPILER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION "15.2.1")$/;"	v
 CMAKE_C_COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION_INTERNAL "")$/;"	v
-CMAKE_C_COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_VERSION_INTERNAL "")$/;"	v
 CMAKE_C_COMPILER_WORKS	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WORKS TRUE)$/;"	v
-CMAKE_C_COMPILER_WORKS	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WORKS TRUE)$/;"	v
 CMAKE_C_COMPILER_WRAPPER	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WRAPPER "")$/;"	v
-CMAKE_C_COMPILER_WRAPPER	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILER_WRAPPER "")$/;"	v
 CMAKE_C_COMPILE_FEATURES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macr/;"	v
-CMAKE_C_COMPILE_FEATURES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macr/;"	v
 CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
-CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT "ON")$/;"	v
 CMAKE_C_IGNORE_EXTENSIONS	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
-CMAKE_C_IGNORE_EXTENSIONS	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)$/;"	v
 CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1\/include;/;"	v
-CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1\/include;/;"	v
 CMAKE_C_IMPLICIT_LINK_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1;\/usr\/lib;\//;"	v
-CMAKE_C_IMPLICIT_LINK_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "\/usr\/lib\/gcc\/x86_64-pc-linux-gnu\/15.2.1;\/usr\/lib;\//;"	v
 CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
-CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")$/;"	v
 CMAKE_C_IMPLICIT_LINK_LIBRARIES	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")$/;"	v
-CMAKE_C_IMPLICIT_LINK_LIBRARIES	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")$/;"	v
 CMAKE_C_INCLUDE_REGEX_COMPLAIN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_COMPLAIN "^$")$/;"	v
-CMAKE_C_INCLUDE_REGEX_COMPLAIN	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_COMPLAIN "^$")$/;"	v
 CMAKE_C_INCLUDE_REGEX_SCAN	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_SCAN "^.*$")$/;"	v
-CMAKE_C_INCLUDE_REGEX_SCAN	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_C_INCLUDE_REGEX_SCAN "^.*$")$/;"	v
 CMAKE_C_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_C_LIBRARY_ARCHITECTURE	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LIBRARY_ARCHITECTURE "")$/;"	v
 CMAKE_C_LINKER_DEPFILE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
-CMAKE_C_LINKER_DEPFILE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_DEPFILE_SUPPORTED TRUE)$/;"	v
 CMAKE_C_LINKER_PREFERENCE	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PREFERENCE 10)$/;"	v
-CMAKE_C_LINKER_PREFERENCE	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PREFERENCE 10)$/;"	v
 CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
 CMAKE_C_PLATFORM_ID	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_PLATFORM_ID "Linux")$/;"	v
-CMAKE_C_PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_PLATFORM_ID "Linux")$/;"	v
 CMAKE_C_SIMULATE_ID	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_ID "")$/;"	v
-CMAKE_C_SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_ID "")$/;"	v
 CMAKE_C_SIMULATE_VERSION	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_VERSION "")$/;"	v
-CMAKE_C_SIMULATE_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIMULATE_VERSION "")$/;"	v
 CMAKE_C_SIZEOF_DATA_PTR	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIZEOF_DATA_PTR "8")$/;"	v
-CMAKE_C_SIZEOF_DATA_PTR	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SIZEOF_DATA_PTR "8")$/;"	v
 CMAKE_C_SOURCE_FILE_EXTENSIONS	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)$/;"	v
-CMAKE_C_SOURCE_FILE_EXTENSIONS	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)$/;"	v
 CMAKE_C_STANDARD_COMPUTED_DEFAULT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "23")$/;"	v
-CMAKE_C_STANDARD_COMPUTED_DEFAULT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "23")$/;"	v
 CMAKE_C_STANDARD_LATEST	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_LATEST "23")$/;"	v
-CMAKE_C_STANDARD_LATEST	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_C_STANDARD_LATEST "23")$/;"	v
 CMAKE_DEPENDS_DEPENDENCY_FILES	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
 CMAKE_DEPENDS_DEPENDENCY_FILES	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
-CMAKE_DEPENDS_DEPENDENCY_FILES	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
-CMAKE_DEPENDS_DEPENDENCY_FILES	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
+CMAKE_DEPENDS_DEPENDENCY_FILES	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_DEPENDENCY_FILES$/;"	v
 CMAKE_DEPENDS_GENERATOR	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")$/;"	v
-CMAKE_DEPENDS_GENERATOR	build/vcb_test/CMakeFiles/Makefile.cmake	/^set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")$/;"	v
 CMAKE_DEPENDS_IN_PROJECT_ONLY	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)$/;"	v
 CMAKE_DEPENDS_IN_PROJECT_ONLY	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)$/;"	v
-CMAKE_DEPENDS_IN_PROJECT_ONLY	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)$/;"	v
-CMAKE_DEPENDS_IN_PROJECT_ONLY	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)$/;"	v
+CMAKE_DEPENDS_IN_PROJECT_ONLY	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)$/;"	v
 CMAKE_DEPENDS_LANGUAGES	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_LANGUAGES$/;"	v
 CMAKE_DEPENDS_LANGUAGES	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_LANGUAGES$/;"	v
-CMAKE_DEPENDS_LANGUAGES	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_LANGUAGES$/;"	v
-CMAKE_DEPENDS_LANGUAGES	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_LANGUAGES$/;"	v
+CMAKE_DEPENDS_LANGUAGES	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_DEPENDS_LANGUAGES$/;"	v
 CMAKE_DEPEND_INFO_FILES	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_DEPEND_INFO_FILES$/;"	v
-CMAKE_DEPEND_INFO_FILES	build/vcb_test/CMakeFiles/Makefile.cmake	/^set(CMAKE_DEPEND_INFO_FILES$/;"	v
 CMAKE_EXPORT_COMPILE_COMMANDS	CMakeLists.txt	/^set(CMAKE_EXPORT_COMPILE_COMMANDS ON)$/;"	v
 CMAKE_FORCE_UNIX_PATHS	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_FORCE_UNIX_PATHS 1)$/;"	v
-CMAKE_FORCE_UNIX_PATHS	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_FORCE_UNIX_PATHS 1)$/;"	v
 CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES$/;"	v
 CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES$/;"	v
-CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES$/;"	v
-CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES$/;"	v
+CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES$/;"	v
 CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
 CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
-CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
-CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
+CMAKE_Fortran_TARGET_LINKED_INFO_FILES	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES$/;"	v
 CMAKE_Fortran_TARGET_MODULE_DIR	build/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
 CMAKE_Fortran_TARGET_MODULE_DIR	build/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
-CMAKE_Fortran_TARGET_MODULE_DIR	build/vcb_test/CMakeFiles/clm_vcb_library.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
-CMAKE_Fortran_TARGET_MODULE_DIR	build/vcb_test/CMakeFiles/clm_vcb_test.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
-CMAKE_HOST_SYSTEM	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-6.17.3-arch2-1")$/;"	v
-CMAKE_HOST_SYSTEM	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-6.17.3-arch2-1")$/;"	v
+CMAKE_Fortran_TARGET_MODULE_DIR	build/CMakeFiles/sqlite.dir/DependInfo.cmake	/^set(CMAKE_Fortran_TARGET_MODULE_DIR "")$/;"	v
+CMAKE_HOST_SYSTEM	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM "Linux-6.17.6-arch1-1")$/;"	v
 CMAKE_HOST_SYSTEM_NAME	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_NAME "Linux")$/;"	v
-CMAKE_HOST_SYSTEM_NAME	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_NAME "Linux")$/;"	v
 CMAKE_HOST_SYSTEM_PROCESSOR	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")$/;"	v
-CMAKE_HOST_SYSTEM_PROCESSOR	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")$/;"	v
-CMAKE_HOST_SYSTEM_VERSION	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "6.17.3-arch2-1")$/;"	v
-CMAKE_HOST_SYSTEM_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "6.17.3-arch2-1")$/;"	v
+CMAKE_HOST_SYSTEM_VERSION	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_HOST_SYSTEM_VERSION "6.17.6-arch1-1")$/;"	v
 CMAKE_INSTALL_COMPONENT	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")$/;"	v
 CMAKE_INSTALL_COMPONENT	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT)$/;"	v
-CMAKE_INSTALL_COMPONENT	build/vcb_test/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")$/;"	v
-CMAKE_INSTALL_COMPONENT	build/vcb_test/cmake_install.cmake	/^    set(CMAKE_INSTALL_COMPONENT)$/;"	v
 CMAKE_INSTALL_CONFIG_NAME	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_CONFIG_NAME "")$/;"	v
-CMAKE_INSTALL_CONFIG_NAME	build/vcb_test/cmake_install.cmake	/^    set(CMAKE_INSTALL_CONFIG_NAME "")$/;"	v
 CMAKE_INSTALL_MANIFEST	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")$/;"	v
 CMAKE_INSTALL_MANIFEST	build/cmake_install.cmake	/^    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INST_COMP_HASH}.txt")$/;"	v
 CMAKE_INSTALL_MANIFEST	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")$/;"	v
-CMAKE_INSTALL_MANIFEST	build/vcb_test/cmake_install.cmake	/^    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")$/;"	v
-CMAKE_INSTALL_MANIFEST	build/vcb_test/cmake_install.cmake	/^    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INST_COMP_HASH}.txt")$/;"	v
-CMAKE_INSTALL_MANIFEST	build/vcb_test/cmake_install.cmake	/^  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")$/;"	v
 CMAKE_INSTALL_PREFIX	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_PREFIX "\/usr\/local")$/;"	v
-CMAKE_INSTALL_PREFIX	build/vcb_test/cmake_install.cmake	/^  set(CMAKE_INSTALL_PREFIX "\/usr\/local")$/;"	v
 CMAKE_INSTALL_SO_NO_EXE	build/cmake_install.cmake	/^  set(CMAKE_INSTALL_SO_NO_EXE "0")$/;"	v
-CMAKE_INSTALL_SO_NO_EXE	build/vcb_test/cmake_install.cmake	/^  set(CMAKE_INSTALL_SO_NO_EXE "0")$/;"	v
 CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_C_COMPILER_ABI}")$/;"	v
-CMAKE_INTERNAL_PLATFORM_ABI	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_CXX_COMPILER_ABI}")$/;"	v
-CMAKE_INTERNAL_PLATFORM_ABI	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_C_COMPILER_ABI}")$/;"	v
-CMAKE_INTERNAL_PLATFORM_ABI	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_INTERNAL_PLATFORM_ABI "${CMAKE_CXX_COMPILER_ABI}")$/;"	v
 CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_LIBRARY_ARCHITECTURE	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_LIBRARY_ARCHITECTURE	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
-CMAKE_LIBRARY_ARCHITECTURE	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_LIBRARY_ARCHITECTURE "")$/;"	v
 CMAKE_LINKER	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_LINKER	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_LINKER	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER "\/sbin\/ld")$/;"	v
-CMAKE_LINKER	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER "\/sbin\/ld")$/;"	v
 CMAKE_LINKER_LINK	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
-CMAKE_LINKER_LINK	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
-CMAKE_LINKER_LINK	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
-CMAKE_LINKER_LINK	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_LINK "")$/;"	v
 CMAKE_LINKER_LLD	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
-CMAKE_LINKER_LLD	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
-CMAKE_LINKER_LLD	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
-CMAKE_LINKER_LLD	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_LLD "")$/;"	v
 CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
-CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)$/;"	v
 CMAKE_MAKEFILE_DEPENDS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_DEPENDS$/;"	v
-CMAKE_MAKEFILE_DEPENDS	build/vcb_test/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_DEPENDS$/;"	v
 CMAKE_MAKEFILE_OUTPUTS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_OUTPUTS$/;"	v
-CMAKE_MAKEFILE_OUTPUTS	build/vcb_test/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_OUTPUTS$/;"	v
 CMAKE_MAKEFILE_PRODUCTS	build/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_PRODUCTS$/;"	v
-CMAKE_MAKEFILE_PRODUCTS	build/vcb_test/CMakeFiles/Makefile.cmake	/^set(CMAKE_MAKEFILE_PRODUCTS$/;"	v
 CMAKE_MT	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
-CMAKE_MT	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
-CMAKE_MT	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
-CMAKE_MT	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_MT "")$/;"	v
 CMAKE_OBJDUMP	build/cmake_install.cmake	/^  set(CMAKE_OBJDUMP "\/sbin\/objdump")$/;"	v
-CMAKE_OBJDUMP	build/vcb_test/cmake_install.cmake	/^  set(CMAKE_OBJDUMP "\/sbin\/objdump")$/;"	v
 CMAKE_RANLIB	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_RANLIB "\/sbin\/ranlib")$/;"	v
-CMAKE_RANLIB	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_RANLIB "\/sbin\/ranlib")$/;"	v
-CMAKE_RANLIB	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_RANLIB "\/sbin\/ranlib")$/;"	v
-CMAKE_RANLIB	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_RANLIB "\/sbin\/ranlib")$/;"	v
 CMAKE_RELATIVE_PATH_TOP_BINARY	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_BINARY "\/home\/space\/Documents\/coding\/conlangmod\/build")$/;"	v
-CMAKE_RELATIVE_PATH_TOP_BINARY	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_BINARY "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_tes/;"	v
 CMAKE_RELATIVE_PATH_TOP_SOURCE	build/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_SOURCE "\/home\/space\/Documents\/coding\/conlangmod")$/;"	v
-CMAKE_RELATIVE_PATH_TOP_SOURCE	build/vcb_test/CMakeFiles/CMakeDirectoryInformation.cmake	/^set(CMAKE_RELATIVE_PATH_TOP_SOURCE "\/home\/space\/Documents\/coding\/conlangmod")$/;"	v
 CMAKE_SIZEOF_VOID_P	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")$/;"	v
-CMAKE_SIZEOF_VOID_P	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_CXX_SIZEOF_DATA_PTR}")$/;"	v
-CMAKE_SIZEOF_VOID_P	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")$/;"	v
-CMAKE_SIZEOF_VOID_P	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^  set(CMAKE_SIZEOF_VOID_P "${CMAKE_CXX_SIZEOF_DATA_PTR}")$/;"	v
 CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/space\/Documents\/coding\/conlangmod$/;"	m
-CMAKE_SOURCE_DIR	build/vcb_test/Makefile	/^CMAKE_SOURCE_DIR = \/home\/space\/Documents\/coding\/conlangmod$/;"	m
-CMAKE_SYSTEM	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-6.17.3-arch2-1")$/;"	v
-CMAKE_SYSTEM	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-6.17.3-arch2-1")$/;"	v
+CMAKE_SYSTEM	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM "Linux-6.17.6-arch1-1")$/;"	v
 CMAKE_SYSTEM_LOADED	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_LOADED 1)$/;"	v
-CMAKE_SYSTEM_LOADED	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_LOADED 1)$/;"	v
 CMAKE_SYSTEM_NAME	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_NAME "Linux")$/;"	v
-CMAKE_SYSTEM_NAME	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_NAME "Linux")$/;"	v
 CMAKE_SYSTEM_PROCESSOR	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_PROCESSOR "x86_64")$/;"	v
-CMAKE_SYSTEM_PROCESSOR	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_PROCESSOR "x86_64")$/;"	v
-CMAKE_SYSTEM_VERSION	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "6.17.3-arch2-1")$/;"	v
-CMAKE_SYSTEM_VERSION	build/vcb_test/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "6.17.3-arch2-1")$/;"	v
+CMAKE_SYSTEM_VERSION	build/CMakeFiles/4.1.2/CMakeSystem.cmake	/^set(CMAKE_SYSTEM_VERSION "6.17.6-arch1-1")$/;"	v
 CMAKE_TAPI	build/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
-CMAKE_TAPI	build/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
-CMAKE_TAPI	build/vcb_test/CMakeFiles/4.1.2/CMakeCCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
-CMAKE_TAPI	build/vcb_test/CMakeFiles/4.1.2/CMakeCXXCompiler.cmake	/^set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")$/;"	v
 COMMA	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 COMPILER_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
-COMPILER_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
-COMPILER_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
-COMPILER_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
 COMPILER_VERSION	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
-COMPILER_VERSION	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION /;"	d	file:
-COMPILER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION /;"	d	file:
-COMPILER_VERSION	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
-COMPILER_VERSION_INTERNAL	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
 COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
-COMPILER_VERSION_INTERNAL_STR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
-COMPILER_VERSION_INTERNAL_STR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
-COMPILER_VERSION_INTERNAL_STR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL_STR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
-COMPILER_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
-COMPILER_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
-COMPILER_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
-COMPILER_VERSION_TWEAK	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
 CSSCoordinates	docs/html/jquery.js	/^session.activeHover){displayController=session.activeHover.data(DATA_DISPLAYCONTROLLER)}if(displ/;"	c	function:anonymousFunction4d6c64ac17300
-CXX_STD	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
-CXX_STD	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD CXX_STD_/;"	d	file:
-CXX_STD	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
-CXX_STD	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD CXX_STD_/;"	d	file:
-CXX_STD	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
-CXX_STD	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD CXX_STD_/;"	d	file:
-CXX_STD	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
-CXX_STD	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD CXX_STD_/;"	d	file:
-CXX_STD_11	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_11 /;"	d	file:
-CXX_STD_11	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_11 /;"	d	file:
-CXX_STD_14	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_14 /;"	d	file:
-CXX_STD_14	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_14 /;"	d	file:
-CXX_STD_17	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_17 /;"	d	file:
-CXX_STD_17	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_17 /;"	d	file:
-CXX_STD_20	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_20 /;"	d	file:
-CXX_STD_20	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_20 /;"	d	file:
-CXX_STD_23	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_23 /;"	d	file:
-CXX_STD_23	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_23 /;"	d	file:
-CXX_STD_98	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_98 /;"	d	file:
-CXX_STD_98	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define CXX_STD_98 /;"	d	file:
 C_STD	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_STD /;"	d	file:
-C_STD	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_STD /;"	d	file:
 C_STD_11	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_11 /;"	d	file:
-C_STD_11	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_11 /;"	d	file:
 C_STD_17	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_17 /;"	d	file:
-C_STD_17	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_17 /;"	d	file:
 C_STD_23	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_23 /;"	d	file:
-C_STD_23	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_23 /;"	d	file:
 C_STD_99	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_99 /;"	d	file:
-C_STD_99	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_99 /;"	d	file:
 C_VERSION	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
 C_VERSION	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
 C_VERSION	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
-C_VERSION	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION /;"	d	file:
-C_VERSION	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_VERSION$/;"	d	file:
-C_VERSION	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define C_VERSION /;"	d	file:
 Callbacks	docs/html/jquery.js	/^return h(e,"previousSibling")},nextUntil:function(e,t,n){return h(e,"nextSibling",n)},prevUntil:/;"	c	variable:S
 Ce	docs/html/jquery.js	/^"script"),l&&ye(a),n){c=0;while(o=a[c++])he.test(o.type||"")&&n.push(o)}return f}var be=\/^([^.]/;"	c
 Ce	docs/html/jquery.js	/^for(e in{submit:!0,reset:!0})b.pseudos[e]=he(e);function me(){}function xe(e){for(var t=0,n=e.le/;"	c	function:ue.ce.fe
@@ -1216,9 +894,6 @@ Condition	src/vcb/condition.cpp	/^Condition::Condition(){$/;"	f	class:Condition
 Condition	src/vcb/condition.cpp	/^Condition::Condition(string condstr, string language, bool arithmetic){$/;"	f	class:Condition
 Cookie	docs/html/cookie.js	/^let Cookie = {$/;"	v
 DEC	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
-DEC	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
-DEC	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
-DEC	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
 DELETE	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 DOMPopupSearchResults	docs/html/search/search.js	/^  this.DOMPopupSearchResults       = () => document.getElementById("MSearchResults");$/;"	f	class:SearchBox
 DOMPopupSearchResultsWindow	docs/html/search/search.js	/^  this.DOMPopupSearchResultsWindow = () => document.getElementById("MSearchResultsWindow");$/;"	f	class:SearchBox
@@ -1230,6 +905,7 @@ DOMSearchSelectWindow	docs/html/search/search.js	/^  this.DOMSearchSelectWindow 
 DOWN	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 De	docs/html/jquery.js	/^}}}),S.fn.extend({on:function(e,t,n,r){return Ee(this,e,t,n,r)},one:function(e,t,n,r){return Ee(/;"	c
 Deferred	docs/html/jquery.js	/^){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1]/;"	m	variable:anonymousObject4d6c64ac7805
+Dependent	data/db/test/init_test.sql	/^    Dependent varchar(128) NOT NUll$/;"	E	table:Var_depend
 Detailed Description	docs/html/classVar.html	/^<a name="details" id="details"><\/a><h2 id="header-details" class="groupheader">Detailed Descrip/;"	i
 Detailed Description	docs/html/dir_6e9a6da2c7e4a6c456ccabb42c2d8f90.html	/^<a name="details" id="details"><\/a><h2 id="header-details" class="groupheader">Detailed Descrip/;"	i
 Detailed Description	docs/html/dir_8b43051b70df3b27a0a2c904e37fa078.html	/^<a name="details" id="details"><\/a><h2 id="header-details" class="groupheader">Detailed Descrip/;"	i
@@ -1250,7 +926,6 @@ E	docs/html/jquery.js	/^)?!0!==t&&"number"!=typeof t&&t.effect||h:o;"number"==ty
 END	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 ENTER	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
-EQUALS	build/vcb_test/Makefile	/^EQUALS = =$/;"	m
 ESCAPE	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 EXISTS_BOOL	include/vcb/com.h	/^    EXISTS_BOOL,$/;"	e	enum:opt
 EXISTS_LIST	include/vcb/com.h	/^    EXISTS_LIST,$/;"	e	enum:opt
@@ -1282,20 +957,21 @@ H	docs/html/jquery.js	/^"^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\\\
 H	docs/html/jquery.js	/^)?!0!==t&&"number"!=typeof t&&t.effect||h:o;"number"==typeof(t=t||{})?t={duration:t}:!0===t&&(t=/;"	c	method:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option
 H	docs/html/jquery.js	/^this,e||[],!0))},is:function(e){return!!j(this,"string"==typeof e&&k.test(e)?S(e):e||[],!1).leng/;"	v	function:ue.ce
 H	docs/html/jquery.js	/^}catch(e){H={apply:t.length?function(e,t){L.apply(e,O.call(t))}:function(e,t){var n=e.length,r=0/;"	p	variable:anonymousObject4d6c64ac1d05
+HASH_ELEMENT_FULL	src/vcb_c/hashtable.c	/^#define HASH_ELEMENT_FULL /;"	d	file:
+HASH_ELEMENT_NULL	src/vcb_c/hashtable.c	/^#define HASH_ELEMENT_NULL /;"	d	file:
+HASH_KEY_STRLEN	src/vcb_c/hashtable.c	/^#define HASH_KEY_STRLEN /;"	d	file:
+HASH_LIST	src/vcb_c/hashtable.c	/^#define HASH_LIST /;"	d	file:
+HASH_NULL	src/vcb_c/hashtable.c	/^#define HASH_NULL /;"	d	file:
+HASH_NULL_SIZE	src/vcb_c/hashtable.c	/^#define HASH_NULL_SIZE /;"	d	file:
 HEX	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
-HEX	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
-HEX	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
-HEX	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
 HOME	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 He	docs/html/jquery.js	/^r=s[i].length;n<r;n++)S.event.add(t,i,s[i][n]);Q.hasData(e)&&(o=Q.access(e),a=S.extend({},o),Q.s/;"	c
 Height	docs/html/jquery.js	/^),S.each({Height:"height",Width:"width"},function(a,s){S.each({padding:"inner"+a,content:s,"":"o/;"	p	variable:anonymousObject4d6c64ac18605
 I	docs/html/jquery.js	/^return h(e,"previousSibling")},nextUntil:function(e,t,n){return h(e,"nextSibling",n)},prevUntil:/;"	c	function:ue.ce
 ID	docs/html/jquery.js	/^O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r;n++)if(e[n]===t)return n;return-1},R="check/;"	p	variable:anonymousObject4d6c64ac1605
 ID_VOID_MAIN	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
-ID_VOID_MAIN	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
 Ie	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64accb05
 InstallScripts	build/CMakeFiles/InstallScripts.json	/^	"InstallScripts" : $/;"	a
-InstallScripts	build/vcb_test/CMakeFiles/InstallScripts.json	/^	"InstallScripts" : $/;"	a
 It	docs/html/jquery.js	/^return null==n?null:Array.isArray(n)?S.map(n,function(e){return{name:t.name,value:e.replace(Et,"/;"	c
 Je	docs/html/jquery.js	/^0].toUpperCase()+e.slice(1),n=Be.length;while(n--)if((e=Be[n]+t)in $e)return e}(e)||e)}var Ue=\//;"	c
 Ke	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	c
@@ -1499,10 +1175,13 @@ MSearchSelectWindow	docs/html/var_8h_source.html	/^<div id="MSearchSelectWindow"
 Me	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	m	variable:anonymousObject4d6c64accb05
 Member Data Documentation	docs/html/classVar.html	/^<a name="doc-variable-members" id="doc-variable-members"><\/a><h2 id="header-doc-variable-member/;"	i
 Member Function Documentation	docs/html/classVar.html	/^<\/div><a name="doc-func-members" id="doc-func-members"><\/a><h2 id="header-doc-func-members" cl/;"	i
+Morph	data/db/test/init_test.sql	/^    Morph varchar(128),$/;"	E	table:Var
 NAVTREE	docs/html/navtreedata.js	/^var NAVTREE =$/;"	v
 NAVTREEINDEX	docs/html/navtreedata.js	/^var NAVTREEINDEX =$/;"	v
 NAVTREEINDEX0	docs/html/navtreeindex0.js	/^var NAVTREEINDEX0 =$/;"	v
 NUMERIC	include/vcb/com.h	/^    NUMERIC$/;"	e	enum:opt
+Name	data/db/test/init_test.sql	/^    Name varchar(128) PRIMARY KEY NOT NULL,$/;"	E	table:Var
+Name	data/db/test/init_test.sql	/^    Name varchar(128) PRIMARY KEY NOT NULL,$/;"	E	table:Var_depend
 Nav	docs/html/search/search.js	/^  this.Nav = function(evt,itemIndex) {$/;"	m	class:SearchResults
 NavChild	docs/html/search/search.js	/^  this.NavChild = function(evt,itemIndex,childIndex) {$/;"	m	class:SearchResults
 NavNext	docs/html/search/search.js	/^  this.NavNext = function(index) {$/;"	m	class:SearchResults
@@ -1564,29 +1243,19 @@ OnSearchSelectShow	docs/html/search/search.js	/^  this.OnSearchSelectShow = func
 OnSelectItem	docs/html/search/search.js	/^  this.OnSelectItem = function(id) {$/;"	m	class:SearchBox
 PAGE_DOWN	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 PAGE_UP	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
+PATH_TO_DATA	include/vcb_c/vcb.h	/^#define PATH_TO_DATA /;"	d
+PATH_TO_DATA	tests/vcb_test.c	/^#define PATH_TO_DATA /;"	d	file:
 PERIOD	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
 PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
-PLATFORM_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
 PSEUDO	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.preFilter
 PSEUDO	docs/html/jquery.js	/^)return!1;u=l="only"===h&&!u&&"nextSibling"}return!0}if(u=[m?c.firstChild:c.lastChild],m&&p){d=(/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.filter
 PSEUDO	docs/html/jquery.js	/^O=t.slice,P=function(e,t){for(var n=0,r=e.length;n<r;n++)if(e[n]===t)return n;return-1},R="check/;"	p	variable:anonymousObject4d6c64ac1605
 Parallel	build/CMakeFiles/InstallScripts.json	/^	"Parallel" : false$/;"	b
-Parallel	build/vcb_test/CMakeFiles/InstallScripts.json	/^	"Parallel" : false$/;"	b
 PlacementCalculator	docs/html/jquery.js	/^openTooltip()}}function cancelTimer(stopClose){hoverTimer=clearTimeout(hoverTimer);if(session.cl/;"	c	function:cancelClose
+Possible	data/db/test/init_test.sql	/^    Possible varchar(256)$/;"	E	table:Var
 ProcessKeys	docs/html/search/search.js	/^  this.ProcessKeys = function(e) {$/;"	m	class:SearchResults
 Public Attributes	docs/html/classCom.html	/^Public Attributes<\/h2><\/td><\/tr>$/;"	i
 Public Attributes	docs/html/classCondition.html	/^Public Attributes<\/h2><\/td><\/tr>$/;"	i
@@ -1608,7 +1277,6 @@ Qe	docs/html/jquery.js	/^0].toUpperCase()+e.slice(1),n=Be.length;while(n--)if((e
 R	docs/html/jquery.js	/^return h(e,"previousSibling")},nextUntil:function(e,t,n){return h(e,"nextSibling",n)},prevUntil:/;"	c	function:ue.ce
 RIGHT	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 RM	build/Makefile	/^RM = \/sbin\/cmake -E rm -f$/;"	m
-RM	build/vcb_test/Makefile	/^RM = \/sbin\/cmake -E rm -f$/;"	m
 Re	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	c	method:anonymousObject4d6c64accb05.html
 S	docs/html/jquery.js	/^)?!0!==t&&"number"!=typeof t&&t.effect||h:o;"number"==typeof(t=t||{})?t={duration:t}:!0===t&&(t=/;"	c	method:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option
 S	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	c	function:anonymousFunction4d6c64ac15100
@@ -1620,43 +1288,15 @@ S.fx.speeds	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:
 S.valHooks	docs/html/jquery.js	/^,"optgroup"))){if(t=S(n).val(),a)return t;s.push(t)}return s},set:function(e,t){var n,r,i=e.opti/;"	p
 SEARCH_COOKIE_NAME	docs/html/search/search.js	/^const SEARCH_COOKIE_NAME = ''+'search_grp';$/;"	C
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
-SHELL	build/vcb_test/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
 SIMULATE_ID	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
-SIMULATE_ID	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_ID /;"	d	file:
 SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
 SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
-SIMULATE_VERSION_MAJOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MAJOR /;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
-SIMULATE_VERSION_MINOR	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_MINOR /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
-SIMULATE_VERSION_PATCH	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define SIMULATE_VERSION_PATCH /;"	d	file:
 SPACE	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 SRIndex	docs/html/annotated.html	/^<div id="SRIndex">$/;"	I
 SRIndex	docs/html/classCom-members.html	/^<div id="SRIndex">$/;"	I
@@ -1754,13 +1394,7 @@ SRResults	docs/html/var_8h.html	/^<div id="SRResults"><\/div>$/;"	I
 SRResults	docs/html/var_8h_source.html	/^<div id="SRResults"><\/div>$/;"	I
 STRICT_BOOL	include/vcb/com.h	/^    STRICT_BOOL,$/;"	e	enum:opt
 STRINGIFY	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
-STRINGIFY	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
-STRINGIFY	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
-STRINGIFY	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
-STRINGIFY_HELPER	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
-STRINGIFY_HELPER	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
-STRINGIFY_HELPER	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
 SYNCOFFMSG	docs/html/navtreedata.js	/^var SYNCOFFMSG = 'click to enable panel synchronization';$/;"	v
 SYNCONMSG	docs/html/navtreedata.js	/^var SYNCONMSG = 'click to disable panel synchronization';$/;"	v
 Se	docs/html/jquery.js	/^"script"),l&&ye(a),n){c=0;while(o=a[c++])he.test(o.type||"")&&n.push(o)}return f}var be=\/^([^.]/;"	c
@@ -1839,10 +1473,15 @@ Topic Documentation	docs/latex/refman.tex	/^\\chapter{Topic Documentation}$/;"	c
 Topic Index	docs/latex/refman.tex	/^\\chapter{Topic Index}$/;"	c
 U	docs/html/jquery.js	/^"object"===w(n))for(s in i=!0,n)$(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,m(r)||(a=!0),l&&(/;"	c
 UP	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
+VAR_MAXVAL	src/vcb_c/var.c	/^#define VAR_MAXVAL /;"	d	file:
+VAR_STRLEN	src/vcb_c/var.c	/^#define VAR_STRLEN /;"	d	file:
+Val	data/db/test/init_test.sql	/^    Val varchar(128) NOT NULL,$/;"	E	table:Var_depend
 Validator / crawler helper	docs/html/doxygen_crawl.html	/^<title>Validator \/ crawler helper<\/title>$/;"	j
+Var	data/db/test/init_test.sql	/^create table Var($/;"	t
 Var	include/vcb/var.h	/^class Var{$/;"	c
 Var	src/vcb/var.cpp	/^Var::Var(string name, string language){ \/\/initialize existing var$/;"	f	class:Var
 Var	src/vcb/var.cpp	/^Var::Var(string name, vector<string> values, map<string, string> parentVarNames_needValues, stri/;"	f	class:Var
+Var_depend	data/db/test/init_test.sql	/^create table Var_depend($/;"	t
 Widget	docs/html/jquery.js	/^"string"==typeof t?i[t]:t).apply(i,arguments)},e||0)},_hoverable:function(t){this.hoverable=this/;"	c	variable:y
 Width	docs/html/jquery.js	/^),S.each({Height:"height",Width:"width"},function(a,s){S.each({padding:"inner"+a,content:s,"":"o/;"	p	variable:anonymousObject4d6c64ac18605
 Wt	docs/html/jquery.js	/^return null==n?null:Array.isArray(n)?S.map(n,function(e){return{name:t.name,value:e.replace(Et,"/;"	c
@@ -1869,10 +1508,18 @@ Z	docs/html/jquery.js	/^var n,r=e[this.expando];if(void 0!==r){if(void 0!==t){n=
 \\sectionmark	docs/latex/refman.tex	/^  \\renewcommand{\\sectionmark}[1]{%$/;"	C
 \\subparagraph	docs/latex/refman.tex	/^  \\renewcommand{\\subparagraph}{%$/;"	C
 \x20	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.relative
+__SQLITE3_INCL	include/vcb_c/vcb.h	/^#define __SQLITE3_INCL /;"	d
+__STDIO_INCL	include/vcb_c/vcb.h	/^#define __STDIO_INCL /;"	d
+__STDLIB_INCL	include/vcb_c/vcb.h	/^#define __STDLIB_INCL /;"	d
+__STRING_INCL	include/vcb_c/vcb.h	/^#define __STRING_INCL /;"	d
+__VCB_INCL	include/vcb_c/vcb.h	/^#define __VCB_INCL /;"	d
+__anon951987d50108	include/vcb_c/vcb.h	/^typedef struct{$/;"	s
+__anon951987d50208	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
+__anon951987d5030a	include/vcb_c/vcb.h	/^typedef union {$/;"	u
+__anon951987d50408	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
+__anon951987d5050a	include/vcb_c/vcb.h	/^typedef union{$/;"	u
+__anon951987d50608	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
 __has_include	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
-__has_include	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
-__has_include	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
-__has_include	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define __has_include(/;"	d	file:
 _applyChanges	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605
 _aspectRatio	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	variable:anonymousObject4d6c64ac20705
 _bindFormResetHandler	docs/html/jquery.js	/^){var e=y(this);setTimeout(function(){var t=e.data("ui-form-reset-instances");y.each(t,function(/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ef05
@@ -2200,7 +1847,6 @@ ajaxSettings	docs/html/jquery.js	/^return null==n?null:Array.isArray(n)?S.map(n,
 ajaxSetup	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	m	variable:anonymousObject4d6c64ac14b05
 ajaxTransport	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	p	variable:anonymousObject4d6c64ac14b05
 all	build/Makefile	/^all: cmake_check_build_system$/;"	t
-all	build/vcb_test/Makefile	/^all: cmake_check_build_system$/;"	t
 all	docs/latex/Makefile	/^all: $(MANUAL_FILE).pdf$/;"	t
 alsoResize	docs/html/jquery.js	/^delete this._mouseDelayTimer),this.ignoreMissingWhich=!1,f=!1,t.preventDefault()},_mouseDistance/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 altKey	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
@@ -2877,6 +2523,11 @@ append	docs/html/jquery.js	/^1!==this.nodeType&&11!==this.nodeType&&9!==this.nod
 appendTo	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 apply	docs/html/jquery.js	/^}catch(e){H={apply:t.length?function(e,t){L.apply(e,O.call(t))}:function(e,t){var n=e.length,r=0/;"	p	property:anonymousObject4d6c64ac1d05.H
 arCheck	src/vcb/condition.cpp	/^int Condition::arCheck(vector<st_Object> input){$/;"	f	class:Condition	typeref:typename:int
+arena	include/vcb_c/vcb.h	/^    st_Arena* arena;$/;"	m	struct:st_List	typeref:typename:st_Arena *
+arena_alloc	src/vcb_c/arena.c	/^void *arena_alloc(st_Arena *arena, size_t size){$/;"	f	typeref:typename:void *
+arena_free	src/vcb_c/arena.c	/^void arena_free(st_Arena *arena){$/;"	f	typeref:typename:void
+arena_init	src/vcb_c/arena.c	/^st_Arena *arena_init(size_t size){$/;"	f	typeref:typename:st_Arena *
+arena_strsplit	src/vcb_c/st.c	/^char **arena_strsplit(st_Arena *arena, char *input, char delim){$/;"	f	typeref:typename:char **
 aria-controls	docs/html/jquery.js	/^t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.pa/;"	p	variable:anonymousObject4d6c64ac2a205
 aria-expanded	docs/html/jquery.js	/^"highlighted").attr("aria-expanded","false"),t.attr({"aria-expanded":"false","aria-hidden":"true/;"	p	variable:anonymousObject4d6c64ac29e05
 aria-expanded	docs/html/jquery.js	/^)&&t.removeClass("sm-nowrap").css("width",this.opts.subMenusMaxWidth)}this.menuPosition(t)}var o/;"	p	variable:anonymousObject4d6c64ac2be05
@@ -2888,12 +2539,16 @@ aria-hidden	docs/html/jquery.js	/^)&&t.removeClass("sm-nowrap").css("width",this
 aria-hidden	docs/html/jquery.js	/^t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.pa/;"	p	variable:anonymousObject4d6c64ac2a305
 aria-labelledby	docs/html/jquery.js	/^t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.pa/;"	p	variable:anonymousObject4d6c64ac2a305
 arithmetic	include/vcb/condition.h	/^        bool arithmetic;$/;"	m	class:Condition	typeref:typename:bool
+arr	include/vcb_c/vcb.h	/^    st_HashValue **arr;$/;"	m	struct:st_HashTable	typeref:typename:st_HashValue **
 arr_0_	docs/html/files.html	/^<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#1/;"	I
 arr_0_0_	docs/html/files.html	/^<tr id="row_0_0_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&/;"	I
 arr_0_1_	docs/html/files.html	/^<tr id="row_0_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">/;"	I
 arr_1_	docs/html/files.html	/^<tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#1/;"	I
 arr_1_0_	docs/html/files.html	/^<tr id="row_1_0_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&/;"	I
+arrarena	include/vcb_c/vcb.h	/^    st_Arena *arrarena;$/;"	m	struct:st_HashTable	typeref:typename:st_Arena *
+arriterator	include/vcb_c/vcb.h	/^    size_t arriterator; \/* number of slots filled in value array (lists are counted as 1) *\/$/;"	m	struct:st_HashTable	typeref:typename:size_t
 arrowDownH	docs/html/jquery.js	/^t.preventDefault()}}).insertAfter(t));var A=".smartmenus_scroll";if(t.dataSM("scroll",{y:this.cs/;"	p	variable:anonymousObject4d6c64ac26d05.docTouchEnd.anonymousFunction4d6c64ac2a400.anonymousObject4d6c64ac2a605
+arrsize	include/vcb_c/vcb.h	/^    size_t arrsize; \/* size of value array *\/$/;"	m	struct:st_HashTable	typeref:typename:size_t
 aspectRatio	docs/html/jquery.js	/^delete this._mouseDelayTimer),this.ignoreMissingWhich=!1,f=!1,t.preventDefault()},_mouseDistance/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 aspectRatio	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	variable:anonymousObject4d6c64ac20705
 ast__Exception_8h_html	docs/html/var_8cpp_source.html	/^<div class="ttc" id="ast__Exception_8h_html"><div class="ttname"><a href="st__Exception_8h.html"/;"	I
@@ -3071,10 +2726,8 @@ classst__Object_a978053b8d852f724aca05761b1d32c45	docs/latex/classst__Object.tex
 classst__Object_aa4a220323c1253a6a95556bc3f4a43fc	docs/latex/classst__Object.tex	/^\\Hypertarget{classst__Object_aa4a220323c1253a6a95556bc3f4a43fc}\\label{classst__Object_aa4a2203/;"	l
 classst__Object_adecb0e25d2585f95931d858dfbd71924	docs/latex/classst__Object.tex	/^\\Hypertarget{classst__Object_adecb0e25d2585f95931d858dfbd71924}\\label{classst__Object_adecb0e2/;"	l
 clean	build/Makefile	/^clean:$/;"	t
-clean	build/vcb_test/Makefile	/^clean:$/;"	t
 clean	docs/latex/Makefile	/^clean:$/;"	t
 clean/fast	build/Makefile	/^clean\/fast: clean$/;"	t
-clean/fast	build/vcb_test/Makefile	/^clean\/fast: clean$/;"	t
 cleanData	docs/html/jquery.js	/^r.parentNode.removeChild(r));return e}S.extend({htmlPrefilter:function(e){return e},clone:functi/;"	m	variable:anonymousObject4d6c64acca05
 clearQueue	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	m	variable:anonymousObject4d6c64ac9d05
 click	docs/html/jquery.js	/^$.SmartMenus,{hideAll:function(){$.each(menuTrees,function(){this.menuHideAll()})},destroy:funct/;"	p	variable:anonymousObject4d6c64ac27005
@@ -3088,14 +2741,10 @@ clipboard_successIcon	docs/html/clipboard.js	/^let clipboard_successIcon = `<svg
 clipboard_title	docs/html/clipboard.js	/^let clipboard_title = "Copy to clipboard"$/;"	v
 clm_vcb_library	CMakeLists.txt	/^add_library(clm_vcb_library)$/;"	t
 clm_vcb_library	build/Makefile	/^clm_vcb_library: cmake_check_build_system$/;"	t
-clm_vcb_library	build/vcb_test/Makefile	/^clm_vcb_library: cmake_check_build_system$/;"	t
 clm_vcb_library/fast	build/Makefile	/^clm_vcb_library\/fast:$/;"	t
-clm_vcb_library/fast	build/vcb_test/Makefile	/^clm_vcb_library\/fast:$/;"	t
 clm_vcb_test	CMakeLists.txt	/^add_executable(clm_vcb_test)$/;"	t
 clm_vcb_test	build/Makefile	/^clm_vcb_test: cmake_check_build_system$/;"	t
-clm_vcb_test	build/vcb_test/Makefile	/^clm_vcb_test: cmake_check_build_system$/;"	t
 clm_vcb_test/fast	build/Makefile	/^clm_vcb_test\/fast:$/;"	t
-clm_vcb_test/fast	build/vcb_test/Makefile	/^clm_vcb_test\/fast:$/;"	t
 clone	docs/html/jquery.js	/^1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||(this.textContent=e)})},null,e,argumen/;"	m	variable:anonymousObject4d6c64accb05
 clone	docs/html/jquery.js	/^r.parentNode.removeChild(r));return e}S.extend({htmlPrefilter:function(e){return e},clone:functi/;"	m	variable:anonymousObject4d6c64acca05
 closeAnyDelayed	docs/html/jquery.js	/^openTooltip()}}function cancelTimer(stopClose){hoverTimer=clearTimeout(hoverTimer);if(session.cl/;"	f	function:cancelClose
@@ -3107,13 +2756,14 @@ closeEvents	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function
 closeTooltip	docs/html/jquery.js	/^closeAnyDelayed();tipController.showTip(element)}}else{cancelClose()}}function closeTooltip(disa/;"	f	class:anonymousFunction4d6c64ac17300.DisplayController
 closest	docs/html/jquery.js	/^var e=0;e<n;e++)if(S.contains(this,t[e]))return!0})},closest:function(e,t){var n,r=0,i=this.leng/;"	m	variable:anonymousObject4d6c64ac6b05
 cmake_check_build_system	build/Makefile	/^cmake_check_build_system:$/;"	t
-cmake_check_build_system	build/vcb_test/Makefile	/^cmake_check_build_system:$/;"	t
 cmake_force	build/Makefile	/^cmake_force:$/;"	t
-cmake_force	build/vcb_test/Makefile	/^cmake_force:$/;"	t
 code	docs/html/doxygen.css	/^tt, code, kbd$/;"	s
 code	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
 codefold	docs/html/dynsections.js	/^let codefold = {$/;"	v
 col	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	p	variable:anonymousObject4d6c64aca805
+col	include/vcb_c/vcb.h	/^    char *col; \/* whether the element at an index is a list ( '1') or a value ('0' if NULL or '/;"	m	struct:st_HashTable	typeref:typename:char *
+col	include/vcb_c/vcb.h	/^    char col; \/*whether value is str or cond*\/$/;"	m	struct:st_Var	typeref:typename:char
+col	include/vcb_c/vcb.h	/^    char col;$/;"	m	struct:__anon951987d50408	typeref:typename:char
 collapsibleBehavior	docs/html/jquery.js	/^bottomToTopSubMenus:!1,collapsibleBehavior:"default"},$});$/;"	p	property:$.fn.smartmenus.defaults
 collapsibleHideDuration	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p	property:$.fn.smartmenus.defaults
 collapsibleHideFunction	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	m	property:$.fn.smartmenus.defaults
@@ -3125,25 +2775,22 @@ collisionWidth	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-
 columnCount	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 com_8h_source	docs/latex/com_8h_source.tex	/^\\hypertarget{com_8h_source}{}\\label{com_8h_source}\\index{include\/vcb\/com.h@{include\/vcb\/c/;"	l
 com_8h_source.html	docs/html/navtreeindex0.js	/^"com_8h_source.html":[2,0,0,1,0],$/;"	p	variable:NAVTREEINDEX0
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:0
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:1
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:2
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:3
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:4
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:5
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:6
-command	build/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:7
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:0
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:1
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:2
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:3
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:4
-command	build/vcb_test/compile_commands.json	/^  "command": "\/sbin\/c++  -I\/home\/space\/Documents\/coding\/conlangmod\/include -std=gnu++20 /;"	s	object:5
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:0
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:1
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:2
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:3
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:4
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:5
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:6
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:7
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:8
 complete	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	variable:$.fn.scrollTo.anonymousFunction4d6c64ac24500.k.anonymousObject4d6c64ac24705
 complete	docs/html/jquery.js	/^null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r.complete,r.complete=function(){m(r.old)&&r.o/;"	f	variable:r
 composed	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	p	variable:anonymousObject4d6c64aca205
 computePlacementCoords	docs/html/jquery.js	/^openTooltip()}}function cancelTimer(stopClose){hoverTimer=clearTimeout(hoverTimer);if(session.cl/;"	f	class:cancelClose.PlacementCalculator
 comstr	include/vcb/com.h	/^        string comstr;$/;"	m	class:Com	typeref:typename:string
+cond	include/vcb_c/vcb.h	/^    st_cValue *cond;$/;"	m	union:__anon951987d5030a	typeref:typename:st_cValue *
+cond	src/vcb_c/cond.c	/^void *cond(char *cond, st_Object **input, size_t size){$/;"	f	typeref:typename:void *
 condition	include/vcb/com.h	/^        Condition condition;$/;"	m	class:Com	typeref:typename:Condition
 condition_8h_source	docs/latex/condition_8h_source.tex	/^\\hypertarget{condition_8h_source}{}\\label{condition_8h_source}\\index{include\/vcb\/condition./;"	l
 condition_8h_source.html	docs/html/navtreeindex0.js	/^"condition_8h_source.html":[2,0,0,1,1],$/;"	p	variable:NAVTREEINDEX0
@@ -3151,9 +2798,8 @@ condstr	include/vcb/condition.h	/^        string condstr;$/;"	m	class:Condition	
 configurable	docs/html/jquery.js	/^"object"===w(n))for(s in i=!0,n)$(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,m(r)||(a=!0),l&&(/;"	p	variable:anonymousObject4d6c64ac9105.cache.anonymousObject4d6c64ac9305
 configurable	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acb905
 configurable	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acba05
-conlangmod_vcb_test	CMakeLists.txt	/^project(conlangmod_vcb_test)$/;"	p
+conlangmod_vcb_c_test	CMakeLists.txt	/^project(conlangmod_vcb_c_test C)$/;"	p
 const	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
-const	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
 constrainPanelWidths	docs/html/navtree.js	/^    function constrainPanelWidths(leftPanelWidth,rightPanelWidth,dragLeft) {$/;"	f	function:initNavTree.initResizable
 constructor	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	p	variable:anonymousObject4d6c64acbf05
 constructor	docs/html/jquery.js	/^e.style[u]=t,t=S.css(e,u)),Ye(0,t,s)}}}),S.cssHooks.marginLeft=Fe(y.reliableMarginLeft,function(/;"	p	variable:anonymousObject4d6c64aced05
@@ -3233,6 +2879,7 @@ cssNumber	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensio
 cssProps	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	variable:anonymousObject4d6c64ace205
 ctrlKey	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
 cur	docs/html/jquery.js	/^e.style[u]=t,t=S.css(e,u)),Ye(0,t,s)}}}),S.cssHooks.marginLeft=Fe(y.reliableMarginLeft,function(/;"	m	variable:anonymousObject4d6c64aced05
+curr	include/vcb_c/vcb.h	/^    void *curr;$/;"	m	struct:__anon951987d50108	typeref:typename:void *
 currentGroup	docs/html/navtree.js	/^        currentGroup = { groupHeader: $element, memTitles: [] };$/;"	v	function:anonymousFunction30fad1a14200
 currentTarget	docs/html/jquery.js	/^ * Copyright Vasil Dinkov, Vadikom Web Ltd. http:\/\/vadikom.com; Licensed MIT *\/(function(t){"/;"	p	variable:anonymousObject4d6c64ac26a05
 currentTarget	docs/html/jquery.js	/^canAnimate&&this.$root.stop(!0,!0),!this.$root.is(":visible")){this.$root.css({left:t,top:e});va/;"	p	variable:anonymousObject4d6c64ac2c405
@@ -3252,11 +2899,12 @@ dataSM	docs/html/jquery.js	/^rootOver:function(t){this.handleEvents()&&!this.isT
 dataType	docs/html/jquery.js	/^,C[r]=function(){o=arguments},n.always(function(){void 0===i?S(C).removeProp(r):C[r]=i,e[r]&&(e./;"	p	variable:anonymousObject4d6c64ac17505
 dataType	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	p	variable:anonymousObject4d6c64ac15305
 dataType	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	p	variable:anonymousObject4d6c64ac15605
+db	include/vcb_c/vcb.h	/^    sqlite3 *db;$/;"	m	struct:__anon951987d50608	typeref:typename:sqlite3 *
+db	include/vcb_c/vcb.h	/^    sqlite3 *db;$/;"	m	struct:st_Var	typeref:typename:sqlite3 *
 de	docs/html/jquery.js	/^)),n}catch(e){N(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return g(t.replace($,"$1"),e,n,r)/;"	f	function:ue.ce.fe
 decodeHtml	docs/html/search/search.js	/^  const decodeHtml = (html) => {$/;"	f	function:createResults
 defaultElement	docs/html/jquery.js	/^e=y.data(this,h);return"instance"===i?(n=e,!1):e?"function"!=typeof e[i]||"_"===i.charAt(0)?y.er/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05
 default_target	build/Makefile	/^default_target: all$/;"	t
-default_target	build/vcb_test/Makefile	/^default_target: all$/;"	t
 delay	docs/html/jquery.js	/^S.fn.delay=function(r,e){return r=S.fx&&S.fx.speeds[r]||r,e=e||"fx",this.queue(e,function(e,t){v/;"	f	function:S.fn
 delay	docs/html/jquery.js	/^var e=y.attr(t,"tabindex"),i=null!=e;return(!i||0<=e)&&y.ui.focusable(t,i)}}),y.fn.extend({uniqu/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ff05.options
 delayInProgress	docs/html/jquery.js	/^delayInProgress:false,windowWidth:0,windowHeight:0,scrollTop:0,scrollLeft:0};var Collision={none/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
@@ -3264,8 +2912,9 @@ delegate	docs/html/jquery.js	/^),S.each({Height:"height",Width:"width"},function
 delegateType	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	property:S.event.special
 deleteLink	docs/html/navtree.js	/^  const deleteLink = function() {$/;"	f	function:initNavTree
 depend	build/Makefile	/^depend:$/;"	t
-depend	build/vcb_test/Makefile	/^depend:$/;"	t
 dependencies	include/vcb/var.h	/^        map<string, vector<Var>> dependencies; \/**< map of dependencies of the var, where the k/;"	m	class:Var	typeref:typename:map<string,vector<Var>>
+dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies; \/* key: (st_Value*)->value or (char *) cond((st_Value*)->cond),/;"	m	struct:st_Var	typeref:typename:st_HashTable *
+dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies;$/;"	m	struct:__anon951987d50608	typeref:typename:st_HashTable *
 depth	docs/html/navtree.js	/^      depth         : 0,$/;"	p	property:initNavTree.o.node
 depth	docs/html/navtree.js	/^      depth        : po.depth + 1,$/;"	p	variable:initNavTree.newNode.node
 dequeue	docs/html/jquery.js	/^1===o.nodeType&&!Y.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf(/;"	m	variable:anonymousObject4d6c64ac9a05
@@ -3325,12 +2974,7 @@ directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:5
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:6
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:7
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:0
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:1
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:2
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:3
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:4
-directory	build/vcb_test/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build\/vcb_test",$/;"	s	object:5
+directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:8
 disable	docs/html/jquery.js	/^).indexOf(i.accessIdPrefix)&&t.removeAttr("id")}).removeClass("has-submenu").removeDataSM("sub")/;"	m	variable:anonymousObject4d6c64ac26d05
 disable	docs/html/jquery.js	/^){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1]/;"	m	variable:ue.ce.f
 disableSelection	docs/html/jquery.js	/^disableSelection:(t="onselectstart"in document.createElement("div")?"selectstart":"mousedown",fu/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ea05
@@ -3547,9 +3191,7 @@ each	docs/html/jquery.js	/^push:u,sort:t.sort,splice:t.splice},S.extend=S.fn.ext
 each	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
 easing	docs/html/jquery.js	/^)||null,o=parseFloat(i.element.css("top"))+(i.position.top-i.originalPosition.top)||null;i.eleme/;"	p	variable:anonymousObject4d6c64ac22c05
 edit_cache	build/Makefile	/^edit_cache:$/;"	t
-edit_cache	build/vcb_test/Makefile	/^edit_cache:$/;"	t
 edit_cache/fast	build/Makefile	/^edit_cache\/fast: edit_cache$/;"	t
-edit_cache/fast	build/vcb_test/Makefile	/^edit_cache\/fast: edit_cache$/;"	t
 elem	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"===p.my[0]&&(l.left-=a\/2),"bottom"===p.my/;"	p	variable:anonymousObject4d6c64ac1e005
 elem	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	p	variable:anonymousObject4d6c64acf505
 elem	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acaf05.anonymousObject4d6c64acb705
@@ -3598,6 +3240,7 @@ expandNode	docs/html/navtree.js	/^  const expandNode = function(o, node, imm, se
 expanded	docs/html/navtree.js	/^      expanded      : false,$/;"	p	property:initNavTree.o.node
 expanded	docs/html/navtree.js	/^      expanded     : false,$/;"	p	variable:initNavTree.newNode.node
 expando	docs/html/jquery.js	/^push:u,sort:t.sort,splice:t.splice},S.extend=S.fn.extend=function(){var e,t,n,r,i,o,a=arguments[/;"	p	variable:anonymousObject4d6c64ac0f05
+external	include/vcb_c/vcb.h	/^    char external;$/;"	m	struct:st_List	typeref:typename:char
 extra	docs/html/jquery.js	/^return this._toggleClass(t,e,i,!0)},_toggleClass:function(t,e,i,s){var n="string"==typeof t||nul/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousFunction4d6c64ac1c700.i
 f	docs/html/doxygen.svg	/^  <filter id="f" x="-.010676" y="-.045304" width="1.0214" height="1.0906" color-interpolation-fi/;"	d
 f	docs/html/doxygen.svg	/^  <filter id="f" x="-.010676" y="-.045304" width="1.0214" height="1.0906" color-interpolation-fi/;"	i
@@ -3613,20 +3256,15 @@ fadeTo	docs/html/jquery.js	/^null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r
 fadeToggle	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:0;for(t.finish=!0,S.queue(this,a,[]),r&&r.stop&&r./;"	p	variable:anonymousObject4d6c64ac11105
 fast	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:0;for(t.finish=!0,S.queue(this,a,[]),r&&r.stop&&r./;"	p	property:S.fx.speeds
 fe	docs/html/jquery.js	/^)),n}catch(e){N(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return g(t.replace($,"$1"),e,n,r)/;"	f	function:ue.ce
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/st\/st_Exception.cpp",$/;"	s	object:1
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/st\/st_string.cpp",$/;"	s	object:0
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/com.cpp",$/;"	s	object:6
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/condition.cpp",$/;"	s	object:4
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/domain.cpp",$/;"	s	object:5
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/st_Object.cpp",$/;"	s	object:3
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/var.cpp",$/;"	s	object:2
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/tests\/vcb_test.cpp",$/;"	s	object:7
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/st\/st_Exception.cpp",$/;"	s	object:1
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/st\/st_string.cpp",$/;"	s	object:0
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/condition.cpp",$/;"	s	object:4
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/st_Object.cpp",$/;"	s	object:3
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb\/var.cpp",$/;"	s	object:2
-file	build/vcb_test/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/tests\/vcb_test.cpp",$/;"	s	object:5
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/arena.c",$/;"	s	object:0
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/cond.c",$/;"	s	object:6
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/hashtable.c",$/;"	s	object:3
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/list.c",$/;"	s	object:2
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/st.c",$/;"	s	object:1
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/system_hash.c",$/;"	s	object:4
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/value.c",$/;"	s	object:5
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/var.c",$/;"	s	object:7
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/tests\/vcb_test.c",$/;"	s	object:8
 file	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	variable:ue.ce.fe.anonymousObject4d6c64ac4b05
 files	docs/html/dir_6e9a6da2c7e4a6c456ccabb42c2d8f90.html	/^<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name/;"	I
 files	docs/html/dir_6e9a6da2c7e4a6c456ccabb42c2d8f90.html	/^<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name/;"	a
@@ -3908,8 +3546,20 @@ hasData	docs/html/jquery.js	/^var n,r=e[this.expando];if(void 0!==r){if(void 0!=
 hasDependent	src/vcb/var.cpp	/^bool Var::hasDependent(Var var){$/;"	f	class:Var	typeref:typename:bool
 hasDependent	src/vcb/var.cpp	/^bool Var::hasDependent(string varName){$/;"	f	class:Var	typeref:typename:bool
 hasSubItems	docs/html/navtree.js	/^      function hasSubItems() {$/;"	f	function:anonymousFunction30fad1a14300
+hash	include/vcb_c/vcb.h	/^    int (*hash)(char*,int);$/;"	m	struct:st_HashTable	typeref:typename:int (*)(char *,int)
 hashUrl	docs/html/navtree.js	/^  const hashUrl = function() {$/;"	f	function:initNavTree
 hashValue	docs/html/navtree.js	/^  const hashValue = function() {$/;"	f	function:initNavTree
+hash_add	src/vcb_c/hashtable.c	/^void hash_add(st_HashTable *hashtable, char* key, void *value){$/;"	f	typeref:typename:void
+hash_free	src/vcb_c/hashtable.c	/^void hash_free(st_HashTable *hashtable){$/;"	f	typeref:typename:void
+hash_get	src/vcb_c/hashtable.c	/^void *hash_get(st_HashTable *hashtable, char *key){$/;"	f	typeref:typename:void *
+hash_getAll	src/vcb_c/hashtable.c	/^void **hash_getAll(st_HashTable *hashtable){$/;"	f	typeref:typename:void **
+hash_init	src/vcb_c/hashtable.c	/^st_HashTable *hash_init(int (*hash)(char*,int)){$/;"	f	typeref:typename:st_HashTable *
+hash_key_resize	src/vcb_c/hashtable.c	/^void hash_key_resize(st_HashTable *hashtable){$/;"	f	typeref:typename:void
+hash_print	src/vcb_c/hashtable.c	/^void hash_print(FILE *out, st_HashTable *hashtable, char *(*string_function)(void*)){$/;"	f	typeref:typename:void
+hash_rem	src/vcb_c/hashtable.c	/^void hash_rem(st_HashTable *hashtable, char *key){$/;"	f	typeref:typename:void
+hash_resize	src/vcb_c/hashtable.c	/^void hash_resize(st_HashTable *hashtable){$/;"	f	typeref:typename:void
+hash_sdbm	src/vcb_c/hashtable.c	/^int hash_sdbm(char *input, int modulo){$/;"	f	typeref:typename:int
+hash_set	src/vcb_c/hashtable.c	/^void hash_set(st_HashTable *hashtable, char *key, void *value){$/;"	f	typeref:typename:void
 he	docs/html/jquery.js	/^)),n}catch(e){N(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return g(t.replace($,"$1"),e,n,r)/;"	f	function:ue.ce.fe
 header	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 header-details	docs/html/classVar.html	/^<a name="details" id="details"><\/a><h2 id="header-details" class="groupheader">Detailed Descrip/;"	I
@@ -3987,7 +3637,6 @@ height	docs/html/navtree.js	/^      content.css({height:contentHeight + "px"});$
 height	docs/html/navtree.js	/^      navtree.css({height:navtreeHeight + "px"});$/;"	p	variable:anonymousObject30fad1a13105
 height	docs/html/navtree.js	/^      sidenav.css({height:sideNavHeight + "px"});$/;"	p	variable:anonymousObject30fad1a13205
 help	build/Makefile	/^help:$/;"	t
-help	build/vcb_test/Makefile	/^help:$/;"	t
 helper	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 hide	docs/html/jquery.js	/^"string"==typeof t?i[t]:t).apply(i,arguments)},e||0)},_hoverable:function(t){this.hoverable=this/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousObject4d6c64ac1d305
 hide	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	m	variable:anonymousObject4d6c64aca605
@@ -4045,53 +3694,17 @@ indexSectionLabels	docs/html/search/searchdata.js	/^var indexSectionLabels =$/;"
 indexSectionNames	docs/html/search/searchdata.js	/^var indexSectionNames =$/;"	v
 indexSectionsWithContent	docs/html/search/searchdata.js	/^var indexSectionsWithContent =$/;"	v
 info_arch	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
-info_arch	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
-info_arch	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
-info_arch	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
 info_compiler	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
-info_compiler	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
-info_compiler	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
-info_compiler	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
 info_cray	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
-info_cray	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
-info_cray	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
-info_cray	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
 info_language_extensions_default	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
-info_language_extensions_default	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
-info_language_extensions_default	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
-info_language_extensions_default	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_extensions_default = "INFO" ":" "extensions_default["$/;"	v	typeref:typename:const char *
 info_language_standard_default	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_standard_default =$/;"	v	typeref:typename:const char *
-info_language_standard_default	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_standard_default = "INFO" ":" "standard_default["$/;"	v	typeref:typename:const char *
-info_language_standard_default	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_standard_default =$/;"	v	typeref:typename:const char *
-info_language_standard_default	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_standard_default = "INFO" ":" "standard_default["$/;"	v	typeref:typename:const char *
 info_platform	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
-info_platform	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
-info_platform	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
-info_platform	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
 info_simulate	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
-info_simulate	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
-info_simulate	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
-info_simulate	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
 info_simulate_version	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
-info_simulate_version	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
-info_simulate_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
-info_simulate_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
 info_version	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
 info_version	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
-info_version	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
-info_version	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
-info_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
-info_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
-info_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
-info_version	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v	typeref:typename:char const *
 info_version_internal	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
 info_version_internal	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
-info_version_internal	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
-info_version_internal	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
-info_version_internal	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
-info_version_internal	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
-info_version_internal	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
-info_version_internal	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INT/;"	v	typeref:typename:char const *
 init	docs/html/dynsections.js	/^  init : function() {$/;"	m	variable:codefold
 init	docs/html/jquery.js	/^$.SmartMenus,{hideAll:function(){$.each(menuTrees,function(){this.menuHideAll()})},destroy:funct/;"	m	property:anonymousObject4d6c64ac26d05.prototype
 init	docs/html/jquery.js	/^e.style[u]=t,t=S.css(e,u)),Ye(0,t,s)}}}),S.cssHooks.marginLeft=Fe(y.reliableMarginLeft,function(/;"	m	variable:anonymousObject4d6c64aced05
@@ -4105,6 +3718,7 @@ initResizableIfExists	docs/html/menu.js	/^    const initResizableIfExists = func
 initTracking	docs/html/jquery.js	/^function initTracking(){if(!session.mouseTrackingActive){session.mouseTrackingActive=true;getVie/;"	f	function:TooltipController.showTip.closeDesyncedTip
 init_search	docs/html/search/search.js	/^function init_search() {$/;"	f
 input	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
+input	include/vcb_c/vcb.h	/^    void **input; \/* st_Object ** *\/$/;"	m	struct:__anon951987d50208	typeref:typename:void **
 insertAfter	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 insertBefore	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 intGet	src/vcb/com.cpp	/^int Com::intGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:int
@@ -4152,9 +3766,13 @@ keepHighlighted	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$
 keepInViewport	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p	property:$.fn.smartmenus.defaults
 key	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
 keyCode	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
+keyarena	include/vcb_c/vcb.h	/^    st_Arena *keyarena;$/;"	m	struct:st_HashTable	typeref:typename:st_Arena *
 keydown	docs/html/jquery.js	/^$.SmartMenus,{hideAll:function(){$.each(menuTrees,function(){this.menuHideAll()})},destroy:funct/;"	p	variable:anonymousObject4d6c64ac26f05
+keyiterator	include/vcb_c/vcb.h	/^    size_t keyiterator; \/* number of keys *\/$/;"	m	struct:st_HashTable	typeref:typename:size_t
 keys	docs/html/jquery.js	/^]=y.widget.extend({},this.options[t]),n=0;n<i.length-1;n++)s[i[n]]=s[i[n]]||{},s=s[i[n]];if(t=i./;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousFunction4d6c64ac1b500.anonymousObject4d6c64ac1b605
 keys	docs/html/jquery.js	/^return this._toggleClass(t,e,i,!0)},_toggleClass:function(t,e,i,s){var n="string"==typeof t||nul/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousFunction4d6c64ac1c700.i
+keys	include/vcb_c/vcb.h	/^    char **keys;$/;"	m	struct:st_HashTable	typeref:typename:char **
+keysize	include/vcb_c/vcb.h	/^    size_t keysize; \/* size of keys array *\/$/;"	m	struct:st_HashTable	typeref:typename:size_t
 l	docs/html/jquery.js	/^S.Callbacks("memory"),2],["resolve","done",S.Callbacks("once memory"),S.Callbacks("once memory")/;"	f	function:anonymousFunction4d6c64ac7c00
 l	docs/html/jquery.js	/^return null==n?null:Array.isArray(n)?S.map(n,function(e){return{name:t.name,value:e.replace(Et,"/;"	f	class:Wt
 l	docs/html/jquery.js	/^v.complete),T.done(v.success),T.fail(v.error),c=Wt(Pt,v,t,T)){if(T.readyState=1,g&&m.trigger("aj/;"	f	method:anonymousObject4d6c64ac14b05.ajax
@@ -5514,6 +5132,8 @@ l00506	docs/html/var_8cpp_source.html	/^<div class="line"><a id="l00506" name="l
 l00506	docs/html/var_8cpp_source.html	/^<div class="line"><a id="l00506" name="l00506"><\/a><span class="lineno">  506<\/span><span clas/;"	a
 labelSpan	docs/html/navtree.js	/^      labelSpan    : document.createElement("span"),$/;"	p	variable:initNavTree.newNode.node
 lang	docs/html/jquery.js	/^function(e,t,n,r){var i,o=s(e,null,r,[]),a=e.length;while(a--)(i=o[a])&&(e[a]=!(t[a]=i))}):funct/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
+lang	include/vcb_c/vcb.h	/^    char *lang;$/;"	m	struct:__anon951987d50608	typeref:typename:char *
+lang	include/vcb_c/vcb.h	/^    char *lang;$/;"	m	struct:st_Var	typeref:typename:char *
 language	include/vcb/com.h	/^        string language;$/;"	m	class:Com	typeref:typename:string
 language	include/vcb/condition.h	/^        string language;$/;"	m	class:Condition	typeref:typename:string
 language	include/vcb/domain.h	/^        string language;$/;"	m	class:Domain	typeref:typename:string
@@ -5577,7 +5197,12 @@ li.unchecked:before	docs/html/doxygen.css	/^li.unchecked:before {$/;"	c
 limit	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	property:p.defaults
 lineHeight	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 linear	docs/html/jquery.js	/^this):Ke.propHooks._default.get(this)},run:function(e){var t,n=Ke.propHooks[this.prop];return th/;"	m	variable:anonymousObject4d6c64acf005
+list	include/vcb_c/vcb.h	/^    st_List* list; $/;"	m	union:__anon951987d5050a	typeref:typename:st_List *
 listGet	src/vcb/com.cpp	/^vector<vector<st_Object>> Com::listGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:vector<vector<st_Object>>
+list_add	src/vcb_c/list.c	/^void list_add(st_List *list, void *value){$/;"	f	typeref:typename:void
+list_free	src/vcb_c/list.c	/^void list_free(st_List *list){$/;"	f	typeref:typename:void
+list_init	src/vcb_c/list.c	/^st_List *list_init(st_Arena *arena){$/;"	f	typeref:typename:st_List *
+list_rem	src/vcb_c/list.c	/^void list_rem(st_List *list, int (*sign_function)(void *)){$/;"	f	typeref:typename:void
 load	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acbc05
 loadJS	docs/html/search/search.js	/^    const loadJS = function(url, impl, loc) {$/;"	m	method:SearchBox.Search
 lock	docs/html/jquery.js	/^){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1]/;"	m	variable:ue.ce.f
@@ -5587,10 +5212,7 @@ lt	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.
 m	docs/html/jquery.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f	function:anonymousFunction4d6c64ac0200
 main	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
-main	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
-main	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
-main	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
-main	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	tests/vcb_test.c	/^int main(int argc, char *argv[]){$/;"	f	typeref:typename:int
 main	tests/vcb_test.cpp	/^int main(int argc, char* argv[]){$/;"	f	typeref:typename:int
 main-nav	docs/html/annotated.html	/^<div id="main-nav"><\/div>$/;"	I
 main-nav	docs/html/classCom-members.html	/^<div id="main-nav"><\/div>$/;"	I
@@ -5697,6 +5319,7 @@ minWidth	docs/html/jquery.js	/^)&&(this.menuScrollStop(t),this.menuScroll(t),e.p
 minWidth	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 minWidth	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.n
 minWidth	docs/html/navtree.js	/^    $(sidenav).resizable({ minWidth: 0 });$/;"	p	variable:anonymousObject30fad1a13505
+morph	include/vcb_c/vcb.h	/^    char *morph;$/;"	m	struct:st_Var	typeref:typename:char *
 mouseOnToPopup	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25405
 mouseTrackingActive	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 mousedown	docs/html/jquery.js	/^","),this.handles={},e=0;e<i.length;e++)s="ui-resizable-"+(t=String.prototype.trim.call(i[e])),n/;"	p	variable:anonymousObject4d6c64ac21205
@@ -5726,6 +5349,7 @@ n	docs/html/jquery.js	/^i){return y.extend(this._change.s.apply(this,arguments),
 n	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25505
 n	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	v	method:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries
 name	include/vcb/var.h	/^        string name; \/**< name of the var *\/$/;"	m	class:Var	typeref:typename:string
+name	include/vcb_c/vcb.h	/^    char *name;$/;"	m	struct:st_Var	typeref:typename:char *
 name	src/sound.cpp	/^        string name;$/;"	m	class:Subvalue	typeref:typename:string	file:
 namespace	docs/html/jquery.js	/^"script"),l&&ye(a),n){c=0;while(o=a[c++])he.test(o.type||"")&&n.push(o)}return f}var be=\/^([^.]/;"	p	variable:Se.anonymousObject4d6c64acab05
 namespace	docs/html/jquery.js	/^)return e.stopImmediatePropagation(),e.preventDefault(),n&&n.value}else r.length&&(Y.set(this,i,/;"	p	variable:anonymousObject4d6c64acaf05.add.anonymousObject4d6c64acb305
@@ -5934,6 +5558,7 @@ newNode	docs/html/navtree.js	/^  const newNode = function(o, po, text, link, chi
 next	docs/html/jquery.js	/^"^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\\\("+M+"*(even|odd|(([+-]|)(\\\\d*)n|)"+M+/;"	p	variable:anonymousObject4d6c64ac1b05
 next	docs/html/jquery.js	/^this,e||[],!0))},is:function(e){return!!j(this,"string"==typeof e&&k.test(e)?S(e):e||[],!1).leng/;"	p	variable:ue.ce.H
 next	docs/html/jquery.js	/^var e=0;e<n;e++)if(S.contains(this,t[e]))return!0})},closest:function(e,t){var n,r=0,i=this.leng/;"	m	variable:anonymousObject4d6c64ac6d05
+next	include/vcb_c/vcb.h	/^    struct st_List *next;$/;"	m	struct:st_List	typeref:struct:st_List *
 nextAll	docs/html/jquery.js	/^var e=0;e<n;e++)if(S.contains(this,t[e]))return!0})},closest:function(e,t){var n,r=0,i=this.leng/;"	m	variable:anonymousObject4d6c64ac6d05
 nextUntil	docs/html/jquery.js	/^return h(e,"previousSibling")},nextUntil:function(e,t,n){return h(e,"nextSibling",n)},prevUntil:/;"	m	variable:anonymousObject4d6c64ac6d05
 noBubble	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	property:anonymousObject4d6c64acbc05.load
@@ -6010,20 +5635,15 @@ originalPosition	docs/html/jquery.js	/^width:n.width(),height:n.height()},this.o
 originalProperties	docs/html/jquery.js	/^originalProperties:e,originalOptions:t,startTime:Ze||at(),duration:t.duration,tweens:[],createTw/;"	p	variable:anonymousObject4d6c64acf505
 orphans	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 ot	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	f
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/st\/st_Exception.cpp.o"$/;"	s	object:1
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/st\/st_string.cpp.o"$/;"	s	object:0
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/com.cpp.o"$/;"	s	object:6
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/condition.cpp.o"$/;"	s	object:4
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/domain.cpp.o"$/;"	s	object:5
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/st_Object.cpp.o"$/;"	s	object:3
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/var.cpp.o"$/;"	s	object:2
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_test.dir\/tests\/vcb_test.cpp.o"$/;"	s	object:7
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/st\/st_Exception.cpp.o"$/;"	s	object:1
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/st\/st_string.cpp.o"$/;"	s	object:0
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/condition.cpp.o"$/;"	s	object:4
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/st_Object.cpp.o"$/;"	s	object:3
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb\/var.cpp.o"$/;"	s	object:2
-output	build/vcb_test/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_test.dir\/tests\/vcb_test.cpp.o"$/;"	s	object:5
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/arena.c.o"$/;"	s	object:0
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/cond.c.o"$/;"	s	object:6
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/hashtable.c.o"$/;"	s	object:3
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/list.c.o"$/;"	s	object:2
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/st.c.o"$/;"	s	object:1
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/system_hash.c.o"$/;"	s	object:4
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/value.c.o"$/;"	s	object:5
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/var.c.o"$/;"	s	object:7
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_test.dir\/tests\/vcb_test.c.o"$/;"	s	object:8
 overflow	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	variable:anonymousObject4d6c64ac20805
 overflow	docs/html/jquery.js	/^height:i.height()-this.outerDimensions.height||0,width:i.width()-this.outerDimensions.width||0})/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.anonymousFunction4d6c64ac21c00.anonymousObject4d6c64ac21d05
 overflow	docs/html/navtree.js	/^    let outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll', scrollbarW/;"	p	variable:initNavTree.getScrollBarWidth.anonymousObject30fad1a10105
@@ -6179,9 +5799,7 @@ preFilter	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textCont
 prefilter	docs/html/jquery.js	/^le([e],!0),l=e.style.display||l,c=S.css(e,"display"),le([e]))),("inline"===c||"inline-block"===c/;"	m	variable:anonymousObject4d6c64acf805
 prefilters	docs/html/jquery.js	/^S.Animation=S.extend(lt,{tweeners:{"*":[function(e,t){var n=this.createTween(e,t);return se(n.el/;"	p	variable:anonymousObject4d6c64acf805
 preinstall	build/Makefile	/^preinstall: all$/;"	t
-preinstall	build/vcb_test/Makefile	/^preinstall: all$/;"	t
 preinstall/fast	build/Makefile	/^preinstall\/fast:$/;"	t
-preinstall/fast	build/vcb_test/Makefile	/^preinstall\/fast:$/;"	t
 prepend	docs/html/jquery.js	/^1!==this.nodeType&&11!==this.nodeType&&9!==this.nodeType||(this.textContent=e)})},null,e,argumen/;"	m	variable:anonymousObject4d6c64accb05
 prependTo	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 prev	docs/html/jquery.js	/^this,e||[],!0))},is:function(e){return!!j(this,"string"==typeof e&&k.test(e)?S(e):e||[],!1).leng/;"	p	variable:ue.ce.H
@@ -6346,6 +5964,7 @@ prototype	docs/html/jquery.js	/^$.SmartMenus,{hideAll:function(){$.each(menuTree
 proxy	docs/html/jquery.js	/^"blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover /;"	f	variable:S
 pseudos	docs/html/jquery.js	/^)return!1;u=l="only"===h&&!u&&"nextSibling"}return!0}if(u=[m?c.firstChild:c.lastChild],m&&p){d=(/;"	p	variable:ue.ce.fe.anonymousObject4d6c64ac4205
 pseudos	docs/html/jquery.js	/^* Copyright jQuery Foundation and other contributors; Licensed MIT *\/!function(t){"use strict";/;"	f	variable:y.expr
+ptr	include/vcb_c/vcb.h	/^    void *ptr;$/;"	m	struct:__anon951987d50108	typeref:typename:void *
 pub-attribs	docs/html/classCom.html	/^<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-a/;"	I
 pub-attribs	docs/html/classCom.html	/^<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-a/;"	a
 pub-attribs	docs/html/classCondition.html	/^<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-a/;"	I
@@ -6387,9 +6006,6 @@ pushPlacement	docs/html/jquery.js	/^top=objectOffset.top+objectHeight;break}retu
 pushStack	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
 qe	docs/html/jquery.js	/^}}}),S.fn.extend({on:function(e,t,n,r){return Ee(this,e,t,n,r)},one:function(e,t,n,r){return Ee(/;"	f
 qnxnto	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
-qnxnto	build/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
-qnxnto	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
-qnxnto	build/vcb_test/CMakeFiles/4.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 queue	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	variable:$.fn.scrollTo.anonymousFunction4d6c64ac24500.k.anonymousObject4d6c64ac24705
 queue	docs/html/jquery.js	/^1===o.nodeType&&!Y.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf(/;"	m	variable:anonymousObject4d6c64ac9a05
 queue	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	m	variable:anonymousObject4d6c64ac9d05
@@ -6519,9 +6135,7 @@ ready	docs/html/jquery.js	/^o.reject,!n),"pending"===o.state()||m(i[t]&&i[t].the
 readyState	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	p	variable:anonymousObject4d6c64ac14b05.ajax.T
 readyWait	docs/html/jquery.js	/^o.reject,!n),"pending"===o.state()||m(i[t]&&i[t].then)))return o.then();while(t--)I(i[t],a(t),o./;"	p	variable:anonymousObject4d6c64ac8d05
 rebuild_cache	build/Makefile	/^rebuild_cache:$/;"	t
-rebuild_cache	build/vcb_test/Makefile	/^rebuild_cache:$/;"	t
 rebuild_cache/fast	build/Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
-rebuild_cache/fast	build/vcb_test/Makefile	/^rebuild_cache\/fast: rebuild_cache$/;"	t
 refresh	docs/html/jquery.js	/^canAnimate&&this.$root.stop(!0,!0),!this.$root.is(":visible")){this.$root.css({left:t,top:e});va/;"	m	variable:anonymousObject4d6c64ac26d05
 relative	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)/;"	p	variable:ue.ce.fe.anonymousObject4d6c64ac4205
 reliableMarginLeft	docs/html/jquery.js	/^l.style.backgroundClip="content-box",l.cloneNode(!0).style.backgroundClip="",y.clearCloneStyle="/;"	m	variable:anonymousObject4d6c64acdd05
@@ -6750,6 +6364,8 @@ side-nav	docs/html/var_8cpp_source.html	/^<div id="side-nav" class="ui-resizable
 side-nav	docs/html/var_8h.html	/^<div id="side-nav" class="ui-resizable side-nav-resizable">$/;"	I
 side-nav	docs/html/var_8h_source.html	/^<div id="side-nav" class="ui-resizable side-nav-resizable">$/;"	I
 simulate	docs/html/jquery.js	/^e.rnamespace=e.namespace?new RegExp("(^|\\\\.)"+h.join("\\\\.(?:.*\\\\.|)")+"(\\\\.|$)"):null,e./;"	m	variable:anonymousObject4d6c64ac13205
+size	include/vcb_c/vcb.h	/^    size_t size; \/*sizeof input*\/$/;"	m	struct:__anon951987d50208	typeref:typename:size_t
+size	include/vcb_c/vcb.h	/^    size_t size;$/;"	m	struct:__anon951987d50108	typeref:typename:size_t
 sizeDiff	docs/html/jquery.js	/^width:n.width(),height:n.height()},this.originalSize=this._helper?{width:n.outerWidth(),height:n/;"	p
 slice	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
 slideDown	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:0;for(t.finish=!0,S.queue(this,a,[]),r&&r.stop&&r./;"	p	variable:anonymousObject4d6c64ac11105
@@ -6846,85 +6462,72 @@ splitbar	docs/html/topics.html	/^  <div id="splitbar" style="-moz-user-select:no
 splitbar	docs/html/var_8cpp_source.html	/^  <div id="splitbar" style="-moz-user-select:none;" $/;"	I
 splitbar	docs/html/var_8h.html	/^  <div id="splitbar" style="-moz-user-select:none;" $/;"	I
 splitbar	docs/html/var_8h_source.html	/^  <div id="splitbar" style="-moz-user-select:none;" $/;"	I
+sql_close	src/vcb_c/var.c	/^void sql_close(sqlite3* db){$/;"	f	typeref:typename:void
 src	docs/html/jquery.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	p	variable:anonymousObject4d6c64ac0505
 src	docs/html/jquery.js	/^e.type="GET")}),S.ajaxTransport("script",function(n){var r,i;if(n.crossDomain||n.scriptAttrs)ret/;"	p	variable:anonymousFunction4d6c64ac16c00.anonymousFunction4d6c64ac16d00.anonymousObject4d6c64ac16f05
-src/st/st_Exception.cpp.i	build/Makefile	/^src\/st\/st_Exception.cpp.i:$/;"	t
-src/st/st_Exception.cpp.i	build/vcb_test/Makefile	/^src\/st\/st_Exception.cpp.i:$/;"	t
-src/st/st_Exception.cpp.o	build/Makefile	/^src\/st\/st_Exception.cpp.o:$/;"	t
-src/st/st_Exception.cpp.o	build/vcb_test/Makefile	/^src\/st\/st_Exception.cpp.o:$/;"	t
-src/st/st_Exception.cpp.s	build/Makefile	/^src\/st\/st_Exception.cpp.s:$/;"	t
-src/st/st_Exception.cpp.s	build/vcb_test/Makefile	/^src\/st\/st_Exception.cpp.s:$/;"	t
-src/st/st_Exception.i	build/Makefile	/^src\/st\/st_Exception.i: src\/st\/st_Exception.cpp.i$/;"	t
-src/st/st_Exception.i	build/vcb_test/Makefile	/^src\/st\/st_Exception.i: src\/st\/st_Exception.cpp.i$/;"	t
-src/st/st_Exception.o	build/Makefile	/^src\/st\/st_Exception.o: src\/st\/st_Exception.cpp.o$/;"	t
-src/st/st_Exception.o	build/vcb_test/Makefile	/^src\/st\/st_Exception.o: src\/st\/st_Exception.cpp.o$/;"	t
-src/st/st_Exception.s	build/Makefile	/^src\/st\/st_Exception.s: src\/st\/st_Exception.cpp.s$/;"	t
-src/st/st_Exception.s	build/vcb_test/Makefile	/^src\/st\/st_Exception.s: src\/st\/st_Exception.cpp.s$/;"	t
-src/st/st_string.cpp.i	build/Makefile	/^src\/st\/st_string.cpp.i:$/;"	t
-src/st/st_string.cpp.i	build/vcb_test/Makefile	/^src\/st\/st_string.cpp.i:$/;"	t
-src/st/st_string.cpp.o	build/Makefile	/^src\/st\/st_string.cpp.o:$/;"	t
-src/st/st_string.cpp.o	build/vcb_test/Makefile	/^src\/st\/st_string.cpp.o:$/;"	t
-src/st/st_string.cpp.s	build/Makefile	/^src\/st\/st_string.cpp.s:$/;"	t
-src/st/st_string.cpp.s	build/vcb_test/Makefile	/^src\/st\/st_string.cpp.s:$/;"	t
-src/st/st_string.i	build/Makefile	/^src\/st\/st_string.i: src\/st\/st_string.cpp.i$/;"	t
-src/st/st_string.i	build/vcb_test/Makefile	/^src\/st\/st_string.i: src\/st\/st_string.cpp.i$/;"	t
-src/st/st_string.o	build/Makefile	/^src\/st\/st_string.o: src\/st\/st_string.cpp.o$/;"	t
-src/st/st_string.o	build/vcb_test/Makefile	/^src\/st\/st_string.o: src\/st\/st_string.cpp.o$/;"	t
-src/st/st_string.s	build/Makefile	/^src\/st\/st_string.s: src\/st\/st_string.cpp.s$/;"	t
-src/st/st_string.s	build/vcb_test/Makefile	/^src\/st\/st_string.s: src\/st\/st_string.cpp.s$/;"	t
-src/vcb/com.cpp.i	build/Makefile	/^src\/vcb\/com.cpp.i:$/;"	t
-src/vcb/com.cpp.o	build/Makefile	/^src\/vcb\/com.cpp.o:$/;"	t
-src/vcb/com.cpp.s	build/Makefile	/^src\/vcb\/com.cpp.s:$/;"	t
-src/vcb/com.i	build/Makefile	/^src\/vcb\/com.i: src\/vcb\/com.cpp.i$/;"	t
-src/vcb/com.o	build/Makefile	/^src\/vcb\/com.o: src\/vcb\/com.cpp.o$/;"	t
-src/vcb/com.s	build/Makefile	/^src\/vcb\/com.s: src\/vcb\/com.cpp.s$/;"	t
-src/vcb/condition.cpp.i	build/Makefile	/^src\/vcb\/condition.cpp.i:$/;"	t
-src/vcb/condition.cpp.i	build/vcb_test/Makefile	/^src\/vcb\/condition.cpp.i:$/;"	t
-src/vcb/condition.cpp.o	build/Makefile	/^src\/vcb\/condition.cpp.o:$/;"	t
-src/vcb/condition.cpp.o	build/vcb_test/Makefile	/^src\/vcb\/condition.cpp.o:$/;"	t
-src/vcb/condition.cpp.s	build/Makefile	/^src\/vcb\/condition.cpp.s:$/;"	t
-src/vcb/condition.cpp.s	build/vcb_test/Makefile	/^src\/vcb\/condition.cpp.s:$/;"	t
-src/vcb/condition.i	build/Makefile	/^src\/vcb\/condition.i: src\/vcb\/condition.cpp.i$/;"	t
-src/vcb/condition.i	build/vcb_test/Makefile	/^src\/vcb\/condition.i: src\/vcb\/condition.cpp.i$/;"	t
-src/vcb/condition.o	build/Makefile	/^src\/vcb\/condition.o: src\/vcb\/condition.cpp.o$/;"	t
-src/vcb/condition.o	build/vcb_test/Makefile	/^src\/vcb\/condition.o: src\/vcb\/condition.cpp.o$/;"	t
-src/vcb/condition.s	build/Makefile	/^src\/vcb\/condition.s: src\/vcb\/condition.cpp.s$/;"	t
-src/vcb/condition.s	build/vcb_test/Makefile	/^src\/vcb\/condition.s: src\/vcb\/condition.cpp.s$/;"	t
-src/vcb/domain.cpp.i	build/Makefile	/^src\/vcb\/domain.cpp.i:$/;"	t
-src/vcb/domain.cpp.o	build/Makefile	/^src\/vcb\/domain.cpp.o:$/;"	t
-src/vcb/domain.cpp.s	build/Makefile	/^src\/vcb\/domain.cpp.s:$/;"	t
-src/vcb/domain.i	build/Makefile	/^src\/vcb\/domain.i: src\/vcb\/domain.cpp.i$/;"	t
-src/vcb/domain.o	build/Makefile	/^src\/vcb\/domain.o: src\/vcb\/domain.cpp.o$/;"	t
-src/vcb/domain.s	build/Makefile	/^src\/vcb\/domain.s: src\/vcb\/domain.cpp.s$/;"	t
-src/vcb/st_Object.cpp.i	build/Makefile	/^src\/vcb\/st_Object.cpp.i:$/;"	t
-src/vcb/st_Object.cpp.i	build/vcb_test/Makefile	/^src\/vcb\/st_Object.cpp.i:$/;"	t
-src/vcb/st_Object.cpp.o	build/Makefile	/^src\/vcb\/st_Object.cpp.o:$/;"	t
-src/vcb/st_Object.cpp.o	build/vcb_test/Makefile	/^src\/vcb\/st_Object.cpp.o:$/;"	t
-src/vcb/st_Object.cpp.s	build/Makefile	/^src\/vcb\/st_Object.cpp.s:$/;"	t
-src/vcb/st_Object.cpp.s	build/vcb_test/Makefile	/^src\/vcb\/st_Object.cpp.s:$/;"	t
-src/vcb/st_Object.i	build/Makefile	/^src\/vcb\/st_Object.i: src\/vcb\/st_Object.cpp.i$/;"	t
-src/vcb/st_Object.i	build/vcb_test/Makefile	/^src\/vcb\/st_Object.i: src\/vcb\/st_Object.cpp.i$/;"	t
-src/vcb/st_Object.o	build/Makefile	/^src\/vcb\/st_Object.o: src\/vcb\/st_Object.cpp.o$/;"	t
-src/vcb/st_Object.o	build/vcb_test/Makefile	/^src\/vcb\/st_Object.o: src\/vcb\/st_Object.cpp.o$/;"	t
-src/vcb/st_Object.s	build/Makefile	/^src\/vcb\/st_Object.s: src\/vcb\/st_Object.cpp.s$/;"	t
-src/vcb/st_Object.s	build/vcb_test/Makefile	/^src\/vcb\/st_Object.s: src\/vcb\/st_Object.cpp.s$/;"	t
-src/vcb/var.cpp.i	build/Makefile	/^src\/vcb\/var.cpp.i:$/;"	t
-src/vcb/var.cpp.i	build/vcb_test/Makefile	/^src\/vcb\/var.cpp.i:$/;"	t
-src/vcb/var.cpp.o	build/Makefile	/^src\/vcb\/var.cpp.o:$/;"	t
-src/vcb/var.cpp.o	build/vcb_test/Makefile	/^src\/vcb\/var.cpp.o:$/;"	t
-src/vcb/var.cpp.s	build/Makefile	/^src\/vcb\/var.cpp.s:$/;"	t
-src/vcb/var.cpp.s	build/vcb_test/Makefile	/^src\/vcb\/var.cpp.s:$/;"	t
-src/vcb/var.i	build/Makefile	/^src\/vcb\/var.i: src\/vcb\/var.cpp.i$/;"	t
-src/vcb/var.i	build/vcb_test/Makefile	/^src\/vcb\/var.i: src\/vcb\/var.cpp.i$/;"	t
-src/vcb/var.o	build/Makefile	/^src\/vcb\/var.o: src\/vcb\/var.cpp.o$/;"	t
-src/vcb/var.o	build/vcb_test/Makefile	/^src\/vcb\/var.o: src\/vcb\/var.cpp.o$/;"	t
-src/vcb/var.s	build/Makefile	/^src\/vcb\/var.s: src\/vcb\/var.cpp.s$/;"	t
-src/vcb/var.s	build/vcb_test/Makefile	/^src\/vcb\/var.s: src\/vcb\/var.cpp.s$/;"	t
+src/vcb_c/arena.c.i	build/Makefile	/^src\/vcb_c\/arena.c.i:$/;"	t
+src/vcb_c/arena.c.o	build/Makefile	/^src\/vcb_c\/arena.c.o:$/;"	t
+src/vcb_c/arena.c.s	build/Makefile	/^src\/vcb_c\/arena.c.s:$/;"	t
+src/vcb_c/arena.i	build/Makefile	/^src\/vcb_c\/arena.i: src\/vcb_c\/arena.c.i$/;"	t
+src/vcb_c/arena.o	build/Makefile	/^src\/vcb_c\/arena.o: src\/vcb_c\/arena.c.o$/;"	t
+src/vcb_c/arena.s	build/Makefile	/^src\/vcb_c\/arena.s: src\/vcb_c\/arena.c.s$/;"	t
+src/vcb_c/cond.c.i	build/Makefile	/^src\/vcb_c\/cond.c.i:$/;"	t
+src/vcb_c/cond.c.o	build/Makefile	/^src\/vcb_c\/cond.c.o:$/;"	t
+src/vcb_c/cond.c.s	build/Makefile	/^src\/vcb_c\/cond.c.s:$/;"	t
+src/vcb_c/cond.i	build/Makefile	/^src\/vcb_c\/cond.i: src\/vcb_c\/cond.c.i$/;"	t
+src/vcb_c/cond.o	build/Makefile	/^src\/vcb_c\/cond.o: src\/vcb_c\/cond.c.o$/;"	t
+src/vcb_c/cond.s	build/Makefile	/^src\/vcb_c\/cond.s: src\/vcb_c\/cond.c.s$/;"	t
+src/vcb_c/hashtable.c.i	build/Makefile	/^src\/vcb_c\/hashtable.c.i:$/;"	t
+src/vcb_c/hashtable.c.o	build/Makefile	/^src\/vcb_c\/hashtable.c.o:$/;"	t
+src/vcb_c/hashtable.c.s	build/Makefile	/^src\/vcb_c\/hashtable.c.s:$/;"	t
+src/vcb_c/hashtable.i	build/Makefile	/^src\/vcb_c\/hashtable.i: src\/vcb_c\/hashtable.c.i$/;"	t
+src/vcb_c/hashtable.o	build/Makefile	/^src\/vcb_c\/hashtable.o: src\/vcb_c\/hashtable.c.o$/;"	t
+src/vcb_c/hashtable.s	build/Makefile	/^src\/vcb_c\/hashtable.s: src\/vcb_c\/hashtable.c.s$/;"	t
+src/vcb_c/list.c.i	build/Makefile	/^src\/vcb_c\/list.c.i:$/;"	t
+src/vcb_c/list.c.o	build/Makefile	/^src\/vcb_c\/list.c.o:$/;"	t
+src/vcb_c/list.c.s	build/Makefile	/^src\/vcb_c\/list.c.s:$/;"	t
+src/vcb_c/list.i	build/Makefile	/^src\/vcb_c\/list.i: src\/vcb_c\/list.c.i$/;"	t
+src/vcb_c/list.o	build/Makefile	/^src\/vcb_c\/list.o: src\/vcb_c\/list.c.o$/;"	t
+src/vcb_c/list.s	build/Makefile	/^src\/vcb_c\/list.s: src\/vcb_c\/list.c.s$/;"	t
+src/vcb_c/st.c.i	build/Makefile	/^src\/vcb_c\/st.c.i:$/;"	t
+src/vcb_c/st.c.o	build/Makefile	/^src\/vcb_c\/st.c.o:$/;"	t
+src/vcb_c/st.c.s	build/Makefile	/^src\/vcb_c\/st.c.s:$/;"	t
+src/vcb_c/st.i	build/Makefile	/^src\/vcb_c\/st.i: src\/vcb_c\/st.c.i$/;"	t
+src/vcb_c/st.o	build/Makefile	/^src\/vcb_c\/st.o: src\/vcb_c\/st.c.o$/;"	t
+src/vcb_c/st.s	build/Makefile	/^src\/vcb_c\/st.s: src\/vcb_c\/st.c.s$/;"	t
+src/vcb_c/system_hash.c.i	build/Makefile	/^src\/vcb_c\/system_hash.c.i:$/;"	t
+src/vcb_c/system_hash.c.o	build/Makefile	/^src\/vcb_c\/system_hash.c.o:$/;"	t
+src/vcb_c/system_hash.c.s	build/Makefile	/^src\/vcb_c\/system_hash.c.s:$/;"	t
+src/vcb_c/system_hash.i	build/Makefile	/^src\/vcb_c\/system_hash.i: src\/vcb_c\/system_hash.c.i$/;"	t
+src/vcb_c/system_hash.o	build/Makefile	/^src\/vcb_c\/system_hash.o: src\/vcb_c\/system_hash.c.o$/;"	t
+src/vcb_c/system_hash.s	build/Makefile	/^src\/vcb_c\/system_hash.s: src\/vcb_c\/system_hash.c.s$/;"	t
+src/vcb_c/value.c.i	build/Makefile	/^src\/vcb_c\/value.c.i:$/;"	t
+src/vcb_c/value.c.o	build/Makefile	/^src\/vcb_c\/value.c.o:$/;"	t
+src/vcb_c/value.c.s	build/Makefile	/^src\/vcb_c\/value.c.s:$/;"	t
+src/vcb_c/value.i	build/Makefile	/^src\/vcb_c\/value.i: src\/vcb_c\/value.c.i$/;"	t
+src/vcb_c/value.o	build/Makefile	/^src\/vcb_c\/value.o: src\/vcb_c\/value.c.o$/;"	t
+src/vcb_c/value.s	build/Makefile	/^src\/vcb_c\/value.s: src\/vcb_c\/value.c.s$/;"	t
+src/vcb_c/var.c.i	build/Makefile	/^src\/vcb_c\/var.c.i:$/;"	t
+src/vcb_c/var.c.o	build/Makefile	/^src\/vcb_c\/var.c.o:$/;"	t
+src/vcb_c/var.c.s	build/Makefile	/^src\/vcb_c\/var.c.s:$/;"	t
+src/vcb_c/var.i	build/Makefile	/^src\/vcb_c\/var.i: src\/vcb_c\/var.c.i$/;"	t
+src/vcb_c/var.o	build/Makefile	/^src\/vcb_c\/var.o: src\/vcb_c\/var.c.o$/;"	t
+src/vcb_c/var.s	build/Makefile	/^src\/vcb_c\/var.s: src\/vcb_c\/var.c.s$/;"	t
 st	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	f
+st_Arena	include/vcb_c/vcb.h	/^} st_Arena;$/;"	t	typeref:struct:__anon951987d50108
 st_Exception	include/st/st_Exception.h	/^class st_Exception{$/;"	c
 st_Exception	src/st/st_Exception.cpp	/^st_Exception::st_Exception(string error){$/;"	f	class:st_Exception
+st_HashTable	include/vcb_c/vcb.h	/^struct st_HashTable{$/;"	s
+st_HashTable	include/vcb_c/vcb.h	/^typedef struct st_HashTable st_HashTable;$/;"	t	typeref:struct:st_HashTable
+st_HashValue	include/vcb_c/vcb.h	/^} st_HashValue;$/;"	t	typeref:union:__anon951987d5050a
+st_List	include/vcb_c/vcb.h	/^struct st_List{$/;"	s
+st_List	include/vcb_c/vcb.h	/^typedef struct st_List st_List;$/;"	t	typeref:struct:st_List
 st_Object	include/vcb/st_Object.h	/^class st_Object{$/;"	c
+st_Object	include/vcb_c/vcb.h	/^}st_Object;$/;"	t	typeref:struct:__anon951987d50608
 st_Object	src/vcb/st_Object.cpp	/^st_Object::st_Object(string language, vector<Var> properties){$/;"	f	class:st_Object
+st_Value	include/vcb_c/vcb.h	/^} st_Value;$/;"	t	typeref:struct:__anon951987d50408
+st_Var	include/vcb_c/vcb.h	/^typedef struct st_Var {$/;"	s
+st_Var	include/vcb_c/vcb.h	/^} st_Var;$/;"	t	typeref:struct:st_Var
 st__Exception_8h	docs/html/st__Exception_8h.js	/^var st__Exception_8h =$/;"	v
 st__Exception_8h	docs/latex/st__Exception_8h.tex	/^\\hypertarget{st__Exception_8h}{}\\label{st__Exception_8h}\\index{include\/st\/st\\_Exception.h@/;"	l
 st__Exception_8h.html	docs/html/navtreeindex0.js	/^"st__Exception_8h.html":[2,0,0,0,0],$/;"	p	variable:NAVTREEINDEX0
@@ -6969,9 +6572,11 @@ st__string_8h_ad32d81d1b91fe375e4eaf9f633fecbd7	docs/latex/st__string_8h.tex	/^{
 st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a	docs/latex/st__string_8h.tex	/^{\\footnotesize\\ttfamily \\label{st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a} $/;"	l
 st__string_8h_source	docs/latex/st__string_8h_source.tex	/^\\hypertarget{st__string_8h_source}{}\\label{st__string_8h_source}\\index{include\/st\/st\\_stri/;"	l
 st__string_8h_source.html	docs/html/navtreeindex0.js	/^"st__string_8h_source.html":[2,0,0,0,1],$/;"	p	variable:NAVTREEINDEX0
+st_cValue	include/vcb_c/vcb.h	/^} st_cValue;$/;"	t	typeref:struct:__anon951987d50208
 st_compliment	src/st/st_string.cpp	/^int st_compliment(string input, int pos){$/;"	f	typeref:typename:int
 st_con	src/st/st_string.cpp	/^char* st_con(string input){$/;"	f	typeref:typename:char *
 st_con	src/st/st_string.cpp	/^string st_con(char* input){$/;"	f	typeref:typename:string
+st_fValue	include/vcb_c/vcb.h	/^} st_fValue;$/;"	t	typeref:union:__anon951987d5030a
 st_find	src/st/st_string.cpp	/^int st_find(string input, char delimeter, int num) \/\/ get the position of the num'th instance /;"	f	typeref:typename:int
 st_find	src/st/st_string.cpp	/^int st_find(string input, string delimeter, int num){$/;"	f	typeref:typename:int
 st_in	src/st/st_string.cpp	/^int st_in(vector<string> input, string match){$/;"	f	typeref:typename:int
@@ -7006,8 +6611,13 @@ stop	docs/html/jquery.js	/^originalProperties:e,originalOptions:t,startTime:Ze||
 stopImmediatePropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 stopPropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 storeLink	docs/html/navtree.js	/^  const storeLink = function(link) {$/;"	f	function:initNavTree
+str	include/vcb_c/vcb.h	/^    char *str;$/;"	m	struct:__anon951987d50208	typeref:typename:char *
+str	include/vcb_c/vcb.h	/^    char *str;$/;"	m	union:__anon951987d5030a	typeref:typename:char *
+string_fn	tests/vcb_test.c	/^char *string_fn(void *value){$/;"	f	typeref:typename:char *
 stripPath	docs/html/navtree.js	/^  const stripPath = function(uri) {$/;"	f	function:initNavTree
 stripPath2	docs/html/navtree.js	/^  const stripPath2 = function(uri) {$/;"	f	function:initNavTree
+strspits	src/vcb_c/st.c	/^char **strspits(char *input, char *delim){$/;"	f	typeref:typename:char **
+strsplit	src/vcb_c/st.c	/^char **strsplit(char *input, char delim){$/;"	f	typeref:typename:char **
 style	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	m	variable:anonymousObject4d6c64ace205
 subH	docs/html/jquery.js	/^t.preventDefault()}}).insertAfter(t));var A=".smartmenus_scroll";if(t.dataSM("scroll",{y:this.cs/;"	p	variable:anonymousObject4d6c64ac26d05.docTouchEnd.anonymousFunction4d6c64ac2a400.anonymousObject4d6c64ac2a605
 subIndicators	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p	property:$.fn.smartmenus.defaults
@@ -7032,6 +6642,7 @@ sw	docs/html/jquery.js	/^).removeData("resizable").removeData("ui-resizable").of
 sw-alt	docs/html/jquery.js	/^"n","s","w"],nw:["nw","w","sw","n","s","se","nw"],ne:["ne","e","se","n","s","sw","ne"],sw:["sw",/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25505
 swing	docs/html/jquery.js	/^this):Ke.propHooks._default.get(this)},run:function(e){var t,n=Ke.propHooks[this.prop];return th/;"	m	variable:anonymousObject4d6c64acf005
 symbol	src/sound.cpp	/^        string symbol;$/;"	m	class:Sound	typeref:typename:string	file:
+system_hash	src/vcb_c/system_hash.c	/^int(*system_hash)(char*,int) = &hash_sdbm;$/;"	v	typeref:typename:int (*)(char *,int)
 t	docs/html/jquery.js	/^)||null,o=parseFloat(i.element.css("top"))+(i.position.top-i.originalPosition.top)||null;i.eleme/;"	v	method:anonymousObject4d6c64ac22c05.step
 t	docs/html/jquery.js	/^,n){var r,i,o,a,s=e.style;return(n=n||Re(e))&&(""!==(a=n.getPropertyValue(t)||n[t])||ie(e)||(a=S/;"	f
 t	docs/html/jquery.js	/^disable:function(){return this._setOptions({disabled:!0})},_classes:function(n){var o=[],h=this;/;"	f	function:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousFunction4d6c64ac1bc00
@@ -7082,18 +6693,16 @@ td.navtab	docs/html/doxygen.css	/^td.navtab {$/;"	c
 td.navtabHL	docs/html/doxygen.css	/^td.navtabHL {$/;"	c
 td.tiny	docs/html/doxygen.css	/^td.tiny {$/;"	c
 teardown	docs/html/jquery.js	/^new S.Event,n,{type:e,isSimulated:!0});S.event.trigger(r,null,t)}}),S.fn.extend({trigger:functio/;"	m	property:S.event.special
-tests/vcb_test.cpp.i	build/Makefile	/^tests\/vcb_test.cpp.i:$/;"	t
-tests/vcb_test.cpp.i	build/vcb_test/Makefile	/^tests\/vcb_test.cpp.i:$/;"	t
-tests/vcb_test.cpp.o	build/Makefile	/^tests\/vcb_test.cpp.o:$/;"	t
-tests/vcb_test.cpp.o	build/vcb_test/Makefile	/^tests\/vcb_test.cpp.o:$/;"	t
-tests/vcb_test.cpp.s	build/Makefile	/^tests\/vcb_test.cpp.s:$/;"	t
-tests/vcb_test.cpp.s	build/vcb_test/Makefile	/^tests\/vcb_test.cpp.s:$/;"	t
-tests/vcb_test.i	build/Makefile	/^tests\/vcb_test.i: tests\/vcb_test.cpp.i$/;"	t
-tests/vcb_test.i	build/vcb_test/Makefile	/^tests\/vcb_test.i: tests\/vcb_test.cpp.i$/;"	t
-tests/vcb_test.o	build/Makefile	/^tests\/vcb_test.o: tests\/vcb_test.cpp.o$/;"	t
-tests/vcb_test.o	build/vcb_test/Makefile	/^tests\/vcb_test.o: tests\/vcb_test.cpp.o$/;"	t
-tests/vcb_test.s	build/Makefile	/^tests\/vcb_test.s: tests\/vcb_test.cpp.s$/;"	t
-tests/vcb_test.s	build/vcb_test/Makefile	/^tests\/vcb_test.s: tests\/vcb_test.cpp.s$/;"	t
+test_1	tests/vcb_test.c	/^int test_1(){ \/\/tests hash function$/;"	f	typeref:typename:int
+test_2	tests/vcb_test.c	/^int test_2(){ \/\/tests hash_init, hash_add, hash_get, and hash_free$/;"	f	typeref:typename:int
+test_3	tests/vcb_test.c	/^int test_3(){\/\/hash_rem$/;"	f	typeref:typename:int
+test_4	tests/vcb_test.c	/^int test_4(){ \/\/tests var_init$/;"	f	typeref:typename:int
+tests/vcb_test.c.i	build/Makefile	/^tests\/vcb_test.c.i:$/;"	t
+tests/vcb_test.c.o	build/Makefile	/^tests\/vcb_test.c.o:$/;"	t
+tests/vcb_test.c.s	build/Makefile	/^tests\/vcb_test.c.s:$/;"	t
+tests/vcb_test.i	build/Makefile	/^tests\/vcb_test.i: tests\/vcb_test.c.i$/;"	t
+tests/vcb_test.o	build/Makefile	/^tests\/vcb_test.o: tests\/vcb_test.c.o$/;"	t
+tests/vcb_test.s	build/Makefile	/^tests\/vcb_test.s: tests\/vcb_test.c.s$/;"	t
 text	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	p	property:anonymousObject4d6c64ac14b05.ajaxSettings.accepts
 text	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	p	property:anonymousObject4d6c64ac14b05.ajaxSettings.responseFields
 text	docs/html/jquery.js	/^r.parentNode.removeChild(r));return e}S.extend({htmlPrefilter:function(e){return e},clone:functi/;"	m	variable:anonymousObject4d6c64accb05
@@ -7387,6 +6996,7 @@ using	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"cente
 ut	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	f
 val	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	m	variable:anonymousObject4d6c64ac12b05
 valHooks	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	p	variable:anonymousObject4d6c64ac12e05
+valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena;$/;"	m	struct:st_Var	typeref:typename:st_Arena *
 value	docs/html/jquery.js	/^"object"===w(n))for(s in i=!0,n)$(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,m(r)||(a=!0),l&&(/;"	p	variable:anonymousObject4d6c64ac9105.cache.anonymousObject4d6c64ac9305
 value	docs/html/jquery.js	/^)return e.stopImmediatePropagation(),e.preventDefault(),n&&n.value}else r.length&&(Y.set(this,i,/;"	p	variable:Se.anonymousObject4d6c64acab05.handler.anonymousObject4d6c64acae05
 value	docs/html/jquery.js	/^){for(var r=0,i=t.length;r<i;r++)se(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),f=!d||!e&&h?/;"	p	variable:ue.ce.fe.Ee.anonymousObject4d6c64ac5605
@@ -7395,10 +7005,17 @@ value	docs/html/jquery.js	/^e=e.slice(n)),n<r&&xe(e))}c.push(t)}return we(c)}ret
 value	docs/html/jquery.js	/^e=e.slice(n)),n<r&&xe(e))}c.push(t)}return we(c)}return me.prototype=b.filters=b.pseudos,b.setFi/;"	p	variable:anonymousObject4d6c64ac5805
 value	include/vcb/st_Object.h	/^        string value;$/;"	m	class:st_Object	typeref:typename:string
 value	include/vcb/var.h	/^        string value; \/**< current value of the var*\/$/;"	m	class:Var	typeref:typename:string
+value	include/vcb_c/vcb.h	/^    st_Value *value;$/;"	m	struct:__anon951987d50608	typeref:typename:st_Value *
+value	include/vcb_c/vcb.h	/^    st_Value *value;$/;"	m	struct:st_Var	typeref:typename:st_Value *
+value	include/vcb_c/vcb.h	/^    st_fValue *value;$/;"	m	struct:__anon951987d50408	typeref:typename:st_fValue *
+value	include/vcb_c/vcb.h	/^    void *value;$/;"	m	struct:st_List	typeref:typename:void *
+value	include/vcb_c/vcb.h	/^    void* value;$/;"	m	union:__anon951987d5050a	typeref:typename:void *
 value	src/sound.cpp	/^        int value;$/;"	m	class:Subvalue	typeref:typename:int	file:
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(Var var){ \/\/Given a dependent var, check which value is required f/;"	f	class:Var	typeref:typename:string
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(string varName){ \/\/Given a dependent var, check which value is req/;"	f	class:Var	typeref:typename:string
+value_get	src/vcb_c/value.c	/^char *value_get(st_Value *value){$/;"	f	typeref:typename:char *
 values	include/vcb/var.h	/^        vector<string> values; \/**< list of possible values of the var*\/$/;"	m	class:Var	typeref:typename:vector<string>
+values	include/vcb_c/vcb.h	/^    st_List *values; \/*value list*\/$/;"	m	struct:st_Var	typeref:typename:st_List *
 var_8cpp_source	docs/latex/var_8cpp_source.tex	/^\\hypertarget{var_8cpp_source}{}\\label{var_8cpp_source}\\index{src\/vcb\/var.cpp@{src\/vcb\/var/;"	l
 var_8cpp_source.html	docs/html/navtreeindex0.js	/^"var_8cpp_source.html":[2,0,1,0,0],$/;"	p	variable:NAVTREEINDEX0
 var_8h	docs/html/var_8h.js	/^var var_8h =$/;"	v
@@ -7406,6 +7023,15 @@ var_8h	docs/latex/var_8h.tex	/^\\hypertarget{var_8h}{}\\label{var_8h}\\index{inc
 var_8h.html	docs/html/navtreeindex0.js	/^"var_8h.html":[2,0,0,1,4],$/;"	p	variable:NAVTREEINDEX0
 var_8h_source	docs/latex/var_8h_source.tex	/^\\hypertarget{var_8h_source}{}\\label{var_8h_source}\\index{include\/vcb\/var.h@{include\/vcb\/v/;"	l
 var_8h_source.html	docs/html/navtreeindex0.js	/^"var_8h_source.html":[2,0,0,1,4]$/;"	p	variable:NAVTREEINDEX0
+var_depend_write	src/vcb_c/var.c	/^void var_depend_write(sqlite3 *db, char *name, char *key, char *value, char **sql, st_Arena *tra/;"	f	typeref:typename:void
+var_fetch	src/vcb_c/var.c	/^st_Var *var_fetch(char *name, st_Var *base){$/;"	f	typeref:typename:st_Var *
+var_ffetch	src/vcb_c/var.c	/^st_Var *var_ffetch(char *name, char *lang){$/;"	f	typeref:typename:st_Var *
+var_free	src/vcb_c/var.c	/^void var_free(st_Var *var){$/;"	f	typeref:typename:void
+var_init	src/vcb_c/var.c	/^st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph){$/;"	f	typeref:typename:st_Var *
+var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, st_Value *value){$/;"	f	typeref:typename:void
+var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, st_Value *value){$/;"	f	typeref:typename:void
+var_write	src/vcb_c/var.c	/^void var_write(st_Var *var){$/;"	f	typeref:typename:void
+vars	include/vcb_c/vcb.h	/^    st_List *vars;$/;"	m	struct:__anon951987d50608	typeref:typename:st_List *
 vars	src/sound.cpp	/^        vector<Var> vars;$/;"	m	class:Subvalue	typeref:typename:vector<Var>	file:
 ve	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	f
 ve	docs/html/jquery.js	/^return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.d/;"	f	function:ue.ce.fe
@@ -7422,7 +7048,6 @@ visibleSubMenus	docs/html/jquery.js	/^"highlighted").attr("aria-expanded","false
 visibleSubMenus	docs/html/jquery.js	/^mouseDetectionEnabled=!0}}function isTouchEvent(t){return!\/^(4|mouse)$\/.test(t.pointerType)}fu/;"	p	class:$.SmartMenus
 void	docs/html/jquery.js	/^,n){var r,i,o,a,s=e.style;return(n=n||Re(e))&&(""!==(a=n.getPropertyValue(t)||n[t])||ie(e)||(a=S/;"	M	variable:anonymousObject4d6c64accb05
 volatile	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
-volatile	build/vcb_test/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
 vt	docs/html/jquery.js	/^set:function(e,t){if(!y.radioValue&&"radio"===t&&A(e,"input")){var n=e.value;return e.setAttribu/;"	f
 w	docs/html/jquery.js	/^!function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module.expo/;"	f
 w	docs/html/jquery.js	/^).removeData("resizable").removeData("ui-resizable").off(".resizable")}var e;return this.element/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._setupHandles.anonymousObject4d6c64ac20e05
