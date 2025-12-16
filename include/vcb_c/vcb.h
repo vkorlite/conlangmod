@@ -1,7 +1,3 @@
-#ifndef PATH_TO_DATA
-#define PATH_TO_DATA "."
-#endif
-
 #ifndef __STDLIB_INCL
 #include <stdlib.h>
 #define __STDLIB_INCL ;
@@ -98,6 +94,7 @@ typedef struct {
 }st_Object;
 
 /*useful strings and string functions*/
+extern char *path_to_data;
 extern char **strsplit(char *input, char delim); /*split string by char delim*/
 extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
@@ -116,6 +113,7 @@ extern void list_rem(st_List *list, int (*sign_function)(void *));
 extern void list_free(st_List *list);
 
 /* st_Value functions */
+extern st_Value *value_init(st_Arena *, char *str, char col, void *input, size_t size);
 extern char *value_get(st_Value *value);
 extern void value_free(st_Value *value);
 
@@ -136,6 +134,7 @@ extern void hash_print(FILE *out, st_HashTable *hashtable, char *(*string_functi
 extern void sql_close(sqlite3* db);
 
 /* st_Var functions */
+extern sqlite3 *var_open(char *lang); /*opens the var sql database for a langauage*/
 extern st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
 extern st_Var *var_ffetch(char *name, char *lang); /*fetch from database, when this is the first var*/
 extern st_Var *var_fetch(char *name, st_Var *base); /*fetch from databse*/

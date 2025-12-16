@@ -1,5 +1,7 @@
-#define PATH_TO_DATA "~/Documents/coding/conlangmod/"
+#ifndef __VCB_INCL
 #include "vcb_c/vcb.h"
+#endif
+
 
 char *string_fn(void *value){
     return (char *)value;
@@ -101,12 +103,42 @@ int test_4(){ //tests var_init
         done++;
     if(strcmp(var->lang, "test"))
         done++;
+    st_List *curr = var->values;
+    while(curr){
+        printf("%s\n", value_get((st_Value*)curr->value));
+        if(curr->next)
+            curr = curr->next;
+        else
+            break;
+    }
+    var_free(var);
     return done;
 }
 
+int test_5(){ //tests var_write, var_open and var_ffetch
+    st_HashTable *hashtable = hash_init(&hash_sdbm);
+    st_List *dep_var1 = malloc(sizeof(st_List));
+    dep_var1->value = "dep_var1";
+    dep_var1->next = 0;
+    hash_add(hashtable, "test_value1", dep_var1);
+    st_Var *var_first = var_init("Test_var", "test", hashtable, "");
+    var_first->db = var_open(var_first->lang);
+    var_write(var_first);
+    st_Var *var = var_ffetch("Test_var", "test");
+    int done = 0;
+    st_List *curr = var->values;
+    while(curr->next){
+        printf("%s\n", value_get((st_Value*)curr->value));
+        curr = curr->next;
+    }
+    
+    return done;
+}
+
+
 int main(int argc, char *argv[]){
-    int len = 4;
-    int ((*test_arr[])()) = {*test_1, *test_2, *test_3, *test_4};
+    int len = 5;
+    int ((*test_arr[])()) = {*test_1, *test_2, *test_3, *test_4, *test_5};
     for(int i = 0; i < len; i++)
         printf("test_%d: %d\n", i+1, (test_arr[i])());
 
