@@ -10,6 +10,7 @@ st_Value *value_init(st_Arena *arena, char *str, char col, void *input, size_t s
     char *vstr = arena_alloc(arena, 256);
     strcpy(vstr, str);
     out->value = arena_alloc(arena, sizeof(st_fValue));
+    out->arena = arena;
     if(col){
         out->value->cond->str = vstr;
         out->value->cond->input = input;
@@ -21,4 +22,8 @@ st_Value *value_init(st_Arena *arena, char *str, char col, void *input, size_t s
 
 char *value_get(st_Value *value){
     return (value->col)? (char*) cond(value->value->cond->str, (st_Object **) value->value->cond->input, value->value->cond->size): value->value->str;
+}
+
+void value_free(st_Value *value){
+    arena_free(value->arena);
 }

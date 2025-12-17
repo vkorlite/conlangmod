@@ -23,7 +23,7 @@ int hash_sdbm(char *input, int modulo){
 }
 
 st_HashTable *hash_init(int (*hash)(char*,int)){
-    st_HashTable *output = (st_HashTable *)malloc(sizeof(st_HashTable));
+    st_HashTable *output = malloc(sizeof(st_HashTable));
 
     output->keysize = 1;
     output->keyiterator = 0;
@@ -186,8 +186,10 @@ void hash_add(st_HashTable *hashtable, char* key, void *value){
     // printf("hashtable->arrsize: %d\n", (int) hashtable->arrsize);
 }
 
-void **hash_getAll(st_HashTable *hashtable){
-    void **output = malloc((hashtable->keyiterator) * sizeof(void*));
+void **hash_getAll(st_Arena *arena, st_HashTable *hashtable){
+    if(arena == NULL)
+        arena = arena_init( hashtable->keyiterator *sizeof(void*));
+    void **output = arena_alloc(arena, (hashtable->keyiterator) * sizeof(void*));
     int len = 0;
     for(int i = 0; i < hashtable->arrsize; i++)
         if((*(hashtable->col+i)) == HASH_ELEMENT_FULL)

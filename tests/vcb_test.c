@@ -117,9 +117,8 @@ int test_4(){ //tests var_init
 
 int test_5(){ //tests var_write, var_open and var_ffetch
     st_HashTable *hashtable = hash_init(&hash_sdbm);
-    st_List *dep_var1 = malloc(sizeof(st_List));
-    dep_var1->value = "dep_var1";
-    dep_var1->next = 0;
+    st_List *dep_var1 = list_init(NULL);
+    list_add(dep_var1, "dep_var1");
     hash_add(hashtable, "test_value1", dep_var1);
     st_Var *var_first = var_init("Test_var", "test", hashtable, "");
     var_first->db = var_open(var_first->lang);
@@ -131,6 +130,7 @@ int test_5(){ //tests var_write, var_open and var_ffetch
         printf("%s\n", value_get((st_Value*)curr->value));
         curr = curr->next;
     }
+    var_free(var);
     
     return done;
 }

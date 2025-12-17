@@ -88,3 +88,17 @@ char **arena_strsplit(st_Arena *arena, char *input, char delim){
     *(output+trc) = "";
     return output;
 }
+
+char *strsub(char *input, int start, int end){
+    char *out = malloc(end-start+1);
+    for(int i = start; i < end; i++)
+        *(out+i-start) = *(input+i);
+    return out;
+}
+
+char *arena_strsub(st_Arena *arena, char *input, int start, int end){
+    char *out = arena_alloc(arena, end-start+1);
+    for(int i = start; i < end; i++)
+        *(out+i-start) = *(input+i);
+    return out;
+}

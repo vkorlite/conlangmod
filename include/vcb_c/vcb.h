@@ -38,22 +38,6 @@ struct st_List{
 };
 typedef struct st_List st_List;
 
-typedef struct {
-    char *str;
-    void **input; /* st_Object ** */
-    size_t size; /*sizeof input*/
-} st_cValue;
-
-typedef union {
-    char *str;
-    st_cValue *cond;
-} st_fValue;
-
-typedef struct {
-    char col;
-    st_fValue *value;
-} st_Value;
-
 typedef union{
     st_List* list; 
     void* value;
@@ -79,8 +63,8 @@ typedef struct st_Var {
     sqlite3 *db;
     char *morph;
     char col; /*whether value is str or cond*/
-    st_Value *value;
-    st_Arena *valarena;
+    st_Arena *valarena; /*contains value, values and dependencies*/
+    char *value;
     st_List *values; /*value list*/
     st_HashTable *dependencies; /* key: (st_Value*)->value or (char *) cond((st_Value*)->cond), value: st_List of char*/
 } st_Var;
@@ -88,7 +72,8 @@ typedef struct st_Var {
 typedef struct {
     char *lang;
     sqlite3 *db;
-    st_Value *value;
+    st_Arena *valarena;
+    char *value;
     st_List *vars;
     st_HashTable *dependencies;
 }st_Object;
@@ -98,11 +83,12 @@ extern char *path_to_data;
 extern char **strsplit(char *input, char delim); /*split string by char delim*/
 extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
-extern int strcomp(char *input, int place); /*find compliment of brackets*/
-extern int strsub(char *input, int start, int end); /*find substring of string*/
+extern char *strsub(char *input, int start, int end); /*find substring of string*/
+extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*strsub, but with arena*/
 
 /*st_Arena functions*/
 extern st_Arena *arena_init(size_t size);
+extern st_Arena *arena_recit(st_Arena *arena, size_t size);
 extern void *arena_alloc(st_Arena *arena, size_t size);
 extern void arena_free(st_Arena *arena);
 
@@ -112,18 +98,13 @@ extern void list_add(st_List *list, void *value);
 extern void list_rem(st_List *list, int (*sign_function)(void *));
 extern void list_free(st_List *list);
 
-/* st_Value functions */
-extern st_Value *value_init(st_Arena *, char *str, char col, void *input, size_t size);
-extern char *value_get(st_Value *value);
-extern void value_free(st_Value *value);
-
 /* st_HashTable functions and vars*/
 extern int(*system_hash)(char*,int);
 extern int hash_sdbm(char *input, int modulo); /*in-built hash function */
 extern st_HashTable *hash_init(int(*hash)(char*,int)); /*initialize a hashtable*/
 extern size_t hash_size(st_HashTable *hashtable); /*get size of hashtable*/
 extern void *hash_get(st_HashTable *hashtable, char *key); /*get value from key*/
-extern void **hash_getAll(st_HashTable *hashtable); /*get all values from hashtable */
+extern void **hash_getAll(st_Arena *arena, st_HashTable *hashtable); /*get all values from hashtable */
 extern void hash_add(st_HashTable *hashtable, char *key, void *value); /*add value to hashtable*/
 extern void hash_set(st_HashTable *hashtable, char *key, void *value); /*set value to an already present key */
 extern void hash_rem(st_HashTable *hashtable, char *key); /*remove a key from the hashtable*/
@@ -135,17 +116,17 @@ extern void sql_close(sqlite3* db);
 
 /* st_Var functions */
 extern sqlite3 *var_open(char *lang); /*opens the var sql database for a langauage*/
-extern st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
+extern st_Var *var_init(st_Arena *arena, char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
 extern st_Var *var_ffetch(char *name, char *lang); /*fetch from database, when this is the first var*/
 extern st_Var *var_fetch(char *name, st_Var *base); /*fetch from databse*/
 extern void var_write(st_Var *var); /*update database*/
-extern void var_set(st_Var *var, st_Value *value); /*set value if value is in values*/
-extern void var_irrset(st_Var *var, st_Value *value); /*set value, don't care about values*/
+extern void var_set(st_Var *var, char *value); /*set value if value is in values*/
+extern void var_irrset(st_Var *var, char *value); /*set value, don't care about values*/
 extern void var_free(st_Var *var); /*free st_Var*/
 
 /* st_Object functions */
-extern st_Object *object_init(char *value, char *lang, st_Var **vars);
-extern st_Object *object_flat(st_Object *obj);
+extern st_Object *object_init(st_Arena *arena, char *value, char *lang, st_List *vars);
+extern void object_free(st_Object *obj);
 
 /* coms, bombs and morphs */
 extern void *cond(char *cond, st_Object **input, size_t size);

@@ -1512,11 +1512,8 @@ __STDLIB_INCL	include/vcb_c/vcb.h	/^#define __STDLIB_INCL /;"	d
 __STRING_INCL	include/vcb_c/vcb.h	/^#define __STRING_INCL /;"	d
 __VCB_INCL	include/vcb_c/vcb.h	/^#define __VCB_INCL /;"	d
 __anon951987d50108	include/vcb_c/vcb.h	/^typedef struct{$/;"	s
-__anon951987d50208	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
-__anon951987d5030a	include/vcb_c/vcb.h	/^typedef union {$/;"	u
-__anon951987d50408	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
-__anon951987d5050a	include/vcb_c/vcb.h	/^typedef union{$/;"	u
-__anon951987d50608	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
+__anon951987d5020a	include/vcb_c/vcb.h	/^typedef union{$/;"	u
+__anon951987d50308	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
 __has_include	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define __has_include(/;"	d	file:
 _applyChanges	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605
 _aspectRatio	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	variable:anonymousObject4d6c64ac20705
@@ -2525,7 +2522,9 @@ arena	include/vcb_c/vcb.h	/^    st_Arena* arena;$/;"	m	struct:st_List	typeref:ty
 arena_alloc	src/vcb_c/arena.c	/^void *arena_alloc(st_Arena *arena, size_t size){$/;"	f	typeref:typename:void *
 arena_free	src/vcb_c/arena.c	/^void arena_free(st_Arena *arena){$/;"	f	typeref:typename:void
 arena_init	src/vcb_c/arena.c	/^st_Arena *arena_init(size_t size){$/;"	f	typeref:typename:st_Arena *
+arena_recit	src/vcb_c/arena.c	/^st_Arena *arena_recit(st_Arena *arena, size_t size){$/;"	f	typeref:typename:st_Arena *
 arena_strsplit	src/vcb_c/st.c	/^char **arena_strsplit(st_Arena *arena, char *input, char delim){$/;"	f	typeref:typename:char **
+arena_strsub	src/vcb_c/st.c	/^char *arena_strsub(st_Arena *arena, char *input, int start, int end){$/;"	f	typeref:typename:char *
 aria-controls	docs/html/jquery.js	/^t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.pa/;"	p	variable:anonymousObject4d6c64ac2a205
 aria-expanded	docs/html/jquery.js	/^"highlighted").attr("aria-expanded","false"),t.attr({"aria-expanded":"false","aria-hidden":"true/;"	p	variable:anonymousObject4d6c64ac29e05
 aria-expanded	docs/html/jquery.js	/^)&&t.removeClass("sm-nowrap").css("width",this.opts.subMenusMaxWidth)}this.menuPosition(t)}var o/;"	p	variable:anonymousObject4d6c64ac2be05
@@ -2761,7 +2760,6 @@ codefold	docs/html/dynsections.js	/^let codefold = {$/;"	v
 col	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	p	variable:anonymousObject4d6c64aca805
 col	include/vcb_c/vcb.h	/^    char *col; \/* whether the element at an index is a list ( '1') or a value ('0' if NULL or '/;"	m	struct:st_HashTable	typeref:typename:char *
 col	include/vcb_c/vcb.h	/^    char col; \/*whether value is str or cond*\/$/;"	m	struct:st_Var	typeref:typename:char
-col	include/vcb_c/vcb.h	/^    char col;$/;"	m	struct:__anon951987d50408	typeref:typename:char
 collapsibleBehavior	docs/html/jquery.js	/^bottomToTopSubMenus:!1,collapsibleBehavior:"default"},$});$/;"	p	property:$.fn.smartmenus.defaults
 collapsibleHideDuration	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p	property:$.fn.smartmenus.defaults
 collapsibleHideFunction	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	m	property:$.fn.smartmenus.defaults
@@ -2787,7 +2785,6 @@ complete	docs/html/jquery.js	/^null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old
 composed	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	p	variable:anonymousObject4d6c64aca205
 computePlacementCoords	docs/html/jquery.js	/^openTooltip()}}function cancelTimer(stopClose){hoverTimer=clearTimeout(hoverTimer);if(session.cl/;"	f	class:cancelClose.PlacementCalculator
 comstr	include/vcb/com.h	/^        string comstr;$/;"	m	class:Com	typeref:typename:string
-cond	include/vcb_c/vcb.h	/^    st_cValue *cond;$/;"	m	union:__anon951987d5030a	typeref:typename:st_cValue *
 cond	src/vcb_c/cond.c	/^void *cond(char *cond, st_Object **input, size_t size){$/;"	f	typeref:typename:void *
 condition	include/vcb/com.h	/^        Condition condition;$/;"	m	class:Com	typeref:typename:Condition
 condition_8h_source	docs/latex/condition_8h_source.tex	/^\\hypertarget{condition_8h_source}{}\\label{condition_8h_source}\\index{include\/vcb\/condition./;"	l
@@ -2897,7 +2894,7 @@ dataSM	docs/html/jquery.js	/^rootOver:function(t){this.handleEvents()&&!this.isT
 dataType	docs/html/jquery.js	/^,C[r]=function(){o=arguments},n.always(function(){void 0===i?S(C).removeProp(r):C[r]=i,e[r]&&(e./;"	p	variable:anonymousObject4d6c64ac17505
 dataType	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	p	variable:anonymousObject4d6c64ac15305
 dataType	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	p	variable:anonymousObject4d6c64ac15605
-db	include/vcb_c/vcb.h	/^    sqlite3 *db;$/;"	m	struct:__anon951987d50608	typeref:typename:sqlite3 *
+db	include/vcb_c/vcb.h	/^    sqlite3 *db;$/;"	m	struct:__anon951987d50308	typeref:typename:sqlite3 *
 db	include/vcb_c/vcb.h	/^    sqlite3 *db;$/;"	m	struct:st_Var	typeref:typename:sqlite3 *
 de	docs/html/jquery.js	/^)),n}catch(e){N(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return g(t.replace($,"$1"),e,n,r)/;"	f	function:ue.ce.fe
 decodeHtml	docs/html/search/search.js	/^  const decodeHtml = (html) => {$/;"	f	function:createResults
@@ -2912,7 +2909,7 @@ deleteLink	docs/html/navtree.js	/^  const deleteLink = function() {$/;"	f	functi
 depend	build/Makefile	/^depend:$/;"	t
 dependencies	include/vcb/var.h	/^        map<string, vector<Var>> dependencies; \/**< map of dependencies of the var, where the k/;"	m	class:Var	typeref:typename:map<string,vector<Var>>
 dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies; \/* key: (st_Value*)->value or (char *) cond((st_Value*)->cond),/;"	m	struct:st_Var	typeref:typename:st_HashTable *
-dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies;$/;"	m	struct:__anon951987d50608	typeref:typename:st_HashTable *
+dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies;$/;"	m	struct:__anon951987d50308	typeref:typename:st_HashTable *
 depth	docs/html/navtree.js	/^      depth         : 0,$/;"	p	property:initNavTree.o.node
 depth	docs/html/navtree.js	/^      depth        : po.depth + 1,$/;"	p	variable:initNavTree.newNode.node
 dequeue	docs/html/jquery.js	/^1===o.nodeType&&!Y.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf(/;"	m	variable:anonymousObject4d6c64ac9a05
@@ -3550,7 +3547,7 @@ hashValue	docs/html/navtree.js	/^  const hashValue = function() {$/;"	f	function
 hash_add	src/vcb_c/hashtable.c	/^void hash_add(st_HashTable *hashtable, char* key, void *value){$/;"	f	typeref:typename:void
 hash_free	src/vcb_c/hashtable.c	/^void hash_free(st_HashTable *hashtable){$/;"	f	typeref:typename:void
 hash_get	src/vcb_c/hashtable.c	/^void *hash_get(st_HashTable *hashtable, char *key){$/;"	f	typeref:typename:void *
-hash_getAll	src/vcb_c/hashtable.c	/^void **hash_getAll(st_HashTable *hashtable){$/;"	f	typeref:typename:void **
+hash_getAll	src/vcb_c/hashtable.c	/^void **hash_getAll(st_Arena *arena, st_HashTable *hashtable){$/;"	f	typeref:typename:void **
 hash_init	src/vcb_c/hashtable.c	/^st_HashTable *hash_init(int (*hash)(char*,int)){$/;"	f	typeref:typename:st_HashTable *
 hash_key_resize	src/vcb_c/hashtable.c	/^void hash_key_resize(st_HashTable *hashtable){$/;"	f	typeref:typename:void
 hash_print	src/vcb_c/hashtable.c	/^void hash_print(FILE *out, st_HashTable *hashtable, char *(*string_function)(void*)){$/;"	f	typeref:typename:void
@@ -3716,7 +3713,6 @@ initResizableIfExists	docs/html/menu.js	/^    const initResizableIfExists = func
 initTracking	docs/html/jquery.js	/^function initTracking(){if(!session.mouseTrackingActive){session.mouseTrackingActive=true;getVie/;"	f	function:TooltipController.showTip.closeDesyncedTip
 init_search	docs/html/search/search.js	/^function init_search() {$/;"	f
 input	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	m	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
-input	include/vcb_c/vcb.h	/^    void **input; \/* st_Object ** *\/$/;"	m	struct:__anon951987d50208	typeref:typename:void **
 insertAfter	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 insertBefore	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	p	variable:anonymousObject4d6c64acd705
 intGet	src/vcb/com.cpp	/^int Com::intGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:int
@@ -5130,7 +5126,7 @@ l00506	docs/html/var_8cpp_source.html	/^<div class="line"><a id="l00506" name="l
 l00506	docs/html/var_8cpp_source.html	/^<div class="line"><a id="l00506" name="l00506"><\/a><span class="lineno">  506<\/span><span clas/;"	a
 labelSpan	docs/html/navtree.js	/^      labelSpan    : document.createElement("span"),$/;"	p	variable:initNavTree.newNode.node
 lang	docs/html/jquery.js	/^function(e,t,n,r){var i,o=s(e,null,r,[]),a=e.length;while(a--)(i=o[a])&&(e[a]=!(t[a]=i))}):funct/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
-lang	include/vcb_c/vcb.h	/^    char *lang;$/;"	m	struct:__anon951987d50608	typeref:typename:char *
+lang	include/vcb_c/vcb.h	/^    char *lang;$/;"	m	struct:__anon951987d50308	typeref:typename:char *
 lang	include/vcb_c/vcb.h	/^    char *lang;$/;"	m	struct:st_Var	typeref:typename:char *
 language	include/vcb/com.h	/^        string language;$/;"	m	class:Com	typeref:typename:string
 language	include/vcb/condition.h	/^        string language;$/;"	m	class:Condition	typeref:typename:string
@@ -5195,7 +5191,7 @@ li.unchecked:before	docs/html/doxygen.css	/^li.unchecked:before {$/;"	c
 limit	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	property:p.defaults
 lineHeight	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 linear	docs/html/jquery.js	/^this):Ke.propHooks._default.get(this)},run:function(e){var t,n=Ke.propHooks[this.prop];return th/;"	m	variable:anonymousObject4d6c64acf005
-list	include/vcb_c/vcb.h	/^    st_List* list; $/;"	m	union:__anon951987d5050a	typeref:typename:st_List *
+list	include/vcb_c/vcb.h	/^    st_List* list; $/;"	m	union:__anon951987d5020a	typeref:typename:st_List *
 listGet	src/vcb/com.cpp	/^vector<vector<st_Object>> Com::listGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:vector<vector<st_Object>>
 list_add	src/vcb_c/list.c	/^void list_add(st_List *list, void *value){$/;"	f	typeref:typename:void
 list_free	src/vcb_c/list.c	/^void list_free(st_List *list){$/;"	f	typeref:typename:void
@@ -5584,6 +5580,7 @@ o	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"==
 o	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="function"==typeof s?function(){var t,e=t/;"	f	function:anonymousFunction4d6c64ac19f00
 o	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	f	function:anonymousFunction4d6c64ac16100.anonymousFunction4d6c64ac16200
 o	docs/html/navtree.js	/^  const o = {$/;"	v	function:initNavTree
+object_init	src/vcb_c/object.c	/^st_Object *object_init(st_Arena *arena, char *value, char *lang, st_List *vars){$/;"	f	typeref:typename:st_Object *
 odd	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 odd	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f405
 odd	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
@@ -6362,7 +6359,6 @@ side-nav	docs/html/var_8cpp_source.html	/^<div id="side-nav" class="ui-resizable
 side-nav	docs/html/var_8h.html	/^<div id="side-nav" class="ui-resizable side-nav-resizable">$/;"	I
 side-nav	docs/html/var_8h_source.html	/^<div id="side-nav" class="ui-resizable side-nav-resizable">$/;"	I
 simulate	docs/html/jquery.js	/^e.rnamespace=e.namespace?new RegExp("(^|\\\\.)"+h.join("\\\\.(?:.*\\\\.|)")+"(\\\\.|$)"):null,e./;"	m	variable:anonymousObject4d6c64ac13205
-size	include/vcb_c/vcb.h	/^    size_t size; \/*sizeof input*\/$/;"	m	struct:__anon951987d50208	typeref:typename:size_t
 size	include/vcb_c/vcb.h	/^    size_t size;$/;"	m	struct:__anon951987d50108	typeref:typename:size_t
 sizeDiff	docs/html/jquery.js	/^width:n.width(),height:n.height()},this.originalSize=this._helper?{width:n.outerWidth(),height:n/;"	p
 slice	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
@@ -6517,13 +6513,12 @@ st_Exception	include/st/st_Exception.h	/^class st_Exception{$/;"	c
 st_Exception	src/st/st_Exception.cpp	/^st_Exception::st_Exception(string error){$/;"	f	class:st_Exception
 st_HashTable	include/vcb_c/vcb.h	/^struct st_HashTable{$/;"	s
 st_HashTable	include/vcb_c/vcb.h	/^typedef struct st_HashTable st_HashTable;$/;"	t	typeref:struct:st_HashTable
-st_HashValue	include/vcb_c/vcb.h	/^} st_HashValue;$/;"	t	typeref:union:__anon951987d5050a
+st_HashValue	include/vcb_c/vcb.h	/^} st_HashValue;$/;"	t	typeref:union:__anon951987d5020a
 st_List	include/vcb_c/vcb.h	/^struct st_List{$/;"	s
 st_List	include/vcb_c/vcb.h	/^typedef struct st_List st_List;$/;"	t	typeref:struct:st_List
 st_Object	include/vcb/st_Object.h	/^class st_Object{$/;"	c
-st_Object	include/vcb_c/vcb.h	/^}st_Object;$/;"	t	typeref:struct:__anon951987d50608
+st_Object	include/vcb_c/vcb.h	/^}st_Object;$/;"	t	typeref:struct:__anon951987d50308
 st_Object	src/vcb/st_Object.cpp	/^st_Object::st_Object(string language, vector<Var> properties){$/;"	f	class:st_Object
-st_Value	include/vcb_c/vcb.h	/^} st_Value;$/;"	t	typeref:struct:__anon951987d50408
 st_Var	include/vcb_c/vcb.h	/^typedef struct st_Var {$/;"	s
 st_Var	include/vcb_c/vcb.h	/^} st_Var;$/;"	t	typeref:struct:st_Var
 st__Exception_8h	docs/html/st__Exception_8h.js	/^var st__Exception_8h =$/;"	v
@@ -6570,11 +6565,9 @@ st__string_8h_ad32d81d1b91fe375e4eaf9f633fecbd7	docs/latex/st__string_8h.tex	/^{
 st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a	docs/latex/st__string_8h.tex	/^{\\footnotesize\\ttfamily \\label{st__string_8h_ae64eeb3d6d3d20bf0fa276f8da01d95a} $/;"	l
 st__string_8h_source	docs/latex/st__string_8h_source.tex	/^\\hypertarget{st__string_8h_source}{}\\label{st__string_8h_source}\\index{include\/st\/st\\_stri/;"	l
 st__string_8h_source.html	docs/html/navtreeindex0.js	/^"st__string_8h_source.html":[2,0,0,0,1],$/;"	p	variable:NAVTREEINDEX0
-st_cValue	include/vcb_c/vcb.h	/^} st_cValue;$/;"	t	typeref:struct:__anon951987d50208
 st_compliment	src/st/st_string.cpp	/^int st_compliment(string input, int pos){$/;"	f	typeref:typename:int
 st_con	src/st/st_string.cpp	/^char* st_con(string input){$/;"	f	typeref:typename:char *
 st_con	src/st/st_string.cpp	/^string st_con(char* input){$/;"	f	typeref:typename:string
-st_fValue	include/vcb_c/vcb.h	/^} st_fValue;$/;"	t	typeref:union:__anon951987d5030a
 st_find	src/st/st_string.cpp	/^int st_find(string input, char delimeter, int num) \/\/ get the position of the num'th instance /;"	f	typeref:typename:int
 st_find	src/st/st_string.cpp	/^int st_find(string input, string delimeter, int num){$/;"	f	typeref:typename:int
 st_in	src/st/st_string.cpp	/^int st_in(vector<string> input, string match){$/;"	f	typeref:typename:int
@@ -6609,13 +6602,12 @@ stop	docs/html/jquery.js	/^originalProperties:e,originalOptions:t,startTime:Ze||
 stopImmediatePropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 stopPropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 storeLink	docs/html/navtree.js	/^  const storeLink = function(link) {$/;"	f	function:initNavTree
-str	include/vcb_c/vcb.h	/^    char *str;$/;"	m	struct:__anon951987d50208	typeref:typename:char *
-str	include/vcb_c/vcb.h	/^    char *str;$/;"	m	union:__anon951987d5030a	typeref:typename:char *
 string_fn	tests/vcb_test.c	/^char *string_fn(void *value){$/;"	f	typeref:typename:char *
 stripPath	docs/html/navtree.js	/^  const stripPath = function(uri) {$/;"	f	function:initNavTree
 stripPath2	docs/html/navtree.js	/^  const stripPath2 = function(uri) {$/;"	f	function:initNavTree
 strspits	src/vcb_c/st.c	/^char **strspits(char *input, char *delim){$/;"	f	typeref:typename:char **
 strsplit	src/vcb_c/st.c	/^char **strsplit(char *input, char delim){$/;"	f	typeref:typename:char **
+strsub	src/vcb_c/st.c	/^char *strsub(char *input, int start, int end){$/;"	f	typeref:typename:char *
 style	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	m	variable:anonymousObject4d6c64ace205
 subH	docs/html/jquery.js	/^t.preventDefault()}}).insertAfter(t));var A=".smartmenus_scroll";if(t.dataSM("scroll",{y:this.cs/;"	p	variable:anonymousObject4d6c64ac26d05.docTouchEnd.anonymousFunction4d6c64ac2a400.anonymousObject4d6c64ac2a605
 subIndicators	docs/html/jquery.js	/^return this.each(function(){var dataOpts=$(this).data("sm-options")||null;if(dataOpts)try{dataOp/;"	p	property:$.fn.smartmenus.defaults
@@ -6995,7 +6987,8 @@ using	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"cente
 ut	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	f
 val	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	m	variable:anonymousObject4d6c64ac12b05
 valHooks	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	p	variable:anonymousObject4d6c64ac12e05
-valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena;$/;"	m	struct:st_Var	typeref:typename:st_Arena *
+valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena; \/*contains value, values and dependencies*\/$/;"	m	struct:st_Var	typeref:typename:st_Arena *
+valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena;$/;"	m	struct:__anon951987d50308	typeref:typename:st_Arena *
 value	docs/html/jquery.js	/^"object"===w(n))for(s in i=!0,n)$(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,m(r)||(a=!0),l&&(/;"	p	variable:anonymousObject4d6c64ac9105.cache.anonymousObject4d6c64ac9305
 value	docs/html/jquery.js	/^)return e.stopImmediatePropagation(),e.preventDefault(),n&&n.value}else r.length&&(Y.set(this,i,/;"	p	variable:Se.anonymousObject4d6c64acab05.handler.anonymousObject4d6c64acae05
 value	docs/html/jquery.js	/^){for(var r=0,i=t.length;r<i;r++)se(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),f=!d||!e&&h?/;"	p	variable:ue.ce.fe.Ee.anonymousObject4d6c64ac5605
@@ -7004,14 +6997,14 @@ value	docs/html/jquery.js	/^e=e.slice(n)),n<r&&xe(e))}c.push(t)}return we(c)}ret
 value	docs/html/jquery.js	/^e=e.slice(n)),n<r&&xe(e))}c.push(t)}return we(c)}return me.prototype=b.filters=b.pseudos,b.setFi/;"	p	variable:anonymousObject4d6c64ac5805
 value	include/vcb/st_Object.h	/^        string value;$/;"	m	class:st_Object	typeref:typename:string
 value	include/vcb/var.h	/^        string value; \/**< current value of the var*\/$/;"	m	class:Var	typeref:typename:string
-value	include/vcb_c/vcb.h	/^    st_Value *value;$/;"	m	struct:__anon951987d50608	typeref:typename:st_Value *
-value	include/vcb_c/vcb.h	/^    st_Value *value;$/;"	m	struct:st_Var	typeref:typename:st_Value *
-value	include/vcb_c/vcb.h	/^    st_fValue *value;$/;"	m	struct:__anon951987d50408	typeref:typename:st_fValue *
+value	include/vcb_c/vcb.h	/^    char *value;$/;"	m	struct:__anon951987d50308	typeref:typename:char *
+value	include/vcb_c/vcb.h	/^    char *value;$/;"	m	struct:st_Var	typeref:typename:char *
 value	include/vcb_c/vcb.h	/^    void *value;$/;"	m	struct:st_List	typeref:typename:void *
-value	include/vcb_c/vcb.h	/^    void* value;$/;"	m	union:__anon951987d5050a	typeref:typename:void *
+value	include/vcb_c/vcb.h	/^    void* value;$/;"	m	union:__anon951987d5020a	typeref:typename:void *
 value	src/sound.cpp	/^        int value;$/;"	m	class:Subvalue	typeref:typename:int	file:
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(Var var){ \/\/Given a dependent var, check which value is required f/;"	f	class:Var	typeref:typename:string
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(string varName){ \/\/Given a dependent var, check which value is req/;"	f	class:Var	typeref:typename:string
+value_free	src/vcb_c/value.c	/^void value_free(st_Value *value){$/;"	f	typeref:typename:void
 value_get	src/vcb_c/value.c	/^char *value_get(st_Value *value){$/;"	f	typeref:typename:char *
 value_init	src/vcb_c/value.c	/^st_Value *value_init(st_Arena *arena, char *str, char col, void *input, size_t size){$/;"	f	typeref:typename:st_Value *
 values	include/vcb/var.h	/^        vector<string> values; \/**< list of possible values of the var*\/$/;"	m	class:Var	typeref:typename:vector<string>
@@ -7028,11 +7021,11 @@ var_fetch	src/vcb_c/var.c	/^st_Var *var_fetch(char *name, st_Var *base){$/;"	f	t
 var_ffetch	src/vcb_c/var.c	/^st_Var *var_ffetch(char *name, char *lang){$/;"	f	typeref:typename:st_Var *
 var_free	src/vcb_c/var.c	/^void var_free(st_Var *var){$/;"	f	typeref:typename:void
 var_init	src/vcb_c/var.c	/^st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph){$/;"	f	typeref:typename:st_Var *
-var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, st_Value *value){$/;"	f	typeref:typename:void
+var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_open	src/vcb_c/var.c	/^sqlite3 *var_open(char *lang){$/;"	f	typeref:typename:sqlite3 *
-var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, st_Value *value){$/;"	f	typeref:typename:void
+var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_write	src/vcb_c/var.c	/^void var_write(st_Var *var){$/;"	f	typeref:typename:void
-vars	include/vcb_c/vcb.h	/^    st_List *vars;$/;"	m	struct:__anon951987d50608	typeref:typename:st_List *
+vars	include/vcb_c/vcb.h	/^    st_List *vars;$/;"	m	struct:__anon951987d50308	typeref:typename:st_List *
 vars	src/sound.cpp	/^        vector<Var> vars;$/;"	m	class:Subvalue	typeref:typename:vector<Var>	file:
 ve	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	f
 ve	docs/html/jquery.js	/^return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.d/;"	f	function:ue.ce.fe

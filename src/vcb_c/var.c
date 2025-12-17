@@ -35,12 +35,12 @@ st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph
     strcpy(out->lang, lang);
     strcpy(out->morph, morph);
 
-    out->valarena = arena_init(dependencies->keyiterator * ( sizeof(st_List) + sizeof(st_Value) + sizeof(st_fValue) + sizeof(st_cValue) + VAR_STRLEN + 1 )+1);
+    out->valarena = arena_init(dependencies->keyiterator * ( sizeof(st_List) + VAR_STRLEN + 1 )+1);
     st_List *list = list_init(out->valarena);
     st_List *curr = list;
     for(int i = 0; i < dependencies->keyiterator; i++){
-        st_Value *val = value_init(out->valarena, *(dependencies->keys+i), 0, NULL, 0);
-        curr->value = val;
+        curr->value = arena_alloc(out->valarena, 256);
+        strcpy(curr->value, *dependencies->keys);
         if(i < dependencies->keyiterator - 1 ){
             curr->next = arena_alloc(out->valarena, sizeof(st_List));
             curr = curr->next;
@@ -52,28 +52,16 @@ st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph
     return out;
 }
 
-void var_set(st_Var *var, st_Value *value){
+void var_set(st_Var *var, char *value){
     for(st_List *list = var->values; list; list = list->next)
-        if(strcmp(value_get((st_Value *)list->value), value_get(value)) == 0){
-            var_irrset(var, value);
+        if(strcmp((char *)list->value,value) == 0){
+            strcpy(var->value, value);
             return;
         }
 }
 
-void var_irrset(st_Var *var, st_Value *value){
-    if(value->col){
-        if(!var->value->col)
-            var->value->col = 1;
-        strcpy(var->value->value->cond->str, value->value->cond->str);
-        var->value->value->cond->input = value->value->cond->input;
-        var->value->value->cond->size = value->value->cond->size;
-    } else{
-        if(var->value->col){
-            var->value->col = 0;
-            var->value->value->str = var->value->value->cond->str;
-        }
-        strcpy(var->value->value->str, value->value->str);
-    }
+void var_irrset(st_Var *var, char *value){
+    strcpy(var->value, value);
 }
 
 st_Var *var_ffetch(char *name, char *lang){
@@ -93,7 +81,7 @@ st_Var *var_fetch(char *name, st_Var *base){
     var->lang = base->lang;
 
     st_Arena *trash = arena_init(VAR_STRLEN * 2 * VAR_MAXVAL);
-    st_Arena *arena = arena_init((sizeof(st_List)*2 + VAR_STRLEN + sizeof(st_Value) + sizeof(st_fValue))*VAR_MAXVAL+VAR_STRLEN*2+1);
+    st_Arena *arena = arena_init((sizeof(st_List)*2 + VAR_STRLEN )*VAR_MAXVAL+VAR_STRLEN*2+1);
 
     int i;
     char *sql = arena_alloc(trash, VAR_STRLEN);
@@ -117,13 +105,13 @@ st_Var *var_fetch(char *name, st_Var *base){
     st_List *value_list = list_init(arena);
     st_List *curr_list = value_list;
     if(strcmp(value_str, "")){
-        st_Value *curr_val = value_init(arena, *value_arr, 0, 0, 0);
-        curr_list->value = curr_val;
+        curr_list->value = arena_alloc(arena, 256);
+        strcpy(curr_list->value, *value_arr);
         for(i = 0; strcmp(*(value_arr+i), ""); i++){
             curr_list->next = arena_alloc(arena, sizeof(st_List));
             curr_list = curr_list->next;
-            st_Value *curr_val = value_init(arena, *(value_arr+i), 0, 0, 0);
-            curr_list->value = curr_val;
+            curr_list->value = arena_alloc(arena, 256);
+            strcpy(curr_list->value, *(value_arr+i));
         }
         curr_list->next = 0;
     }
@@ -241,8 +229,4 @@ void var_write(st_Var *var){
 void var_free(st_Var *var){
     arena_free(var->valarena);
     hash_free(var->dependencies);
-    free(var->name);
-    free(var->lang);
-    free(var->morph);
-    free(var);
 }
