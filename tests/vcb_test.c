@@ -2,7 +2,6 @@
 #include "vcb_c/vcb.h"
 #endif
 
-
 char *string_fn(void *value){
     return (char *)value;
 }
@@ -89,7 +88,7 @@ int test_4(){ //tests var_init
     dep_var1->value = "dep_var1";
     dep_var1->next = 0;
     hash_add(hashtable, "test_value1", dep_var1);
-    st_Var *var = var_init("Test_var", "test", hashtable, "");
+    st_Var *var = var_init("Test_var", "test", hashtable);
     int done = 0;
     if(strcmp(var->name, "Test_var"))
         done++;
@@ -104,7 +103,7 @@ int test_5(){ //tests var_write, var_open and var_ffetch
     st_List *dep_var1 = list_init(NULL);
     list_add(dep_var1, "dep_var1");
     hash_add(hashtable, "test_value1", dep_var1);
-    st_Var *var_first = var_init("Test_var", "test", hashtable, "");
+    st_Var *var_first = var_init("Test_var", "test", hashtable);
     var_first->db = var_open(var_first->lang);
     var_write(var_first);
     st_Var *var = var_ffetch("Test_var", "test");

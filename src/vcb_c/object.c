@@ -16,17 +16,10 @@ st_Object *object_init(char *value, char *lang, st_List *vars){
     strcpy(out->value, value);
     out->lang = malloc(OBJ_STRLEN);
     strcpy(out->lang, lang);
-    st_HashTable *dependencies = hash_init(&hash_sdbm);
-    for(curr = vars; curr; curr = curr->next){
-        hash_add(dependencies, ((st_Var*)curr->value)->name, morph(((st_Var*)curr->value)->name, out));
-    }
-    out->dependencies = dependencies;
-
     return out;
 }
 
 void object_free(st_Object *object){
-    hash_free(object->dependencies);
     hash_free(object->vars);
     free(object->value);
     free(object->lang);

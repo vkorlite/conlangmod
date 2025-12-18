@@ -26,14 +26,12 @@ sqlite3 *var_open(char *lang){
     return db;
 }
 
-st_Var *var_init( char *name, char *lang, st_HashTable *dependencies, char *morph){
+st_Var *var_init( char *name, char *lang, st_HashTable *dependencies){
     st_Var *out = malloc(sizeof(st_Var));
     out->name = malloc(VAR_STRLEN);
     out->lang = malloc(VAR_STRLEN);
-    out->morph = malloc(VAR_STRLEN);
     strcpy(out->name, name);
     strcpy(out->lang, lang);
-    strcpy(out->morph, morph);
 
     out->valarena = arena_init(dependencies->keyiterator * ( sizeof(st_List) + VAR_STRLEN + 1 )+1);
     st_List *list = list_init(out->valarena);
@@ -78,7 +76,6 @@ st_Var *var_fetch(char *name, st_Var *base){
     st_Var *var = malloc(sizeof(st_Var));
     var->name = malloc(VAR_STRLEN);
     var->lang = malloc(VAR_STRLEN);
-    var->morph = malloc(VAR_STRLEN);
     strcpy(var->name, name);
     strcpy(var->lang, base->lang);
     var->db = db;
@@ -96,13 +93,10 @@ st_Var *var_fetch(char *name, st_Var *base){
     }
 
     char *value_str = arena_alloc(trash, VAR_STRLEN);
-    char *morph_str = arena_alloc(trash, VAR_STRLEN);
     while((rc = sqlite3_step(stmt)) == SQLITE_ROW){
-        strcpy(morph_str, (char* )sqlite3_column_text(stmt, 0));
         strcpy(value_str, (char *)sqlite3_column_text(stmt, 1));
     }
 
-    strcpy(var->morph, morph_str);
 
     char **value_arr = arena_strsplit(trash, value_str, ' ');
     st_List *value_list = list_init(arena);
@@ -205,9 +199,9 @@ void var_write(st_Var *var){
     strcat(possible, (char*)curr_list->value);
 
     if(update)
-        sprintf(sql, "update Var set Morph='%1s', Possible='%s' where Name='%s';", var->morph, possible, var->name);
+        sprintf(sql, "update Var set Possible='%s' where Name='%s';", possible, var->name);
     else 
-        sprintf(sql, "insert into Var(Name, Morph, Possible) values ('%s', '%s', '%s');", var->name, var->morph, possible); 
+        sprintf(sql, "insert into Var(Name, Possible) values ('%s', '%s');", var->name, possible); 
     char *err = arena_alloc(trash, VAR_STRLEN);
     rc = sqlite3_exec(db, sql, 0, 0, &err);
     if(rc != SQLITE_OK){
@@ -234,6 +228,5 @@ void var_free(st_Var *var){
     hash_free(var->dependencies);
     free(var->name);
     free(var->lang);
-    free(var->morph);
     free(var);
 }

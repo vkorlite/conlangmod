@@ -66,7 +66,6 @@ typedef struct st_Var {
     char *name;
     char *lang;
     sqlite3 *db;
-    char *morph;
     char col; /*whether value is str or cond*/
     st_Arena *valarena; /*contains value, values and dependencies*/
     char *value;
@@ -79,7 +78,6 @@ typedef struct {
     sqlite3 *db;
     char *value;
     st_HashTable *vars;
-    st_HashTable *dependencies;
 }st_Object;
 
 /*useful strings and string functions*/
@@ -129,7 +127,7 @@ extern void sql_close(sqlite3* db);
 
 /* st_Var functions */
 extern sqlite3 *var_open(char *lang); /*opens the var sql database for a langauage*/
-extern st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
+extern st_Var *var_init(char *name, char *lang, st_HashTable *dependencies); /*initialize a st_Var, without database */
 extern st_Var *var_ffetch(char *name, char *lang); /*fetch from database, when this is the first var*/
 extern st_Var *var_fetch(char *name, st_Var *base); /*fetch from databse*/
 extern void var_write(st_Var *var); /*update database*/
@@ -138,15 +136,14 @@ extern void var_irrset(st_Var *var, char *value); /*set value, don't care about 
 extern void var_free(st_Var *var); /*free st_Var*/
 
 /* st_Object functions */
-extern st_Object *object_init( char *value, char *lang, st_List *vars);
+extern st_Object *object_init(char *value, char *lang, st_List *vars);
 extern void object_free(st_Object *obj);
 
-/* coms, bombs and morphs */
+/* coms, bombs */
 extern char *cond(char *condstr_raw, st_Object **input, size_t size);
 extern void *com(char *comstr, st_Object **input, size_t size);
 extern void *domain(char *domstr, st_Object **input, size_t size);
 extern void *bomb(char *bombstr, st_Object **input, size_t size);
-extern st_List *morph(char* morphstr, st_Object* input); 
 
 #ifdef __cplusplus
 }

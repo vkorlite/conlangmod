@@ -1,6 +1,5 @@
 create table Var(
     Name varchar(128) PRIMARY KEY NOT NULL,
-    Morph varchar(128),
     Possible varchar(256)
 );
 

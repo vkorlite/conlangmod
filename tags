@@ -1184,7 +1184,6 @@ MSearchSelectWindow	docs/html/var_8h_source.html	/^<div id="MSearchSelectWindow"
 Me	docs/html/jquery.js	/^"string"==typeof e&&!ke.test(e)&&!ge[(de.exec(e)||["",""])[1].toLowerCase()]){e=S.htmlPrefilter(/;"	m	variable:anonymousObject4d6c64accb05
 Member Data Documentation	docs/html/classVar.html	/^<a name="doc-variable-members" id="doc-variable-members"><\/a><h2 id="header-doc-variable-member/;"	i
 Member Function Documentation	docs/html/classVar.html	/^<\/div><a name="doc-func-members" id="doc-func-members"><\/a><h2 id="header-doc-func-members" cl/;"	i
-Morph	data/db/test/init_test.sql	/^    Morph varchar(128),$/;"	E	table:Var
 NAVTREE	docs/html/navtreedata.js	/^var NAVTREE =$/;"	v
 NAVTREEINDEX	docs/html/navtreedata.js	/^var NAVTREEINDEX =$/;"	v
 NAVTREEINDEX0	docs/html/navtreeindex0.js	/^var NAVTREEINDEX0 =$/;"	v
@@ -2920,7 +2919,6 @@ deleteLink	docs/html/navtree.js	/^  const deleteLink = function() {$/;"	f	functi
 depend	build/Makefile	/^depend:$/;"	t
 dependencies	include/vcb/var.h	/^        map<string, vector<Var>> dependencies; \/**< map of dependencies of the var, where the k/;"	m	class:Var	typeref:typename:map<string,vector<Var>>
 dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies; \/* key: (st_Value*)->value or (char *) cond((st_Value*)->cond),/;"	m	struct:st_Var	typeref:typename:st_HashTable *
-dependencies	include/vcb_c/vcb.h	/^    st_HashTable *dependencies;$/;"	m	struct:__anon951987d50308	typeref:typename:st_HashTable *
 depth	docs/html/navtree.js	/^      depth         : 0,$/;"	p	property:initNavTree.o.node
 depth	docs/html/navtree.js	/^      depth        : po.depth + 1,$/;"	p	variable:initNavTree.newNode.node
 dequeue	docs/html/jquery.js	/^1===o.nodeType&&!Y.get(o,"hasDataAttrs"))){t=a.length;while(t--)a[t]&&0===(r=a[t].name).indexOf(/;"	m	variable:anonymousObject4d6c64ac9a05
@@ -5324,7 +5322,7 @@ minWidth	docs/html/jquery.js	/^)&&(this.menuScrollStop(t),this.menuScroll(t),e.p
 minWidth	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 minWidth	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.n
 minWidth	docs/html/navtree.js	/^    $(sidenav).resizable({ minWidth: 0 });$/;"	p	variable:anonymousObject30fad1a13505
-morph	include/vcb_c/vcb.h	/^    char *morph;$/;"	m	struct:st_Var	typeref:typename:char *
+morph	src/vcb_c/morph.c	/^st_List *morph(char *morphstr, st_Object *input){ $/;"	f	typeref:typename:st_List *
 mouseOnToPopup	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25405
 mouseTrackingActive	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 mousedown	docs/html/jquery.js	/^","),this.handles={},e=0;e<i.length;e++)s="ui-resizable-"+(t=String.prototype.trim.call(i[e])),n/;"	p	variable:anonymousObject4d6c64ac21205
@@ -7030,7 +7028,7 @@ var_depend_write	src/vcb_c/var.c	/^void var_depend_write(sqlite3 *db, char *name
 var_fetch	src/vcb_c/var.c	/^st_Var *var_fetch(char *name, st_Var *base){$/;"	f	typeref:typename:st_Var *
 var_ffetch	src/vcb_c/var.c	/^st_Var *var_ffetch(char *name, char *lang){$/;"	f	typeref:typename:st_Var *
 var_free	src/vcb_c/var.c	/^void var_free(st_Var *var){$/;"	f	typeref:typename:void
-var_init	src/vcb_c/var.c	/^st_Var *var_init( char *name, char *lang, st_HashTable *dependencies, char *morph){$/;"	f	typeref:typename:st_Var *
+var_init	src/vcb_c/var.c	/^st_Var *var_init( char *name, char *lang, st_HashTable *dependencies){$/;"	f	typeref:typename:st_Var *
 var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_open	src/vcb_c/var.c	/^sqlite3 *var_open(char *lang){$/;"	f	typeref:typename:sqlite3 *
 var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, char *value){$/;"	f	typeref:typename:void
