@@ -5,8 +5,19 @@
 #define COND_STRLEN 256
 
 char *evaluate(char *condstr, st_Object **input, size_t size){
-    if(*condstr == '#' && *(condstr+1)-'0' < size)
-       return (*(input+(*(condstr+1)-'0')))->value;
+    if(*condstr == '#'){
+        int index = atoi(strsub(condstr, 1, strfind(condstr, '.', 0)));
+        if(index < size){
+            char *value = strsub(condstr, strfind(condstr, ',', 0)+1, strlen(condstr));
+            if(strcmp(value, "value"))
+                return (*(input+(*(condstr+1)-'0')))->value;
+            else{
+                return ((st_Var*)hash_get((*(input+(*(condstr+1)-'0')))->vars, value))->value;
+            }
+        } else {
+            return "0";
+        }
+    }
     return condstr;
 }
 

@@ -78,7 +78,7 @@ typedef struct {
     char *lang;
     sqlite3 *db;
     char *value;
-    st_List *vars;
+    st_HashTable *vars;
     st_HashTable *dependencies;
 }st_Object;
 

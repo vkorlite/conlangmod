@@ -7035,7 +7035,7 @@ var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, char *value){$/;"	f	ty
 var_open	src/vcb_c/var.c	/^sqlite3 *var_open(char *lang){$/;"	f	typeref:typename:sqlite3 *
 var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_write	src/vcb_c/var.c	/^void var_write(st_Var *var){$/;"	f	typeref:typename:void
-vars	include/vcb_c/vcb.h	/^    st_List *vars;$/;"	m	struct:__anon951987d50308	typeref:typename:st_List *
+vars	include/vcb_c/vcb.h	/^    st_HashTable *vars;$/;"	m	struct:__anon951987d50308	typeref:typename:st_HashTable *
 vars	src/sound.cpp	/^        vector<Var> vars;$/;"	m	class:Subvalue	typeref:typename:vector<Var>	file:
 ve	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	f
 ve	docs/html/jquery.js	/^return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.d/;"	f	function:ue.ce.fe
