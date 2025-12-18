@@ -1,4 +1,4 @@
-ConLangMod is a project that helps conlangers systematize their conlangs, and write complex, i.e. not just simple character replacements, rules for changes in languages. It takes an object oriented approach to language.
+ConLangMod is a project that helps conlangers systematize their conlangs, and write complex, i.e. not just simple character replacements, rules for changes in languages. More indepth explanations for the proposed workings of ConLangMod are in outlide.md
 
 ---
 
