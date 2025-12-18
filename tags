@@ -829,6 +829,7 @@ COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COND_STRLEN	src/vcb_c/cond.c	/^#define COND_STRLEN /;"	d	file:
 CSSCoordinates	docs/html/jquery.js	/^session.activeHover){displayController=session.activeHover.data(DATA_DISPLAYCONTROLLER)}if(displ/;"	c	function:anonymousFunction4d6c64ac17300
 C_STD	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_STD /;"	d	file:
 C_STD_11	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define C_STD_11 /;"	d	file:
@@ -1515,6 +1516,7 @@ Z	docs/html/jquery.js	/^var n,r=e[this.expando];if(void 0!==r){if(void 0!==t){n=
 \\sectionmark	docs/latex/refman.tex	/^  \\renewcommand{\\sectionmark}[1]{%$/;"	C
 \\subparagraph	docs/latex/refman.tex	/^  \\renewcommand{\\subparagraph}{%$/;"	C
 \x20	docs/html/jquery.js	/^"string"==typeof e.textContent)return e.textContent;for(e=e.firstChild;e;e=e.nextSibling)n+=o(e)/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.relative
+__CTYPE_INCL	include/vcb_c/vcb.h	/^#define __CTYPE_INCL /;"	d
 __SQLITE3_INCL	include/vcb_c/vcb.h	/^#define __SQLITE3_INCL /;"	d
 __STDIO_INCL	include/vcb_c/vcb.h	/^#define __STDIO_INCL /;"	d
 __STDLIB_INCL	include/vcb_c/vcb.h	/^#define __STDLIB_INCL /;"	d
@@ -2607,7 +2609,9 @@ body	docs/html/doxygen.css	/^body, table, div, p, dl {$/;"	s
 body.resizing	docs/html/doxygen.css	/^body.resizing {$/;"	c
 bool	docs/html/jquery.js	/^"^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\\\("+M+"*(even|odd|(([+-]|)(\\\\d*)n|)"+M+/;"	p	variable:anonymousObject4d6c64ac1605
 boolCheck	src/vcb/condition.cpp	/^bool Condition::boolCheck(vector<st_Object> input){ $/;"	f	class:Condition	typeref:typename:bool
+boolEval	src/vcb_c/cond.c	/^int boolEval(char *condstr, st_Object **input, size_t size){$/;"	f	typeref:typename:int
 boolGet	src/vcb/com.cpp	/^bool Com::boolGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:bool
+boolconcat	src/vcb_c/cond.c	/^int boolconcat(int eval, char prevsymbol, int currans){$/;"	f	typeref:typename:int
 border	docs/html/jquery.js	/^e.style[u]=t,t=S.css(e,u)),Ye(0,t,s)}}}),S.cssHooks.marginLeft=Fe(y.reliableMarginLeft,function(/;"	p	variable:anonymousObject4d6c64ace805
 bottom	docs/html/jquery.js	/^delayInProgress:false,windowWidth:0,windowHeight:0,scrollTop:0,scrollLeft:0};var Collision={none/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.Collision
 bottomToTopSubMenus	docs/html/jquery.js	/^bottomToTopSubMenus:!1,collapsibleBehavior:"default"},$});$/;"	p	property:$.fn.smartmenus.defaults
@@ -2779,20 +2783,20 @@ collisionWidth	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-
 columnCount	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 com_8h_source	docs/latex/com_8h_source.tex	/^\\hypertarget{com_8h_source}{}\\label{com_8h_source}\\index{include\/vcb\/com.h@{include\/vcb\/c/;"	l
 com_8h_source.html	docs/html/navtreeindex0.js	/^"com_8h_source.html":[2,0,0,1,0],$/;"	p	variable:NAVTREEINDEX0
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:0
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:1
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:2
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:3
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:4
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:5
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:6
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:7
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:0
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:1
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:2
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:3
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:4
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:5
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:6
+command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:7
 complete	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	variable:$.fn.scrollTo.anonymousFunction4d6c64ac24500.k.anonymousObject4d6c64ac24705
 complete	docs/html/jquery.js	/^null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r.complete,r.complete=function(){m(r.old)&&r.o/;"	f	variable:r
 composed	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	p	variable:anonymousObject4d6c64aca205
 computePlacementCoords	docs/html/jquery.js	/^openTooltip()}}function cancelTimer(stopClose){hoverTimer=clearTimeout(hoverTimer);if(session.cl/;"	f	class:cancelClose.PlacementCalculator
 comstr	include/vcb/com.h	/^        string comstr;$/;"	m	class:Com	typeref:typename:string
-cond	src/vcb_c/cond.c	/^void *cond(char *cond, st_Object **input, size_t size){$/;"	f	typeref:typename:void *
+cond	src/vcb_c/cond.c	/^char *cond(char *condstr_raw, st_Object **input, size_t size){$/;"	f	typeref:typename:char *
 condition	include/vcb/com.h	/^        Condition condition;$/;"	m	class:Com	typeref:typename:Condition
 condition_8h_source	docs/latex/condition_8h_source.tex	/^\\hypertarget{condition_8h_source}{}\\label{condition_8h_source}\\index{include\/vcb\/condition./;"	l
 condition_8h_source.html	docs/html/navtreeindex0.js	/^"condition_8h_source.html":[2,0,0,1,1],$/;"	p	variable:NAVTREEINDEX0
@@ -3232,6 +3236,7 @@ error	docs/html/jquery.js	/^push:u,sort:t.sort,splice:t.splice},S.extend=S.fn.ex
 error	include/st/st_Exception.h	/^        string error;$/;"	m	class:st_Exception	typeref:typename:string
 escapeHtml	docs/html/navtree.js	/^    function escapeHtml (string) {$/;"	f	function:initNavTree.initPageToc
 etag	docs/html/jquery.js	/^return null==n?null:Array.isArray(n)?S.map(n,function(e){return{name:t.name,value:e.replace(Et,"/;"	p	variable:anonymousObject4d6c64ac14b05
+evaluate	src/vcb_c/cond.c	/^char *evaluate(char *condstr, st_Object **input, size_t size){$/;"	f	typeref:typename:char *
 even	docs/html/jquery.js	/^){var e=y(this);setTimeout(function(){var t=e.data("ui-form-reset-instances");y.each(t,function(/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f405
 even	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 even	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
@@ -5200,6 +5205,7 @@ list	include/vcb_c/vcb.h	/^    st_List* list; $/;"	m	union:__anon951987d5020a	ty
 listGet	src/vcb/com.cpp	/^vector<vector<st_Object>> Com::listGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:vector<vector<st_Object>>
 list_add	src/vcb_c/list.c	/^void list_add(st_List *list, void *value){$/;"	f	typeref:typename:void
 list_free	src/vcb_c/list.c	/^void list_free(st_List *list){$/;"	f	typeref:typename:void
+list_get	src/vcb_c/list.c	/^void *list_get(st_List *list, int index){$/;"	f	typeref:typename:void *
 list_init	src/vcb_c/list.c	/^st_List *list_init(st_Arena *arena){$/;"	f	typeref:typename:st_List *
 list_rem	src/vcb_c/list.c	/^void list_rem(st_List *list, int (*sign_function)(void *)){$/;"	f	typeref:typename:void
 load	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acbc05
@@ -6602,12 +6608,19 @@ stopImmediatePropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.res
 stopPropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 storeLink	docs/html/navtree.js	/^  const storeLink = function(link) {$/;"	f	function:initNavTree
 strcompl	src/vcb_c/st.c	/^int strcompl(char *input, int num){$/;"	f	typeref:typename:int
+strcontain	src/vcb_c/st.c	/^int strcontain(char *input, char delim){$/;"	f	typeref:typename:int
+strcontains	src/vcb_c/st.c	/^int strcontains(char *input, char* delim){$/;"	f	typeref:typename:int
 strfind	src/vcb_c/st.c	/^int strfind(char *input, char delim, int num){$/;"	f	typeref:typename:int
 string_fn	tests/vcb_test.c	/^char *string_fn(void *value){$/;"	f	typeref:typename:char *
+strinsert	src/vcb_c/st.c	/^char *strinsert(st_Arena *arena, char* input, char *insert, int pos){$/;"	f	typeref:typename:char *
 stripPath	docs/html/navtree.js	/^  const stripPath = function(uri) {$/;"	f	function:initNavTree
 stripPath2	docs/html/navtree.js	/^  const stripPath2 = function(uri) {$/;"	f	function:initNavTree
-strspits	src/vcb_c/st.c	/^char **strspits(char *input, char *delim){$/;"	f	typeref:typename:char **
+strmatch	src/vcb_c/st.c	/^int strmatch(char *input, char delim){$/;"	f	typeref:typename:int
+strmatchs	src/vcb_c/st.c	/^int strmatchs(char *input, char *delim){$/;"	f	typeref:typename:int
+strrep	src/vcb_c/st.c	/^char *strrep(st_Arena *arena, char *input, char *replacement, int start, int end){$/;"	f	typeref:typename:char *
 strsplit	src/vcb_c/st.c	/^char **strsplit(char *input, char delim){$/;"	f	typeref:typename:char **
+strsplitm	src/vcb_c/st.c	/^char **strsplitm(char *input, char *delims){$/;"	f	typeref:typename:char **
+strsplits	src/vcb_c/st.c	/^char **strsplits(char *input, char *delim){$/;"	f	typeref:typename:char **
 strsub	src/vcb_c/st.c	/^char *strsub(char *input, int start, int end){$/;"	f	typeref:typename:char *
 style	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	m	variable:anonymousObject4d6c64ace205
 subH	docs/html/jquery.js	/^t.preventDefault()}}).insertAfter(t));var A=".smartmenus_scroll";if(t.dataSM("scroll",{y:this.cs/;"	p	variable:anonymousObject4d6c64ac26d05.docTouchEnd.anonymousFunction4d6c64ac2a400.anonymousObject4d6c64ac2a605

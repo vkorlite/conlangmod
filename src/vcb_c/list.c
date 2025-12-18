@@ -47,6 +47,14 @@ void list_add(st_List *list, void *value){
     }
 }
 
+void *list_get(st_List *list, int index){
+    st_List *curr = list;
+    for(int i = 0; i < index && curr->next; i++){
+        curr = curr->next;
+    }
+    return curr->value;
+}
+
 void list_rem(st_List *list, int (*sign_function)(void *)){
     if(sign_function(list->value))
         list = list->next;

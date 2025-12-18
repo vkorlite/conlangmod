@@ -27,7 +27,7 @@ char **strsplit(char *input, char delim){
     return output;
 }
 
-char **strspits(char *input, char *delim){
+char **strsplits(char *input, char *delim){
     if(strlen(input) <= strlen(delim)){
         char **output = (char**)malloc(sizeof(char*));
         *output = input;
@@ -126,4 +126,97 @@ int strcompl(char *input, int num){
         else if(*(input+i) == cl)
             br--;
     return i;
+}
+
+int strmatch(char *input, char delim){
+    int num = 0;
+    for(int i = 0; *(input+i) != '\0'; i++)
+        if(*(input+i) == delim)
+            num++;
+    return num;
+}
+
+char *strrep(st_Arena *arena, char *input, char *replacement, int start, int end){
+    int strlen_repl = strlen(replacement);
+    int strlen_input = strlen(input);
+    int space = ((strlen_repl > end-start)? strlen_repl-end+start+1: 1);
+    char *out = arena_alloc(arena, strlen_input+space+1);
+    int len = 0;
+    for(int i = 0; i < strlen_input && len < strlen_input+space; i++)
+        if(i < start)
+            *(out+len++) = *(input+i);
+        else if(i <= end && i-start < strlen_repl)
+            *(out+len++) = *(replacement+i-start);
+        else if(i > end)
+            *(out+len++) = *(input+i);
+    *(out+strlen_input+space) = '\0';
+    return out;
+}
+
+char *strinsert(st_Arena *arena, char* input, char *insert, int pos){
+    int strlen_insert = strlen(insert);
+    int strlen_input = strlen(input);
+    char *out = arena_alloc(arena, strlen_input+strlen_insert+1);
+    for(int i =0; i < strlen_input + strlen_insert; i++)
+        if(i < pos)
+            *(out+i) = *(input+i);
+        else if(i-pos < strlen_insert)
+            *(out+i) = *(insert+i-pos);
+        else
+            *(out+i) = *(input+i-strlen_insert);
+    *(out+strlen_input+strlen_insert) = '\0';
+    return out;
+}
+
+int strcontain(char *input, char delim){
+    for(int i = 0; *(input+i) != '\0'; i++)
+        if(*(input+i) == delim)
+            return 1;
+    return 0;
+}
+
+int strcontains(char *input, char* delim){
+    for(int i =0; *(input+i) != '\0'; i++)
+        if(strcontain(delim, *(input+i)))
+            return 1;
+    return 0;
+}
+
+char **strsplitm(char *input, char *delims){
+    int i;
+    int len = 0;
+    for(i = 0; *(input+i) != '\0'; i++){
+        if(strcontain(delims, *(input+i)))
+            len++;
+    }
+    char **out = malloc((len+1) *sizeof(void*));
+    int con = 0;
+    int prevspace = 0;
+    for(i = 0; *(input+i) != '\0' && con < len; i++){
+        if(strcontain(delims, *(input+i))){
+            *(out+con) = malloc(i-prevspace+1);
+            for(int j = prevspace; j < i; j++)
+                *(*(out+con)+j-prevspace) = *(input+j);
+            *(*(out+con++)+i-prevspace) = '\0';
+            prevspace = i+1;
+        }
+    }
+    if(con < len){
+        *(out+con) = malloc(i-prevspace+1);
+        for(int j = prevspace; j < i; j++)
+            *(*(out+con)+j-prevspace) = *(input+j);
+        *(*(out+con++)+i-prevspace) = '\0';
+    }
+    *(out+con) = malloc(1);
+    **(out+con) = '\0';
+
+    return out;
+}
+
+int strmatchs(char *input, char *delim){
+    int num = 0;
+    for(int i = 0; *(input+i) != '\0'; i++)
+        if(strcontain(delim, *(input+i)))
+            num++;
+    return num;
 }

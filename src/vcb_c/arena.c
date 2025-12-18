@@ -11,6 +11,8 @@ st_Arena *arena_init(size_t size){
 }
 
 void *arena_alloc(st_Arena *arena, size_t size){
+    if(arena == NULL)
+        return malloc(size);
     if(size > arena->size){
         fprintf(stderr, "vcb/arena.c, arena_alloc(): NOT ENOUGH MEMORY FOR %d BYTES, %d BYTES LEFT\n", (int) size, (int) arena->size);
         return NULL;
@@ -22,6 +24,8 @@ void *arena_alloc(st_Arena *arena, size_t size){
 }
 
 void arena_free(st_Arena *arena){
+    if(arena == NULL)
+        return;
     free(arena->ptr);
     free(arena);
 }

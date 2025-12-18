@@ -18,6 +18,11 @@
 #define __STRING_INCL ;
 #endif
 
+#ifndef __CTYPE_INCL
+#include <ctype.h>
+#define __CTYPE_INCL ;
+#endif
+
 #ifdef __cplusplus
 extern "C"{
 #endif 
@@ -82,10 +87,17 @@ extern char *path_to_data;
 extern char **strsplit(char *input, char delim); /*split string by char delim*/
 extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
+extern char **strsplitm(char *input, char *delim); /*split string by mulitple delims*/
 extern char *strsub(char *input, int start, int end); /*find substring of string*/
 extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*strsub, but with arena*/
-extern int strfind(char *input, char delim, int num);
-extern int strcompl(char *input, int num);
+extern int strfind(char *input, char delim, int num); /*find the nth occurence of the delimeter in the str*/
+extern int strcompl(char *input, int num); /*find the compliment brackets in the str*/
+extern int strmatch(char *input, char delim); /*find the num of occurences of a delim in a str*/
+extern int strmatchm(char *input, char *delim);
+extern char *strrep(st_Arena *arena, char *input, char *replacement, int start, int end);
+extern char *strinsert(st_Arena *arena, char *input, char *insert, int pos);
+extern int strcontain(char *input, char delim);
+extern int strcontains(char *input, char *delim);
 
 /*st_Arena functions*/
 extern st_Arena *arena_init(size_t size);
@@ -95,6 +107,7 @@ extern void arena_free(st_Arena *arena);
 /* st_List functions */
 extern st_List *list_init(st_Arena *arena);
 extern void list_add(st_List *list, void *value);
+extern void *list_get(st_List *list, int index);
 extern void list_rem(st_List *list, int (*sign_function)(void *));
 extern void list_free(st_List *list);
 
@@ -129,11 +142,11 @@ extern st_Object *object_init( char *value, char *lang, st_List *vars);
 extern void object_free(st_Object *obj);
 
 /* coms, bombs and morphs */
-extern void *cond(char *cond, st_Object **input, size_t size);
-extern void *com(char *com, st_Object **input, size_t size);
-extern void *domain(char *com, st_Object **input, size_t size);
-extern void *bomb(char *bomb, st_Object **input, size_t size);
-extern st_Object *morph(char* morph, st_Object* input); 
+extern char *cond(char *condstr_raw, st_Object **input, size_t size);
+extern void *com(char *comstr, st_Object **input, size_t size);
+extern void *domain(char *domstr, st_Object **input, size_t size);
+extern void *bomb(char *bombstr, st_Object **input, size_t size);
+extern st_List *morph(char* morphstr, st_Object* input); 
 
 #ifdef __cplusplus
 }
