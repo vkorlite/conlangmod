@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 
 project(conlangmod_vcb_c_test C)
+add_compile_options(-Wall -Werror)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 find_package(SQLite3 REQUIRED)
@@ -22,7 +23,6 @@ target_sources(clm_vcb_library
         src/vcb_c/list.c
         src/vcb_c/hashtable.c
         src/vcb_c/system_hash.c
-        src/vcb_c/value.c
         src/vcb_c/cond.c
         src/vcb_c/var.c
     PUBLIC

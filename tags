@@ -88,6 +88,14 @@
 !_TAG_KIND_DESCRIPTION!Make	I,makefile	/makefiles/
 !_TAG_KIND_DESCRIPTION!Make	m,macro	/macros/
 !_TAG_KIND_DESCRIPTION!Make	t,target	/targets/
+!_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
+!_TAG_KIND_DESCRIPTION!Markdown	h,hashtag	/hashtags/
+!_TAG_KIND_DESCRIPTION!Markdown	n,footnote	/footnotes/
+!_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
+!_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
+!_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
 !_TAG_KIND_DESCRIPTION!SQL	C,ccflag	/PLSQL_CCFLAGS/
 !_TAG_KIND_DESCRIPTION!SQL	D,domain	/domains/
 !_TAG_KIND_DESCRIPTION!SQL	E,field	/record fields/
@@ -160,6 +168,7 @@
 !_TAG_PARSER_VERSION!JSON	0.0	/current.age/
 !_TAG_PARSER_VERSION!JavaScript	1.1	/current.age/
 !_TAG_PARSER_VERSION!Make	1.1	/current.age/
+!_TAG_PARSER_VERSION!Markdown	1.1	/current.age/
 !_TAG_PARSER_VERSION!SQL	0.0	/current.age/
 !_TAG_PARSER_VERSION!SVG	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
@@ -658,7 +667,6 @@ $.fn.smartmenus.defaults	docs/html/jquery.js	/^return this.each(function(){var d
 5	docs/html/search/searchdata.js	/^  5: "groups"$/;"	p	variable:indexSectionNames
 6	build/compile_commands.json	/^{$/;"	o
 7	build/compile_commands.json	/^{$/;"	o
-8	build/compile_commands.json	/^{$/;"	o
 ::-webkit-scrollbar	docs/html/doxygen.css	/^::-webkit-scrollbar {$/;"	s
 ::-webkit-scrollbar-corner	docs/html/doxygen.css	/^::-webkit-scrollbar-corner {$/;"	s
 ::-webkit-scrollbar-thumb	docs/html/doxygen.css	/^::-webkit-scrollbar-thumb {$/;"	s
@@ -2522,7 +2530,6 @@ arena	include/vcb_c/vcb.h	/^    st_Arena* arena;$/;"	m	struct:st_List	typeref:ty
 arena_alloc	src/vcb_c/arena.c	/^void *arena_alloc(st_Arena *arena, size_t size){$/;"	f	typeref:typename:void *
 arena_free	src/vcb_c/arena.c	/^void arena_free(st_Arena *arena){$/;"	f	typeref:typename:void
 arena_init	src/vcb_c/arena.c	/^st_Arena *arena_init(size_t size){$/;"	f	typeref:typename:st_Arena *
-arena_recit	src/vcb_c/arena.c	/^st_Arena *arena_recit(st_Arena *arena, size_t size){$/;"	f	typeref:typename:st_Arena *
 arena_strsplit	src/vcb_c/st.c	/^char **arena_strsplit(st_Arena *arena, char *input, char delim){$/;"	f	typeref:typename:char **
 arena_strsub	src/vcb_c/st.c	/^char *arena_strsub(st_Arena *arena, char *input, int start, int end){$/;"	f	typeref:typename:char *
 aria-controls	docs/html/jquery.js	/^t.hasClass("mega-menu")&&t.find("ul").dataSM("in-mega",!0);for(var e=2,i=t[0];(i=i.parentNode.pa/;"	p	variable:anonymousObject4d6c64ac2a205
@@ -2779,7 +2786,6 @@ command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\
 command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:5
 command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:6
 command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:7
-command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include  -o CMakeFiles/;"	s	object:8
 complete	docs/html/jquery.js	/^ *\/(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undef/;"	p	variable:$.fn.scrollTo.anonymousFunction4d6c64ac24500.k.anonymousObject4d6c64ac24705
 complete	docs/html/jquery.js	/^null!=r.queue&&!0!==r.queue||(r.queue="fx"),r.old=r.complete,r.complete=function(){m(r.old)&&r.o/;"	f	variable:r
 composed	docs/html/jquery.js	/^Y.remove(e,[t+"queue",n])})})}}),S.fn.extend({queue:function(t,n){var e=2;return"string"!=typeof/;"	p	variable:anonymousObject4d6c64aca205
@@ -2969,7 +2975,6 @@ directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:5
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:6
 directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:7
-directory	build/compile_commands.json	/^  "directory": "\/home\/space\/Documents\/coding\/conlangmod\/build",$/;"	s	object:8
 disable	docs/html/jquery.js	/^).indexOf(i.accessIdPrefix)&&t.removeAttr("id")}).removeClass("has-submenu").removeDataSM("sub")/;"	m	variable:anonymousObject4d6c64ac26d05
 disable	docs/html/jquery.js	/^){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1]/;"	m	variable:ue.ce.f
 disableSelection	docs/html/jquery.js	/^disableSelection:(t="onselectstart"in document.createElement("div")?"selectstart":"mousedown",fu/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ea05
@@ -3230,12 +3235,12 @@ even	docs/html/jquery.js	/^){var e=y(this);setTimeout(function(){var t=e.data("u
 even	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 even	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
 eventPhase	docs/html/jquery.js	/^this.isImmediatePropagationStopped=we,e&&!this.isSimulated&&e.stopImmediatePropagation(),this.st/;"	p	variable:anonymousObject4d6c64acc005
+ex	include/vcb_c/vcb.h	/^    char ex;$/;"	m	struct:st_List	typeref:typename:char
 expand	docs/html/jquery.js	/^e.style[u]=t,t=S.css(e,u)),Ye(0,t,s)}}}),S.cssHooks.marginLeft=Fe(y.reliableMarginLeft,function(/;"	m	property:S.cssHooks
 expandNode	docs/html/navtree.js	/^  const expandNode = function(o, node, imm, setFocus) {$/;"	f	function:initNavTree
 expanded	docs/html/navtree.js	/^      expanded      : false,$/;"	p	property:initNavTree.o.node
 expanded	docs/html/navtree.js	/^      expanded     : false,$/;"	p	variable:initNavTree.newNode.node
 expando	docs/html/jquery.js	/^push:u,sort:t.sort,splice:t.splice},S.extend=S.fn.extend=function(){var e,t,n,r,i,o,a=arguments[/;"	p	variable:anonymousObject4d6c64ac0f05
-external	include/vcb_c/vcb.h	/^    char external;$/;"	m	struct:st_List	typeref:typename:char
 extra	docs/html/jquery.js	/^return this._toggleClass(t,e,i,!0)},_toggleClass:function(t,e,i,s){var n="string"==typeof t||nul/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05.option.anonymousFunction4d6c64ac1c700.i
 f	docs/html/doxygen.svg	/^  <filter id="f" x="-.010676" y="-.045304" width="1.0214" height="1.0906" color-interpolation-fi/;"	d
 f	docs/html/doxygen.svg	/^  <filter id="f" x="-.010676" y="-.045304" width="1.0214" height="1.0906" color-interpolation-fi/;"	i
@@ -3252,14 +3257,13 @@ fadeToggle	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:0
 fast	docs/html/jquery.js	/^],r=t[a+"queueHooks"],i=S.timers,o=n?n.length:0;for(t.finish=!0,S.queue(this,a,[]),r&&r.stop&&r./;"	p	property:S.fx.speeds
 fe	docs/html/jquery.js	/^)),n}catch(e){N(t,!0)}finally{s===S&&e.removeAttribute("id")}}}return g(t.replace($,"$1"),e,n,r)/;"	f	function:ue.ce
 file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/arena.c",$/;"	s	object:0
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/cond.c",$/;"	s	object:6
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/cond.c",$/;"	s	object:5
 file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/hashtable.c",$/;"	s	object:3
 file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/list.c",$/;"	s	object:2
 file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/st.c",$/;"	s	object:1
 file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/system_hash.c",$/;"	s	object:4
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/value.c",$/;"	s	object:5
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/var.c",$/;"	s	object:7
-file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/tests\/vcb_test.c",$/;"	s	object:8
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/src\/vcb_c\/var.c",$/;"	s	object:6
+file	build/compile_commands.json	/^  "file": "\/home\/space\/Documents\/coding\/conlangmod\/tests\/vcb_test.c",$/;"	s	object:7
 file	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	variable:ue.ce.fe.anonymousObject4d6c64ac4b05
 files	docs/html/dir_6e9a6da2c7e4a6c456ccabb42c2d8f90.html	/^<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name/;"	I
 files	docs/html/dir_6e9a6da2c7e4a6c456ccabb42c2d8f90.html	/^<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name/;"	a
@@ -3547,7 +3551,7 @@ hashValue	docs/html/navtree.js	/^  const hashValue = function() {$/;"	f	function
 hash_add	src/vcb_c/hashtable.c	/^void hash_add(st_HashTable *hashtable, char* key, void *value){$/;"	f	typeref:typename:void
 hash_free	src/vcb_c/hashtable.c	/^void hash_free(st_HashTable *hashtable){$/;"	f	typeref:typename:void
 hash_get	src/vcb_c/hashtable.c	/^void *hash_get(st_HashTable *hashtable, char *key){$/;"	f	typeref:typename:void *
-hash_getAll	src/vcb_c/hashtable.c	/^void **hash_getAll(st_Arena *arena, st_HashTable *hashtable){$/;"	f	typeref:typename:void **
+hash_getAll	src/vcb_c/hashtable.c	/^void **hash_getAll(st_HashTable *hashtable){$/;"	f	typeref:typename:void **
 hash_init	src/vcb_c/hashtable.c	/^st_HashTable *hash_init(int (*hash)(char*,int)){$/;"	f	typeref:typename:st_HashTable *
 hash_key_resize	src/vcb_c/hashtable.c	/^void hash_key_resize(st_HashTable *hashtable){$/;"	f	typeref:typename:void
 hash_print	src/vcb_c/hashtable.c	/^void hash_print(FILE *out, st_HashTable *hashtable, char *(*string_function)(void*)){$/;"	f	typeref:typename:void
@@ -5314,6 +5318,7 @@ minWidth	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidt
 minWidth	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.n
 minWidth	docs/html/navtree.js	/^    $(sidenav).resizable({ minWidth: 0 });$/;"	p	variable:anonymousObject30fad1a13505
 morph	include/vcb_c/vcb.h	/^    char *morph;$/;"	m	struct:st_Var	typeref:typename:char *
+morph	src/vcb_c/cond.c	/^st_Object *morph(char *morph, st_Object *input){$/;"	f	typeref:typename:st_Object *
 mouseOnToPopup	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25405
 mouseTrackingActive	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 mousedown	docs/html/jquery.js	/^","),this.handles={},e=0;e<i.length;e++)s="ui-resizable-"+(t=String.prototype.trim.call(i[e])),n/;"	p	variable:anonymousObject4d6c64ac21205
@@ -5580,7 +5585,7 @@ o	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"==
 o	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="function"==typeof s?function(){var t,e=t/;"	f	function:anonymousFunction4d6c64ac19f00
 o	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	f	function:anonymousFunction4d6c64ac16100.anonymousFunction4d6c64ac16200
 o	docs/html/navtree.js	/^  const o = {$/;"	v	function:initNavTree
-object_init	src/vcb_c/object.c	/^st_Object *object_init(st_Arena *arena, char *value, char *lang, st_List *vars){$/;"	f	typeref:typename:st_Object *
+object_init	src/vcb_c/object.c	/^st_Object *object_init(char *value, char *lang, st_List *vars){$/;"	f	typeref:typename:st_Object *
 odd	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 odd	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f405
 odd	docs/html/jquery.js	/^var f="3.6.0",S=function(e,t){return new S.fn.init(e,t)};function p(e){var t=!!e&&"length"in e&&/;"	m	variable:anonymousObject4d6c64ac0705
@@ -5631,14 +5636,13 @@ originalProperties	docs/html/jquery.js	/^originalProperties:e,originalOptions:t,
 orphans	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
 ot	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=\/^(?:toggle|show|hide)$\/,it=\/queueHook/;"	f
 output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/arena.c.o"$/;"	s	object:0
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/cond.c.o"$/;"	s	object:6
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/cond.c.o"$/;"	s	object:5
 output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/hashtable.c.o"$/;"	s	object:3
 output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/list.c.o"$/;"	s	object:2
 output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/st.c.o"$/;"	s	object:1
 output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/system_hash.c.o"$/;"	s	object:4
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/value.c.o"$/;"	s	object:5
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/var.c.o"$/;"	s	object:7
-output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_test.dir\/tests\/vcb_test.c.o"$/;"	s	object:8
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_library.dir\/src\/vcb_c\/var.c.o"$/;"	s	object:6
+output	build/compile_commands.json	/^  "output": "CMakeFiles\/clm_vcb_test.dir\/tests\/vcb_test.c.o"$/;"	s	object:7
 overflow	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	variable:anonymousObject4d6c64ac20805
 overflow	docs/html/jquery.js	/^height:i.height()-this.outerDimensions.height||0,width:i.width()-this.outerDimensions.width||0})/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.anonymousFunction4d6c64ac21c00.anonymousObject4d6c64ac21d05
 overflow	docs/html/navtree.js	/^    let outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll', scrollbarW/;"	p	variable:initNavTree.getScrollBarWidth.anonymousObject30fad1a10105
@@ -6495,12 +6499,6 @@ src/vcb_c/system_hash.c.s	build/Makefile	/^src\/vcb_c\/system_hash.c.s:$/;"	t
 src/vcb_c/system_hash.i	build/Makefile	/^src\/vcb_c\/system_hash.i: src\/vcb_c\/system_hash.c.i$/;"	t
 src/vcb_c/system_hash.o	build/Makefile	/^src\/vcb_c\/system_hash.o: src\/vcb_c\/system_hash.c.o$/;"	t
 src/vcb_c/system_hash.s	build/Makefile	/^src\/vcb_c\/system_hash.s: src\/vcb_c\/system_hash.c.s$/;"	t
-src/vcb_c/value.c.i	build/Makefile	/^src\/vcb_c\/value.c.i:$/;"	t
-src/vcb_c/value.c.o	build/Makefile	/^src\/vcb_c\/value.c.o:$/;"	t
-src/vcb_c/value.c.s	build/Makefile	/^src\/vcb_c\/value.c.s:$/;"	t
-src/vcb_c/value.i	build/Makefile	/^src\/vcb_c\/value.i: src\/vcb_c\/value.c.i$/;"	t
-src/vcb_c/value.o	build/Makefile	/^src\/vcb_c\/value.o: src\/vcb_c\/value.c.o$/;"	t
-src/vcb_c/value.s	build/Makefile	/^src\/vcb_c\/value.s: src\/vcb_c\/value.c.s$/;"	t
 src/vcb_c/var.c.i	build/Makefile	/^src\/vcb_c\/var.c.i:$/;"	t
 src/vcb_c/var.c.o	build/Makefile	/^src\/vcb_c\/var.c.o:$/;"	t
 src/vcb_c/var.c.s	build/Makefile	/^src\/vcb_c\/var.c.s:$/;"	t
@@ -7004,9 +7002,6 @@ value	include/vcb_c/vcb.h	/^    void* value;$/;"	m	union:__anon951987d5020a	type
 value	src/sound.cpp	/^        int value;$/;"	m	class:Subvalue	typeref:typename:int	file:
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(Var var){ \/\/Given a dependent var, check which value is required f/;"	f	class:Var	typeref:typename:string
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(string varName){ \/\/Given a dependent var, check which value is req/;"	f	class:Var	typeref:typename:string
-value_free	src/vcb_c/value.c	/^void value_free(st_Value *value){$/;"	f	typeref:typename:void
-value_get	src/vcb_c/value.c	/^char *value_get(st_Value *value){$/;"	f	typeref:typename:char *
-value_init	src/vcb_c/value.c	/^st_Value *value_init(st_Arena *arena, char *str, char col, void *input, size_t size){$/;"	f	typeref:typename:st_Value *
 values	include/vcb/var.h	/^        vector<string> values; \/**< list of possible values of the var*\/$/;"	m	class:Var	typeref:typename:vector<string>
 values	include/vcb_c/vcb.h	/^    st_List *values; \/*value list*\/$/;"	m	struct:st_Var	typeref:typename:st_List *
 var_8cpp_source	docs/latex/var_8cpp_source.tex	/^\\hypertarget{var_8cpp_source}{}\\label{var_8cpp_source}\\index{src\/vcb\/var.cpp@{src\/vcb\/var/;"	l
@@ -7020,7 +7015,7 @@ var_depend_write	src/vcb_c/var.c	/^void var_depend_write(sqlite3 *db, char *name
 var_fetch	src/vcb_c/var.c	/^st_Var *var_fetch(char *name, st_Var *base){$/;"	f	typeref:typename:st_Var *
 var_ffetch	src/vcb_c/var.c	/^st_Var *var_ffetch(char *name, char *lang){$/;"	f	typeref:typename:st_Var *
 var_free	src/vcb_c/var.c	/^void var_free(st_Var *var){$/;"	f	typeref:typename:void
-var_init	src/vcb_c/var.c	/^st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph){$/;"	f	typeref:typename:st_Var *
+var_init	src/vcb_c/var.c	/^st_Var *var_init( char *name, char *lang, st_HashTable *dependencies, char *morph){$/;"	f	typeref:typename:st_Var *
 var_irrset	src/vcb_c/var.c	/^void var_irrset(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_open	src/vcb_c/var.c	/^sqlite3 *var_open(char *lang){$/;"	f	typeref:typename:sqlite3 *
 var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, char *value){$/;"	f	typeref:typename:void

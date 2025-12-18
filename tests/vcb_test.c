@@ -11,7 +11,7 @@ char *string_fn(void *value){
 int test_1(){ //tests hash function
     int len = 3;
     char *input[] = {"hello", "saying", "really long test, idk if this one will work, it is way beyond the scope of the hash", ""};
-    int *output =(int*) malloc(len * sizeof(int)+1);
+    int *output = malloc(len * sizeof(int)+1);
     int i = 0;
     for(i = 0; i < len; i++)
         *(output+i) = hash_sdbm(input[i], len);
@@ -36,8 +36,9 @@ int test_2(){ //tests hash_init, hash_add, hash_get, and hash_free
         "Cadava krv", "Na crvenom nebu"};
     int i = 0;
     for(i = 0; i <  (len << 1); i+=2){
+        printf("%d\n", i);
         hash_add(hashtable, *(input+i), *(input+i+1));
-    }    
+    }
 
     int done = 0;
     for(i = 0; i < (len << 1); i+=2)
@@ -61,9 +62,8 @@ int test_3(){//hash_rem
     int repeats = 0;
     for(int i = 0; i < len-2; i+=2)
         for(int j = i+2; j < len; j+=2)
-            if(strcmp(*(input+i), *(input+j)) == 0)
+            if(strcmp(*(input+i), *(input+j)) == 0 && strcmp(*(input+i+1), *(input+j+1)))
                 repeats++;
-     
 
     for(int i = 0; i < len; i+=2)
         hash_add(hashtable, *(input+i), *(input+i+1));
@@ -71,21 +71,13 @@ int test_3(){//hash_rem
     for(int i = 0; i < len; i+=2)
         if(strcmp((char *) hash_get(hashtable, *(input+i)), *(input+i+1)) == 0)
             done++;
-        else
-            printf("done FAILED AT %s -> %s \n", *(input+i), *(input+i+1));
 
     for(int i =0; i < len; i+=2)
         hash_rem(hashtable, *(input+i));
 
-    printf("rem done\n");
-
-    hash_print(stdout, hashtable, &string_fn);
-
     for(int i = 0; i < len; i+=2)
         if(strcmp((char *)hash_get(hashtable, *(input+i)), "__NULL__") == 0)
             done2++;
-        else
-            printf("done2 FAILED AT %s -> %s \n", *(input+i), *(input+i+1));
 
     return (done+repeats)-done2;
 }
@@ -103,14 +95,6 @@ int test_4(){ //tests var_init
         done++;
     if(strcmp(var->lang, "test"))
         done++;
-    st_List *curr = var->values;
-    while(curr){
-        printf("%s\n", value_get((st_Value*)curr->value));
-        if(curr->next)
-            curr = curr->next;
-        else
-            break;
-    }
     var_free(var);
     return done;
 }
@@ -125,12 +109,8 @@ int test_5(){ //tests var_write, var_open and var_ffetch
     var_write(var_first);
     st_Var *var = var_ffetch("Test_var", "test");
     int done = 0;
-    st_List *curr = var->values;
-    while(curr->next){
-        printf("%s\n", value_get((st_Value*)curr->value));
-        curr = curr->next;
-    }
     var_free(var);
+    free(var);
     
     return done;
 }
@@ -141,5 +121,5 @@ int main(int argc, char *argv[]){
     int ((*test_arr[])()) = {*test_1, *test_2, *test_3, *test_4, *test_5};
     for(int i = 0; i < len; i++)
         printf("test_%d: %d\n", i+1, (test_arr[i])());
-
+    return 0;
 }

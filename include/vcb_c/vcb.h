@@ -33,7 +33,7 @@ typedef struct{
 struct st_List{
     struct st_List *next;
     st_Arena* arena;
-    char external;
+    char ex;
     void *value;
 };
 typedef struct st_List st_List;
@@ -88,7 +88,6 @@ extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*s
 
 /*st_Arena functions*/
 extern st_Arena *arena_init(size_t size);
-extern st_Arena *arena_recit(st_Arena *arena, size_t size);
 extern void *arena_alloc(st_Arena *arena, size_t size);
 extern void arena_free(st_Arena *arena);
 
@@ -104,7 +103,7 @@ extern int hash_sdbm(char *input, int modulo); /*in-built hash function */
 extern st_HashTable *hash_init(int(*hash)(char*,int)); /*initialize a hashtable*/
 extern size_t hash_size(st_HashTable *hashtable); /*get size of hashtable*/
 extern void *hash_get(st_HashTable *hashtable, char *key); /*get value from key*/
-extern void **hash_getAll(st_Arena *arena, st_HashTable *hashtable); /*get all values from hashtable */
+extern void **hash_getAll(st_HashTable *hashtable); /*get all values from hashtable */
 extern void hash_add(st_HashTable *hashtable, char *key, void *value); /*add value to hashtable*/
 extern void hash_set(st_HashTable *hashtable, char *key, void *value); /*set value to an already present key */
 extern void hash_rem(st_HashTable *hashtable, char *key); /*remove a key from the hashtable*/
@@ -116,7 +115,7 @@ extern void sql_close(sqlite3* db);
 
 /* st_Var functions */
 extern sqlite3 *var_open(char *lang); /*opens the var sql database for a langauage*/
-extern st_Var *var_init(st_Arena *arena, char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
+extern st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph); /*initialize a st_Var, without database */
 extern st_Var *var_ffetch(char *name, char *lang); /*fetch from database, when this is the first var*/
 extern st_Var *var_fetch(char *name, st_Var *base); /*fetch from databse*/
 extern void var_write(st_Var *var); /*update database*/
@@ -125,7 +124,7 @@ extern void var_irrset(st_Var *var, char *value); /*set value, don't care about 
 extern void var_free(st_Var *var); /*free st_Var*/
 
 /* st_Object functions */
-extern st_Object *object_init(st_Arena *arena, char *value, char *lang, st_List *vars);
+extern st_Object *object_init( char *value, char *lang, st_List *vars);
 extern void object_free(st_Object *obj);
 
 /* coms, bombs and morphs */

@@ -26,11 +26,11 @@ sqlite3 *var_open(char *lang){
     return db;
 }
 
-st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph){
+st_Var *var_init( char *name, char *lang, st_HashTable *dependencies, char *morph){
     st_Var *out = malloc(sizeof(st_Var));
-    out->name = malloc(256);
-    out->lang = malloc(256);
-    out->morph = malloc(256);
+    out->name = malloc(VAR_STRLEN);
+    out->lang = malloc( VAR_STRLEN);
+    out->morph = malloc(VAR_STRLEN);
     strcpy(out->name, name);
     strcpy(out->lang, lang);
     strcpy(out->morph, morph);
@@ -39,7 +39,7 @@ st_Var *var_init(char *name, char *lang, st_HashTable *dependencies, char *morph
     st_List *list = list_init(out->valarena);
     st_List *curr = list;
     for(int i = 0; i < dependencies->keyiterator; i++){
-        curr->value = arena_alloc(out->valarena, 256);
+        curr->value = arena_alloc(out->valarena, VAR_STRLEN);
         strcpy(curr->value, *dependencies->keys);
         if(i < dependencies->keyiterator - 1 ){
             curr->next = arena_alloc(out->valarena, sizeof(st_List));
@@ -105,12 +105,12 @@ st_Var *var_fetch(char *name, st_Var *base){
     st_List *value_list = list_init(arena);
     st_List *curr_list = value_list;
     if(strcmp(value_str, "")){
-        curr_list->value = arena_alloc(arena, 256);
+        curr_list->value = arena_alloc(arena, VAR_STRLEN);
         strcpy(curr_list->value, *value_arr);
         for(i = 0; strcmp(*(value_arr+i), ""); i++){
             curr_list->next = arena_alloc(arena, sizeof(st_List));
             curr_list = curr_list->next;
-            curr_list->value = arena_alloc(arena, 256);
+            curr_list->value = arena_alloc(arena, VAR_STRLEN);
             strcpy(curr_list->value, *(value_arr+i));
         }
         curr_list->next = 0;
@@ -180,7 +180,7 @@ void var_write(st_Var *var){
     sqlite3 *db = var->db;
     sqlite3_stmt *stmt;
 
-    st_Arena *trash = arena_init(VAR_STRLEN*(2*VAR_MAXVAL+3));
+    st_Arena *trash = arena_init( VAR_STRLEN*(2*VAR_MAXVAL+3));
 
     char *sql = arena_alloc(trash, VAR_STRLEN);
     sprintf(sql, "select * from Var where Name='%s';", var->name);
@@ -195,11 +195,11 @@ void var_write(st_Var *var){
     char *possible = arena_alloc(trash, VAR_STRLEN*VAR_MAXVAL);
     st_List *curr_list = var->values;
     while(curr_list->next){
-        strcat(possible, value_get(curr_list->value));
+        strcat(possible, (char*)curr_list->value);
         strcat(possible, " ");
         curr_list = curr_list->next;
     }
-    strcat(possible, value_get(curr_list->value));
+    strcat(possible, (char*)curr_list->value);
 
     if(update)
         sprintf(sql, "update Var set Morph='%1s', Possible='%s' where Name='%s';", var->morph, possible, var->name);
@@ -219,7 +219,7 @@ void var_write(st_Var *var){
         key = *(hashtable->keys+i);
         depend_list = hash_get(hashtable, key);
         while(depend_list->next){
-            var_depend_write(db, var->name, key, value_get((st_Value*)depend_list->value), &sql, trash, &stmt);
+            var_depend_write(db, var->name, key, (char*)depend_list->value, &sql, trash, &stmt);
             depend_list = depend_list->next;
         }
     }

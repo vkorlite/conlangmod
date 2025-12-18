@@ -159,9 +159,8 @@ void hash_add(st_HashTable *hashtable, char* key, void *value){
     if(hashtable->keyiterator >= hashtable->keysize) /* check if hashtable->keys needs to be extended */
         hash_key_resize(hashtable);
 
-    if(hashtable->arriterator >= ((hashtable->arrsize) >> 1)){ /*hashtable->arr needs to be extended*/
+    if(hashtable->arriterator >= ((hashtable->arrsize) >> 1)) /*hashtable->arr needs to be extended*/
         hash_resize(hashtable);
-    }
 
     int place = hashtable->hash(key, hashtable->arrsize);
     if(*(hashtable->col+place) == HASH_ELEMENT_NULL){ /* check for collisions */ 
@@ -186,10 +185,8 @@ void hash_add(st_HashTable *hashtable, char* key, void *value){
     // printf("hashtable->arrsize: %d\n", (int) hashtable->arrsize);
 }
 
-void **hash_getAll(st_Arena *arena, st_HashTable *hashtable){
-    if(arena == NULL)
-        arena = arena_init( hashtable->keyiterator *sizeof(void*));
-    void **output = arena_alloc(arena, (hashtable->keyiterator) * sizeof(void*));
+void **hash_getAll(st_HashTable *hashtable){
+    void **output = malloc((hashtable->keyiterator) * sizeof(void*));
     int len = 0;
     for(int i = 0; i < hashtable->arrsize; i++)
         if((*(hashtable->col+i)) == HASH_ELEMENT_FULL)

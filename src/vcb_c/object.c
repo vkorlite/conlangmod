@@ -2,6 +2,6 @@
 #include "vcb_c/vcb.h"
 #endif
 
-st_Object *object_init(st_Arena *arena, char *value, char *lang, st_List *vars){
+st_Object *object_init(char *value, char *lang, st_List *vars){
     return NULL;
 }
