@@ -108,6 +108,7 @@ extern void list_add(st_List *list, void *value);
 extern void *list_get(st_List *list, int index);
 extern void list_rem(st_List *list, int (*sign_function)(void *));
 extern void list_free(st_List *list);
+extern void list_copy(st_List *receiver, st_List *giver);
 
 /* st_HashTable functions and vars*/
 extern int(*system_hash)(char*,int);
@@ -137,12 +138,13 @@ extern void var_free(st_Var *var); /*free st_Var*/
 
 /* st_Object functions */
 extern st_Object *object_init(char *value, char *lang, st_List *vars);
+extern int object_equal(st_Object *obj1, st_Object *obj2);
 extern void object_free(st_Object *obj);
 
 /* coms, bombs */
 extern char *cond(char *condstr_raw, st_Object **input, size_t size);
 extern void *com(char *comstr, st_Object **input, size_t size);
-extern void *domain(char *domstr, st_Object **input, size_t size);
+extern st_List *domain(char *domstr, st_Object **input, size_t size);
 extern void *bomb(char *bombstr, st_Object **input, size_t size);
 
 #ifdef __cplusplus

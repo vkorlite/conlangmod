@@ -19,6 +19,19 @@ st_Object *object_init(char *value, char *lang, st_List *vars){
     return out;
 }
 
+int object_equal(st_Object *obj1, st_Object *obj2){
+    if(strcmp(obj1->value, obj2->value)){
+        return 0;
+    }
+    if(obj1->vars->keyiterator != obj2->vars->keyiterator){
+        return 0;
+    }
+    for(int i = 0; i < obj1->vars->keyiterator ; i++)
+        if(strcmp(*(obj1->vars->keys+i), *(obj2->vars->keys+i)))
+            return 0;
+    return 1;
+}
+
 void object_free(st_Object *object){
     hash_free(object->vars);
     free(object->value);

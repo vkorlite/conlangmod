@@ -55,6 +55,27 @@ void *list_get(st_List *list, int index){
     return curr->value;
 }
 
+void list_copy(st_List *receiver, st_List *giver){
+    st_List *curr_r = receiver;
+    st_List *curr_g;
+    for(curr_g = giver; curr_g->next; curr_g = curr_g->next){
+        curr_r->value = curr_g->value;
+        if(curr_r->next)
+            curr_r = curr_r->next;
+        else{
+            curr_r = arena_alloc(receiver->arena, sizeof(st_List));
+            curr_r = curr_r->next;
+        }
+    }
+    curr_r->value = curr_g->value;
+}
+
+void list_pop(st_List *list){
+    st_List *curr;
+    for(curr = list; curr->next->next; curr = curr->next);
+    curr->next = 0;
+}
+
 void list_rem(st_List *list, int (*sign_function)(void *)){
     if(sign_function(list->value))
         list = list->next;

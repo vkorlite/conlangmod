@@ -3168,6 +3168,7 @@ docClick	docs/html/jquery.js	/^).indexOf(i.accessIdPrefix)&&t.removeAttr("id")})
 docTouchEnd	docs/html/jquery.js	/^this.$touchScrollingSub=null,void 0):((this.visibleSubMenus.length&&!$.contains(this.$root[0],t./;"	m	variable:anonymousObject4d6c64ac26d05
 documentClick	docs/html/jquery.js	/^session.isTipOpen){if(!session.isClosing){hideTip(session.activeHover)}tipElement.delay(100).que/;"	f
 domain	include/vcb/com.h	/^        Domain domain;$/;"	m	class:Com	typeref:typename:Domain
+domain	src/vcb_c/domain.c	/^st_List *domain(char *domstr, st_Object **input, size_t size){$/;"	f	typeref:typename:st_List *
 domain_8h_source	docs/latex/domain_8h_source.tex	/^\\hypertarget{domain_8h_source}{}\\label{domain_8h_source}\\index{include\/vcb\/domain.h@{includ/;"	l
 domain_8h_source.html	docs/html/navtreeindex0.js	/^"domain_8h_source.html":[2,0,0,1,2],$/;"	p	variable:NAVTREEINDEX0
 domstr	include/vcb/domain.h	/^        string domstr;$/;"	m	class:Domain	typeref:typename:string
@@ -5202,9 +5203,11 @@ linear	docs/html/jquery.js	/^this):Ke.propHooks._default.get(this)},run:function
 list	include/vcb_c/vcb.h	/^    st_List* list; $/;"	m	union:__anon951987d5020a	typeref:typename:st_List *
 listGet	src/vcb/com.cpp	/^vector<vector<st_Object>> Com::listGet(vector<st_Object> input){$/;"	f	class:Com	typeref:typename:vector<vector<st_Object>>
 list_add	src/vcb_c/list.c	/^void list_add(st_List *list, void *value){$/;"	f	typeref:typename:void
+list_copy	src/vcb_c/list.c	/^void list_copy(st_List *receiver, st_List *giver){$/;"	f	typeref:typename:void
 list_free	src/vcb_c/list.c	/^void list_free(st_List *list){$/;"	f	typeref:typename:void
 list_get	src/vcb_c/list.c	/^void *list_get(st_List *list, int index){$/;"	f	typeref:typename:void *
 list_init	src/vcb_c/list.c	/^st_List *list_init(st_Arena *arena){$/;"	f	typeref:typename:st_List *
+list_pop	src/vcb_c/list.c	/^void list_pop(st_List *list){$/;"	f	typeref:typename:void
 list_rem	src/vcb_c/list.c	/^void list_rem(st_List *list, int (*sign_function)(void *)){$/;"	f	typeref:typename:void
 load	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acbc05
 loadJS	docs/html/search/search.js	/^    const loadJS = function(url, impl, loc) {$/;"	m	method:SearchBox.Search
@@ -5589,6 +5592,7 @@ o	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"==
 o	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="function"==typeof s?function(){var t,e=t/;"	f	function:anonymousFunction4d6c64ac19f00
 o	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	f	function:anonymousFunction4d6c64ac16100.anonymousFunction4d6c64ac16200
 o	docs/html/navtree.js	/^  const o = {$/;"	v	function:initNavTree
+object_equal	src/vcb_c/object.c	/^int object_equal(st_Object *obj1, st_Object *obj2){$/;"	f	typeref:typename:int
 object_free	src/vcb_c/object.c	/^void object_free(st_Object *object){$/;"	f	typeref:typename:void
 object_init	src/vcb_c/object.c	/^st_Object *object_init(char *value, char *lang, st_List *vars){$/;"	f	typeref:typename:st_Object *
 odd	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
