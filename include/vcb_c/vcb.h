@@ -84,6 +84,8 @@ extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strspl
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
 extern char *strsub(char *input, int start, int end); /*find substring of string*/
 extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*strsub, but with arena*/
+extern int strfind(char *input, char delim, int num);
+extern int strcompl(char *input, int num);
 
 /*st_Arena functions*/
 extern st_Arena *arena_init(size_t size);
@@ -128,6 +130,8 @@ extern void object_free(st_Object *obj);
 
 /* coms, bombs and morphs */
 extern void *cond(char *cond, st_Object **input, size_t size);
+extern void *com(char *com, st_Object **input, size_t size);
+extern void *domain(char *com, st_Object **input, size_t size);
 extern void *bomb(char *bomb, st_Object **input, size_t size);
 extern st_Object *morph(char* morph, st_Object* input); 
 

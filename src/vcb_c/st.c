@@ -102,3 +102,28 @@ char *arena_strsub(st_Arena *arena, char *input, int start, int end){
         *(out+i-start) = *(input+i);
     return out;
 }
+
+int strfind(char *input, char delim, int num){
+    int i;
+    for(i = 0; *(input+i) != '\0' && num >= 0; i++)
+        if(*(input+i) == delim)
+            num--;
+    return i;
+}
+
+int strcompl(char *input, int num){
+    char op = *(input+num);
+    char cl;
+    if(op == '(')
+        cl = op+1;
+    else
+        cl = op+2;
+    int i;
+    int br = 1;
+    for(i = num+1; *(input+i) != '\0' && br > 0; i++)
+        if(*(input+i) == op)
+            br++;
+        else if(*(input+i) == cl)
+            br--;
+    return i;
+}

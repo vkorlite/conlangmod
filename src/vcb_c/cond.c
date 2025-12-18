@@ -3,9 +3,7 @@
 #endif
 
 void *cond(char *cond, st_Object **input, size_t size){
+    //split into domain, 
     return (void *) cond;
 }
 
-st_Object *morph(char *morph, st_Object *input){
-    return object_init(morph, "test", list_init(NULL));
-}

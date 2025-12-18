@@ -5319,7 +5319,6 @@ minWidth	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidt
 minWidth	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.n
 minWidth	docs/html/navtree.js	/^    $(sidenav).resizable({ minWidth: 0 });$/;"	p	variable:anonymousObject30fad1a13505
 morph	include/vcb_c/vcb.h	/^    char *morph;$/;"	m	struct:st_Var	typeref:typename:char *
-morph	src/vcb_c/cond.c	/^st_Object *morph(char *morph, st_Object *input){$/;"	f	typeref:typename:st_Object *
 mouseOnToPopup	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25405
 mouseTrackingActive	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 mousedown	docs/html/jquery.js	/^","),this.handles={},e=0;e<i.length;e++)s="ui-resizable-"+(t=String.prototype.trim.call(i[e])),n/;"	p	variable:anonymousObject4d6c64ac21205
@@ -6602,6 +6601,8 @@ stop	docs/html/jquery.js	/^originalProperties:e,originalOptions:t,startTime:Ze||
 stopImmediatePropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 stopPropagation	docs/html/jquery.js	/^e.originalEvent.returnValue=e.result)}}}},S.removeEvent=function(e,t,n){e.removeEventListener&&e/;"	m	variable:anonymousObject4d6c64acbf05
 storeLink	docs/html/navtree.js	/^  const storeLink = function(link) {$/;"	f	function:initNavTree
+strcompl	src/vcb_c/st.c	/^int strcompl(char *input, int num){$/;"	f	typeref:typename:int
+strfind	src/vcb_c/st.c	/^int strfind(char *input, char delim, int num){$/;"	f	typeref:typename:int
 string_fn	tests/vcb_test.c	/^char *string_fn(void *value){$/;"	f	typeref:typename:char *
 stripPath	docs/html/navtree.js	/^  const stripPath = function(uri) {$/;"	f	function:initNavTree
 stripPath2	docs/html/navtree.js	/^  const stripPath2 = function(uri) {$/;"	f	function:initNavTree
