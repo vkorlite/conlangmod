@@ -1,6 +1,6 @@
-ConLangMod documentation
+ConLangMod Outline
 
-3. Language
+1. Language
 This section will outline the Structure of a language, as ConLangMod sees it. 
 Everything in this program is seen as an object: sounds, words, sentences, syllables, etc.
 Everything is able to be split appart into its individual parts, creating a hierarchy of objects, with the Language object at the top.
@@ -12,7 +12,7 @@ Morphology describes how the language forms words.
 Lexicon describes the words and their meanings.
 Grammar describes how the language changes words and how it puts them together in the context of a sentence.
 
-1.1 Vars and Coms
+1.1 Vars, Coms and Bombs (vcb)
 Vars and Coms are the lingua franca of the different parts of the code. Each part of the language interracts with other parts. Sounds change due to grammar for example.
 Therefore it is needed to establish variables that are accessible to the whole language.
 Essentially Vars are properties that objects of a language have.
@@ -26,8 +26,6 @@ However more complicated Vars only make sense if other vars are true.
 Therefore some, and in fact most, vars are subvalues of other Vars.
 It doesn't make sense to check if a sound is a consonant or a vowel, if the object isn't even a sound.
 Therefore each var has dependencies, which tell the program what values other vars are required to have for the var to be needed
-These dependencies are in a hierarchy, so as to be able to throw out useless vars as early as possible.
-Vars can have the same name but have different dependencies and thus different values. For example, Syllables and Vowels are different object types, however they both have the var: WordPosition
 To access an objects Var, you use the format: OBJECT.VARNAME
 For example, to get which letter of a word a sound is you would write Object.WordPosition.
 
@@ -122,10 +120,3 @@ ConLangMod allows for mass additions of words through files, whose formats are d
 1.6 Grammar
 The grammar of a language shows us how words behave in a sentence. 
 Using vars and coms, you are expected to fully describe the inflections of words, sentence structure, and how it affects how words sound, how their written, how their made, and their meaning.
-
-2. Evolving Languages
-Now that we understand how ConLangMod understands languages, we can learn how it changes them as well, to facillitate which, this program was made.
-Using Coms and Vars you can provide rules how languages are change.
-It provides capabilities in doing so in a timeline, and a hierarchy.
-Meaning you can set how a language evolves over long periods of time, while also making sure that your changes interract in the way you want them too.
-This requires a lot of testing though.
