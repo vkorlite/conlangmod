@@ -257,7 +257,7 @@ void hash_print(FILE *out, st_HashTable *hashtable, char *(*string_function)(voi
 }
 
 void hash_free(st_HashTable *hashtable){
-    free(hashtable->arrarena);
-    free(hashtable->keyarena);
+    arena_free(hashtable->arrarena);
+    arena_free(hashtable->keyarena);
     free(hashtable);
 }

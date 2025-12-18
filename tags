@@ -1242,6 +1242,7 @@ NoMatches	docs/html/var_8cpp_source.html	/^<div class="SRStatus" id="NoMatches">
 NoMatches	docs/html/var_8h.html	/^<div class="SRStatus" id="NoMatches">No Matches<\/div>$/;"	I
 NoMatches	docs/html/var_8h_source.html	/^<div class="SRStatus" id="NoMatches">No Matches<\/div>$/;"	I
 O	docs/html/jquery.js	/^this,e||[],!0))},is:function(e){return!!j(this,"string"==typeof e&&k.test(e)?S(e):e||[],!1).leng/;"	c	function:ue.ce
+OBJ_STRLEN	src/vcb_c/object.c	/^#define OBJ_STRLEN /;"	d	file:
 Oe	docs/html/jquery.js	/^r=s[i].length;n<r;n++)S.event.add(t,i,s[i][n]);Q.hasData(e)&&(o=Q.access(e),a=S.extend({},o),Q.s/;"	c
 OnSearchFieldChange	docs/html/search/search.js	/^  this.OnSearchFieldChange = function(evt) {$/;"	m	class:SearchBox
 OnSearchFieldFocus	docs/html/search/search.js	/^  this.OnSearchFieldFocus = function(isActive) {$/;"	m	class:SearchBox
@@ -5585,6 +5586,7 @@ o	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"==
 o	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="function"==typeof s?function(){var t,e=t/;"	f	function:anonymousFunction4d6c64ac19f00
 o	docs/html/jquery.js	/^t=e.contents();t.length?t.wrapAll(n):e.append(n)})},wrap:function(t){var n=m(t);return this.each/;"	f	function:anonymousFunction4d6c64ac16100.anonymousFunction4d6c64ac16200
 o	docs/html/navtree.js	/^  const o = {$/;"	v	function:initNavTree
+object_free	src/vcb_c/object.c	/^void object_free(st_Object *object){$/;"	f	typeref:typename:void
 object_init	src/vcb_c/object.c	/^st_Object *object_init(char *value, char *lang, st_List *vars){$/;"	f	typeref:typename:st_Object *
 odd	docs/html/jquery.js	/^return e.parentNode&&e.parentNode.selectedIndex,!0===e.selected},empty:function(e){for(e=e.first/;"	p	property:ue.ce.fe.anonymousObject4d6c64ac4205.pseudos
 odd	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f405
@@ -6986,7 +6988,6 @@ ut	docs/html/jquery.js	/^S.fx=Ke.prototype.init,S.fx.step={};var Ze,et,tt,nt,rt=
 val	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	m	variable:anonymousObject4d6c64ac12b05
 valHooks	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	p	variable:anonymousObject4d6c64ac12e05
 valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena; \/*contains value, values and dependencies*\/$/;"	m	struct:st_Var	typeref:typename:st_Arena *
-valarena	include/vcb_c/vcb.h	/^    st_Arena *valarena;$/;"	m	struct:__anon951987d50308	typeref:typename:st_Arena *
 value	docs/html/jquery.js	/^"object"===w(n))for(s in i=!0,n)$(e,t,s,n[s],!0,o,a);else if(void 0!==r&&(i=!0,m(r)||(a=!0),l&&(/;"	p	variable:anonymousObject4d6c64ac9105.cache.anonymousObject4d6c64ac9305
 value	docs/html/jquery.js	/^)return e.stopImmediatePropagation(),e.preventDefault(),n&&n.value}else r.length&&(Y.set(this,i,/;"	p	variable:Se.anonymousObject4d6c64acab05.handler.anonymousObject4d6c64acae05
 value	docs/html/jquery.js	/^){for(var r=0,i=t.length;r<i;r++)se(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),f=!d||!e&&h?/;"	p	variable:ue.ce.fe.Ee.anonymousObject4d6c64ac5605

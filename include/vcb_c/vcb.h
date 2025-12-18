@@ -72,7 +72,6 @@ typedef struct st_Var {
 typedef struct {
     char *lang;
     sqlite3 *db;
-    st_Arena *valarena;
     char *value;
     st_List *vars;
     st_HashTable *dependencies;

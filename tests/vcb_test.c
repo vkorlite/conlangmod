@@ -110,7 +110,6 @@ int test_5(){ //tests var_write, var_open and var_ffetch
     st_Var *var = var_ffetch("Test_var", "test");
     int done = 0;
     var_free(var);
-    free(var);
     
     return done;
 }

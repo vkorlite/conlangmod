@@ -3,10 +3,15 @@
 #endif
 
 st_List *list_init(st_Arena *arena){
-    if(arena == NULL)
+    st_List *list;
+    char ex = 1;
+    if(arena == NULL){
         arena = arena_init(sizeof(st_List)+1);
-    st_List *list = arena_alloc(arena, sizeof(st_List));
+        ex = 0;
+    }
+    list = arena_alloc(arena, sizeof(st_List));
     list->arena = arena;
+    list->ex = ex;
     list->value = 0;
     list->next = 0;
     return list;
@@ -17,7 +22,7 @@ void list_add(st_List *list, void *value){
         list->value = value;
         return;
     }
-    if(sizeof(st_List) >= list->arena->size){
+    if(!list->ex && sizeof(st_List) >= list->arena->size){
         st_Arena *newarena = arena_init((list->arena->size+list->arena->curr-list->arena->ptr) << 1 );
         st_List *newlist = arena_alloc(newarena, sizeof(st_List));
         newlist->arena = newarena;
@@ -55,5 +60,6 @@ void list_rem(st_List *list, int (*sign_function)(void *)){
 }
 
 void list_free(st_List *list){
-    arena_free(list->arena);
+    if(!list->ex)
+        arena_free(list->arena);
 }
