@@ -88,6 +88,15 @@ void list_rem(st_List *list, int (*sign_function)(void *)){
         }
 }
 
+size_t list_size(st_List *list){
+    size_t out = 0;
+    for(st_List *curr = list; curr->next; curr=curr->next){
+        out++;
+    }
+    out++;
+    return out;
+}
+
 void list_free(st_List *list){
     if(!list->ex)
         arena_free(list->arena);

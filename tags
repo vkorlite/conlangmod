@@ -829,6 +829,7 @@ COMPILER_VERSION_PATCH	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
 COMPILER_VERSION_TWEAK	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COM_STRLEN	src/vcb_c/com.c	/^#define COM_STRLEN /;"	d	file:
 COND_STRLEN	src/vcb_c/cond.c	/^#define COND_STRLEN /;"	d	file:
 CSSCoordinates	docs/html/jquery.js	/^session.activeHover){displayController=session.activeHover.data(DATA_DISPLAYCONTROLLER)}if(displ/;"	c	function:anonymousFunction4d6c64ac17300
 C_STD	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#  define C_STD /;"	d	file:
@@ -937,11 +938,15 @@ ENTER	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 ESCAPE	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
 EXISTS_BOOL	include/vcb/com.h	/^    EXISTS_BOOL,$/;"	e	enum:opt
+EXISTS_BOOL	src/vcb_c/com.c	/^    EXISTS_BOOL,$/;"	e	enum:__anon89cd0b380103	file:
 EXISTS_LIST	include/vcb/com.h	/^    EXISTS_LIST,$/;"	e	enum:opt
+EXISTS_LIST	src/vcb_c/com.c	/^    EXISTS_LIST,$/;"	e	enum:__anon89cd0b380103	file:
 Ee	docs/html/jquery.js	/^"script"),l&&ye(a),n){c=0;while(o=a[c++])he.test(o.type||"")&&n.push(o)}return f}var be=\/^([^.]/;"	c
 Ee	docs/html/jquery.js	/^){for(var r=0,i=t.length;r<i;r++)se(e,t[r],n);return n}(h||"*",n.nodeType?[n]:n,[]),f=!d||!e&&h?/;"	c	function:ue.ce.fe
 FORALL_BOOL	include/vcb/com.h	/^    FORALL_BOOL,$/;"	e	enum:opt
+FORALL_BOOL	src/vcb_c/com.c	/^    FORALL_BOOL,$/;"	e	enum:__anon89cd0b380103	file:
 FORALL_LIST	include/vcb/com.h	/^    FORALL_LIST,$/;"	e	enum:opt
+FORALL_LIST	src/vcb_c/com.c	/^    FORALL_LIST,$/;"	e	enum:__anon89cd0b380103	file:
 Fe	docs/html/jquery.js	/^,n){var r,i,o,a,s=e.style;return(n=n||Re(e))&&(""!==(a=n.getPropertyValue(t)||n[t])||ie(e)||(a=S/;"	c
 File Documentation	docs/latex/refman.tex	/^\\chapter{File Documentation}$/;"	c
 File Index	docs/latex/refman.tex	/^\\chapter{File Index}$/;"	c
@@ -1188,6 +1193,7 @@ NAVTREE	docs/html/navtreedata.js	/^var NAVTREE =$/;"	v
 NAVTREEINDEX	docs/html/navtreedata.js	/^var NAVTREEINDEX =$/;"	v
 NAVTREEINDEX0	docs/html/navtreeindex0.js	/^var NAVTREEINDEX0 =$/;"	v
 NUMERIC	include/vcb/com.h	/^    NUMERIC$/;"	e	enum:opt
+NUMERIC	src/vcb_c/com.c	/^    NUMERIC$/;"	e	enum:__anon89cd0b380103	file:
 Name	data/db/test/init_test.sql	/^    Name varchar(128) PRIMARY KEY NOT NULL,$/;"	E	table:Var
 Name	data/db/test/init_test.sql	/^    Name varchar(128) PRIMARY KEY NOT NULL,$/;"	E	table:Var_depend
 Nav	docs/html/search/search.js	/^  this.Nav = function(evt,itemIndex) {$/;"	m	class:SearchResults
@@ -1400,6 +1406,7 @@ SRResults	docs/html/var_8cpp_source.html	/^<div id="SRResults"><\/div>$/;"	I
 SRResults	docs/html/var_8h.html	/^<div id="SRResults"><\/div>$/;"	I
 SRResults	docs/html/var_8h_source.html	/^<div id="SRResults"><\/div>$/;"	I
 STRICT_BOOL	include/vcb/com.h	/^    STRICT_BOOL,$/;"	e	enum:opt
+STRICT_BOOL	src/vcb_c/com.c	/^    STRICT_BOOL,$/;"	e	enum:__anon89cd0b380103	file:
 STRINGIFY	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(X) STRINGIFY_/;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/4.1.2/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
 SYNCOFFMSG	docs/html/navtreedata.js	/^var SYNCOFFMSG = 'click to enable panel synchronization';$/;"	v
@@ -1459,14 +1466,8 @@ Searching	docs/html/var_8h_source.html	/^<div class="SRStatus" id="Searching">Se
 SelectItemCount	docs/html/search/search.js	/^  this.SelectItemCount = function() {$/;"	m	class:SearchBox
 SelectItemSet	docs/html/search/search.js	/^  this.SelectItemSet = function(id) {$/;"	m	class:SearchBox
 SmartMenus	docs/html/jquery.js	/^mouseDetectionEnabled=!0}}function isTouchEvent(t){return!\/^(4|mouse)$\/.test(t.pointerType)}fu/;"	c	class:$
-Sound	src/sound.cpp	/^        Sound(string symbol){$/;"	f	class:Sound	file:
-Sound	src/sound.cpp	/^        Sound(string symbol, vector<Subvalue> subvalues){$/;"	f	class:Sound	file:
-Sound	src/sound.cpp	/^class Sound{$/;"	c	file:
 Static Public Attributes	docs/html/classVar.html	/^Static Public Attributes<\/h2><\/td><\/tr>$/;"	i
 Static Public Member Functions	docs/html/classVar.html	/^Static Public Member Functions<\/h2><\/td><\/tr>$/;"	i
-Subvalue	src/sound.cpp	/^        Subvalue(string name){$/;"	f	class:Subvalue	file:
-Subvalue	src/sound.cpp	/^        Subvalue(string name, int value, Var var){$/;"	f	class:Subvalue	file:
-Subvalue	src/sound.cpp	/^class Subvalue{$/;"	c	file:
 T	docs/html/jquery.js	/^function(e){return 1&e.compareDocumentPosition(C.createElement("fieldset"))}),ce(function(e){ret/;"	c	function:ue.ce
 T	docs/html/jquery.js	/^isLocal:\/^(?:about|app|app-storage|.+-extension|file|res|widget):$\/.test(bt.protocol),global:!/;"	v	method:anonymousObject4d6c64ac14b05.ajax
 TAB	docs/html/jquery.js	/^return this.filter(function(t){return t%2==0})},odd:function(){return this.filter(function(t){re/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1f705
@@ -1521,6 +1522,7 @@ __STDIO_INCL	include/vcb_c/vcb.h	/^#define __STDIO_INCL /;"	d
 __STDLIB_INCL	include/vcb_c/vcb.h	/^#define __STDLIB_INCL /;"	d
 __STRING_INCL	include/vcb_c/vcb.h	/^#define __STRING_INCL /;"	d
 __VCB_INCL	include/vcb_c/vcb.h	/^#define __VCB_INCL /;"	d
+__anon89cd0b380103	src/vcb_c/com.c	/^typedef enum {$/;"	g	file:
 __anon951987d50108	include/vcb_c/vcb.h	/^typedef struct{$/;"	s
 __anon951987d5020a	include/vcb_c/vcb.h	/^typedef union{$/;"	u
 __anon951987d50308	include/vcb_c/vcb.h	/^typedef struct {$/;"	s
@@ -2780,6 +2782,7 @@ collisionHeight	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left
 collisionPosition	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"===p.my[0]&&(l.left-=a\/2),"bottom"===p.my/;"	p	variable:anonymousObject4d6c64ac1e005
 collisionWidth	docs/html/jquery.js	/^,h.outerHeight());"right"===p.my[0]?l.left-=a:"center"===p.my[0]&&(l.left-=a\/2),"bottom"===p.my/;"	p	variable:anonymousObject4d6c64ac1e005
 columnCount	docs/html/jquery.js	/^!y.boxSizingReliable()&&i||!y.reliableTrDimensions()&&A(e,"tr")||"auto"===a||!parseFloat(a)&&"in/;"	p	property:anonymousObject4d6c64ace205.cssNumber
+com	src/vcb_c/com.c	/^void *com(char *comstr, st_Object **input, size_t size){$/;"	f	typeref:typename:void *
 com_8h_source	docs/latex/com_8h_source.tex	/^\\hypertarget{com_8h_source}{}\\label{com_8h_source}\\index{include\/vcb\/com.h@{include\/vcb\/c/;"	l
 com_8h_source.html	docs/html/navtreeindex0.js	/^"com_8h_source.html":[2,0,0,1,0],$/;"	p	variable:NAVTREEINDEX0
 command	build/compile_commands.json	/^  "command": "\/sbin\/cc  -I\/home\/space\/Documents\/coding\/conlangmod\/include -Wall -Werror /;"	s	object:0
@@ -5209,6 +5212,7 @@ list_get	src/vcb_c/list.c	/^void *list_get(st_List *list, int index){$/;"	f	type
 list_init	src/vcb_c/list.c	/^st_List *list_init(st_Arena *arena){$/;"	f	typeref:typename:st_List *
 list_pop	src/vcb_c/list.c	/^void list_pop(st_List *list){$/;"	f	typeref:typename:void
 list_rem	src/vcb_c/list.c	/^void list_rem(st_List *list, int (*sign_function)(void *)){$/;"	f	typeref:typename:void
+list_size	src/vcb_c/list.c	/^size_t list_size(st_List *list){$/;"	f	typeref:typename:size_t
 load	docs/html/jquery.js	/^]=r.needsContext?-1<S(i,this).index(l):S.find(i,this,null,[l]).length),a[i]&&o.push(r);o.length&/;"	p	variable:anonymousObject4d6c64acbc05
 loadJS	docs/html/search/search.js	/^    const loadJS = function(url, impl, loc) {$/;"	m	method:SearchBox.Search
 lock	docs/html/jquery.js	/^){for(a=a||r.once,o=i=!0;u.length;l=-1){t=u.shift();while(++l<s.length)!1===s[l].apply(t[0],t[1]/;"	m	variable:ue.ce.f
@@ -5325,7 +5329,6 @@ minWidth	docs/html/jquery.js	/^)&&(this.menuScrollStop(t),this.menuScroll(t),e.p
 minWidth	docs/html/jquery.js	/^handles:"e,s,se",helper:!1,maxHeight:null,maxWidth:null,minHeight:10,minWidth:10,zIndex:90,resiz/;"	p	property:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.options
 minWidth	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries.n
 minWidth	docs/html/navtree.js	/^    $(sidenav).resizable({ minWidth: 0 });$/;"	p	variable:anonymousObject30fad1a13505
-morph	src/vcb_c/morph.c	/^st_List *morph(char *morphstr, st_Object *input){ $/;"	f	typeref:typename:st_List *
 mouseOnToPopup	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25405
 mouseTrackingActive	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 mousedown	docs/html/jquery.js	/^","),this.handles={},e=0;e<i.length;e++)s="ui-resizable-"+(t=String.prototype.trim.call(i[e])),n/;"	p	variable:anonymousObject4d6c64ac21205
@@ -5354,9 +5357,9 @@ n	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="
 n	docs/html/jquery.js	/^i){return y.extend(this._change.s.apply(this,arguments),this._change.w.apply(this,[t,e,i]))},ne:/;"	v	method:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605.anonymousObject4d6c64ac22905.stop
 n	docs/html/jquery.js	/^targetElements.on(evt+EVENT_NAMESPACE,function elementToggle(event){$.powerTip.toggle(this,event/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25505
 n	docs/html/jquery.js	/^this.prevPosition={top:this.position.top,left:this.position.left},this.prevSize={width:this.size/;"	v	method:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._updateVirtualBoundaries
+n	outline.md	/^Each object in the Domain is used as a Var, that is formated as : #n, where n  is the index of t/;"	h
 name	include/vcb/var.h	/^        string name; \/**< name of the var *\/$/;"	m	class:Var	typeref:typename:string
 name	include/vcb_c/vcb.h	/^    char *name;$/;"	m	struct:st_Var	typeref:typename:char *
-name	src/sound.cpp	/^        string name;$/;"	m	class:Subvalue	typeref:typename:string	file:
 namespace	docs/html/jquery.js	/^"script"),l&&ye(a),n){c=0;while(o=a[c++])he.test(o.type||"")&&n.push(o)}return f}var be=\/^([^.]/;"	p	variable:Se.anonymousObject4d6c64acab05
 namespace	docs/html/jquery.js	/^)return e.stopImmediatePropagation(),e.preventDefault(),n&&n.value}else r.length&&(Y.set(this,i,/;"	p	variable:anonymousObject4d6c64acaf05.add.anonymousObject4d6c64acb305
 namespace	docs/html/jquery.js	/^function o(t){return i.prototype[e].apply(this,t)}h[e]="function"==typeof s?function(){var t,e=t/;"	p	variable:n.anonymousObject4d6c64ac1a105
@@ -5626,6 +5629,7 @@ openTooltip	docs/html/jquery.js	/^session.activeHover){displayController=session
 opened	docs/html/dynsections.js	/^  opened : true,$/;"	p	variable:codefold
 operand	include/vcb/condition.h	/^        char operand;$/;"	m	class:Condition	typeref:typename:char
 opt	include/vcb/com.h	/^enum opt{$/;"	g
+opt	src/vcb_c/com.c	/^} opt;$/;"	t	typeref:enum:__anon89cd0b380103	file:
 option	docs/html/jquery.js	/^){t.target===e&&this.destroy()}}),this.document=y(e.style?e.ownerDocument:e.document||e),this.wi/;"	m	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac1ac05
 option	docs/html/jquery.js	/^t=" "+e+" ";while(n=this[r++])if(1===n.nodeType&&-1<(" "+ht(gt(n))+" ").indexOf(t))return!0;retu/;"	p	property:anonymousObject4d6c64ac12e05.valHooks
 option	include/vcb/com.h	/^        enum opt option;$/;"	m	class:Com	typeref:enum:opt
@@ -6640,14 +6644,12 @@ subdirs	docs/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html	/^<tr class="heading
 subdirs	docs/html/dir_d44c64559bbebec7f509842c48db8b23.html	/^<tr class="heading"><td colspan="2"><h2 id="header-subdirs" class="groupheader"><a id="subdirs" /;"	I
 subdirs	docs/html/dir_d44c64559bbebec7f509842c48db8b23.html	/^<tr class="heading"><td colspan="2"><h2 id="header-subdirs" class="groupheader"><a id="subdirs" /;"	a
 submit	docs/html/jquery.js	/^for(e in{submit:!0,reset:!0})b.pseudos[e]=he(e);function me(){}function xe(e){for(var t=0,n=e.le/;"	p	variable:ue.ce.fe.anonymousObject4d6c64ac4c05
-subvalues	src/sound.cpp	/^        vector<Subvalue> subvalues;$/;"	m	class:Sound	typeref:typename:vector<Subvalue>	file:
 success	docs/html/jquery.js	/^}return T},getJSON:function(e,t,n){return S.get(e,t,n,"json")},getScript:function(e,t){return S./;"	p	variable:anonymousObject4d6c64ac15305
 support	docs/html/jquery.js	/^e[r],r,e[r]))break;return e},makeArray:function(e,t){var n=t||[];return null!=e&&(p(Object(e))?S/;"	p	variable:anonymousObject4d6c64ac0f05
 sw	docs/html/jquery.js	/^"n","s","w"],nw:["nw","w","sw","n","s","se","nw"],ne:["ne","e","se","n","s","sw","ne"],sw:["sw",/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25505
 sw	docs/html/jquery.js	/^).removeData("resizable").removeData("ui-resizable").off(".resizable")}var e;return this.element/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac20605._setupHandles.anonymousObject4d6c64ac20e05
 sw-alt	docs/html/jquery.js	/^"n","s","w"],nw:["nw","w","sw","n","s","se","nw"],ne:["ne","e","se","n","s","sw","ne"],sw:["sw",/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousObject4d6c64ac25505
 swing	docs/html/jquery.js	/^this):Ke.propHooks._default.get(this)},run:function(e){var t,n=Ke.propHooks[this.prop];return th/;"	m	variable:anonymousObject4d6c64acf005
-symbol	src/sound.cpp	/^        string symbol;$/;"	m	class:Sound	typeref:typename:string	file:
 system_hash	src/vcb_c/system_hash.c	/^int(*system_hash)(char*,int) = &hash_sdbm;$/;"	v	typeref:typename:int (*)(char *,int)
 t	docs/html/jquery.js	/^)||null,o=parseFloat(i.element.css("top"))+(i.position.top-i.originalPosition.top)||null;i.eleme/;"	v	method:anonymousObject4d6c64ac22c05.step
 t	docs/html/jquery.js	/^,n){var r,i,o,a,s=e.style;return(n=n||Re(e))&&(""!==(a=n.getPropertyValue(t)||n[t])||ie(e)||(a=S/;"	f
@@ -6810,6 +6812,7 @@ toggleLevel	docs/html/dynsections.js	/^  toggleLevel : function(level) {$/;"	m	v
 toggleVisibility	docs/html/dynsections.js	/^  toggleVisibility : function(linkObj) {$/;"	m	variable:dynsection
 toggleVisibility	docs/html/dynsections.js	/^function toggleVisibility(linkObj) {$/;"	f
 toggle_all	docs/html/dynsections.js	/^  toggle_all : function() {$/;"	m	variable:codefold
+tolowers	src/vcb_c/st.c	/^char *tolowers(char *input){$/;"	f	typeref:typename:char *
 tooltips	docs/html/jquery.js	/^(function(root,factory){if(typeof define==="function"&&define.amd){define(["jquery"],factory)}el/;"	p	variable:anonymousFunction4d6c64ac17300.anonymousFunction4d6c64ac24f00.session
 top	docs/html/annotated.html	/^<div id="top"><!-- do not remove this div, it is closed by doxygen! -->$/;"	I
 top	docs/html/classCom-members.html	/^<div id="top"><!-- do not remove this div, it is closed by doxygen! -->$/;"	I
@@ -7016,7 +7019,6 @@ value	include/vcb_c/vcb.h	/^    char *value;$/;"	m	struct:__anon951987d50308	typ
 value	include/vcb_c/vcb.h	/^    char *value;$/;"	m	struct:st_Var	typeref:typename:char *
 value	include/vcb_c/vcb.h	/^    void *value;$/;"	m	struct:st_List	typeref:typename:void *
 value	include/vcb_c/vcb.h	/^    void* value;$/;"	m	union:__anon951987d5020a	typeref:typename:void *
-value	src/sound.cpp	/^        int value;$/;"	m	class:Subvalue	typeref:typename:int	file:
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(Var var){ \/\/Given a dependent var, check which value is required f/;"	f	class:Var	typeref:typename:string
 valueDependency	src/vcb/var.cpp	/^string Var::valueDependency(string varName){ \/\/Given a dependent var, check which value is req/;"	f	class:Var	typeref:typename:string
 values	include/vcb/var.h	/^        vector<string> values; \/**< list of possible values of the var*\/$/;"	m	class:Var	typeref:typename:vector<string>
@@ -7038,7 +7040,6 @@ var_open	src/vcb_c/var.c	/^sqlite3 *var_open(char *lang){$/;"	f	typeref:typename
 var_set	src/vcb_c/var.c	/^void var_set(st_Var *var, char *value){$/;"	f	typeref:typename:void
 var_write	src/vcb_c/var.c	/^void var_write(st_Var *var){$/;"	f	typeref:typename:void
 vars	include/vcb_c/vcb.h	/^    st_HashTable *vars;$/;"	m	struct:__anon951987d50308	typeref:typename:st_HashTable *
-vars	src/sound.cpp	/^        vector<Var> vars;$/;"	m	class:Subvalue	typeref:typename:vector<Var>	file:
 ve	docs/html/jquery.js	/^].style.display=l[c]);return e}S.fn.extend({show:function(){return le(this,!0)},hide:function(){/;"	f
 ve	docs/html/jquery.js	/^return"form"in e?e.parentNode&&!1===e.disabled?"label"in e?"label"in e.parentNode?e.parentNode.d/;"	f	function:ue.ce.fe
 version	docs/html/jquery.js	/^* Copyright jQuery Foundation and other contributors; Licensed MIT *\/!function(t){"use strict";/;"	p	variable:anonymousObject4d6c64ac19d05

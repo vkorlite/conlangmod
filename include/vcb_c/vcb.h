@@ -83,6 +83,7 @@ typedef struct {
 /*useful strings and string functions*/
 extern char *path_to_data;
 extern char **strsplit(char *input, char delim); /*split string by char delim*/
+extern char *tolowers(char *input);
 extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
 extern char **strsplitm(char *input, char *delim); /*split string by mulitple delims*/
@@ -104,6 +105,7 @@ extern void arena_free(st_Arena *arena);
 
 /* st_List functions */
 extern st_List *list_init(st_Arena *arena);
+extern size_t list_size(st_List *list);
 extern void list_add(st_List *list, void *value);
 extern void *list_get(st_List *list, int index);
 extern void list_rem(st_List *list, int (*sign_function)(void *));

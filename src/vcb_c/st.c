@@ -220,3 +220,12 @@ int strmatchs(char *input, char *delim){
             num++;
     return num;
 }
+
+char *tolowers(char *input){
+    int strlen_i = strlen(input);
+    char *out = malloc(strlen_i+1);
+    for(int i = 0; *(input+i) != '\0'; i++)
+        *(out+i) = tolower(*(input+i));
+    *(out+strlen_i) = '\0';
+    return out;
+}
