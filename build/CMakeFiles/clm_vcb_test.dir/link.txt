@@ -1,0 +1,1 @@
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/clm_vcb_test.dir/link.d CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.o -o clm_vcb_test  libclm_vcb_library.a /usr/lib/libsqlite3.so

@@ -1,0 +1,4 @@
+/home/space/coding/conlangmod/build/CMakeFiles/clm_vcb_test.dir
+/home/space/coding/conlangmod/build/CMakeFiles/clm_vcb_library.dir
+/home/space/coding/conlangmod/build/CMakeFiles/edit_cache.dir
+/home/space/coding/conlangmod/build/CMakeFiles/rebuild_cache.dir

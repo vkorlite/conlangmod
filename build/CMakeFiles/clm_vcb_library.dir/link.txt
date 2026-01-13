@@ -1,0 +1,2 @@
+/usr/bin/ar qc libclm_vcb_library.a CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o
+/usr/bin/ranlib libclm_vcb_library.a

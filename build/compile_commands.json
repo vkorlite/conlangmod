@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o -c /home/space/coding/conlangmod/src/vcb_c/arena.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/arena.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o -c /home/space/coding/conlangmod/src/vcb_c/st.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/st.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o -c /home/space/coding/conlangmod/src/vcb_c/list.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/list.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o -c /home/space/coding/conlangmod/src/vcb_c/hashtable.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/hashtable.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o -c /home/space/coding/conlangmod/src/vcb_c/system_hash.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/system_hash.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o -c /home/space/coding/conlangmod/src/vcb_c/cond.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/cond.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o -c /home/space/coding/conlangmod/src/vcb_c/var.c",
+  "file": "/home/space/coding/conlangmod/src/vcb_c/var.c",
+  "output": "CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o"
+},
+{
+  "directory": "/home/space/coding/conlangmod/build",
+  "command": "/usr/bin/cc  -I/home/space/coding/conlangmod/include -Wall -Werror -o CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.o -c /home/space/coding/conlangmod/tests/vcb_test.c",
+  "file": "/home/space/coding/conlangmod/tests/vcb_test.c",
+  "output": "CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.o"
+}
+]

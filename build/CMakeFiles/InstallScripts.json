@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/space/coding/conlangmod/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

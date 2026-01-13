@@ -7,7 +7,7 @@
 st_Object *object_init(char *value, char *lang, st_List *vars){
     st_Object *out = malloc(sizeof(st_Object));
     out->db = ((st_Var*)vars->value)->db;
-    st_HashTable *vars_hashtable = hash_init(&hash_sdbm);
+    st_HashTable *vars_hashtable = sys_hash_init();
     st_List *curr;
     for(curr = vars; curr->next; curr = curr->next)
         hash_add(vars_hashtable, ((st_Var*)curr->value)->name, ((st_Var*)curr->value));

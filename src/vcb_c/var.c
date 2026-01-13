@@ -121,7 +121,7 @@ st_Var *var_fetch(char *name, st_Var *base){
         exit(10);
     }
 
-    st_HashTable *hashtable = hash_init(&hash_sdbm);
+    st_HashTable *hashtable = sys_hash_init();
     char *var_str = arena_alloc(arena, VAR_STRLEN);
     char in;
     st_List *new_list = arena_alloc(arena, sizeof(st_List));

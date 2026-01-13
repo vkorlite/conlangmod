@@ -8,8 +8,8 @@ char *evaluate(char *condstr, st_Object **input, size_t size){
     if(*condstr == '#'){
         int index = atoi(strsub(condstr, 1, strfind(condstr, '.', 0)));
         if(index < size){
-            char *value = strsub(condstr, strfind(condstr, ',', 0)+1, strlen(condstr));
-            if(strcmp(value, "value"))
+            char *value = strsub(condstr, strfind(condstr, ',', 0)+1, -1);
+            if(strcmp(tolowers(value), "value"))
                 return (*(input+(*(condstr+1)-'0')))->value;
             else{
                 return ((st_Var*)hash_get((*(input+(*(condstr+1)-'0')))->vars, value))->value;
@@ -21,25 +21,157 @@ char *evaluate(char *condstr, st_Object **input, size_t size){
     return condstr;
 }
 
-int boolEval(char *condstr, st_Object **input, size_t size){
+int boolEval(char *condstr_raw, st_Object **input, size_t size){
+    char *condstr = condstr_raw;
+    if(*condstr_raw == '!'){
+        condstr = strsub(condstr_raw, 1, -1);
+        char *toeval = evaluate(condstr, input, size);
+        if(*toeval == '0')
+            return 1;
+        return 0;
+    }
     char *toeval = evaluate(condstr, input, size);
     if(*toeval == '0')
         return 0;
     return 1;
 }
 
-int boolconcat(int eval, char prevsymbol, int currans){
-    switch(prevsymbol){
-        case '&':
-            return currans & eval;
-        case '|':
-            return currans | eval;
+typedef struct {
+    void *left;
+    void *right;
+    char symbol;
+} Tree;
+
+typedef union{
+    Tree *tr;
+    char *str;
+} Branch;
+
+typedef struct{
+    char isleaf;
+    Branch *value;
+} Part;
+
+Part *rec_tree_maker(st_Arena *trash, char **parts, char *dels){
+    //base case
+    char *priority = "|&=<>+-*/";
+    Part *out = arena_alloc(trash, sizeof(Part));
+    Branch *fork = arena_alloc(trash, sizeof(Branch));
+    if(*dels == '\0'){
+        out->isleaf = 1;
+        fork->str = arena_alloc(trash, 256);
+        strcpy(fork->str, *parts);
+        out->value = fork;
+        return out;
     }
-    return 0;
+    //find root
+    out->isleaf = 0;
+    Tree *trout = arena_alloc(trash, sizeof(Tree));
+    out->value = arena_alloc(trash, sizeof(Branch));
+    out->value->tr = trout;
+    int pos = 0;
+    int min = 10;
+    for(int i = 0; *(dels+i) != '\0'; i++){
+        int find = strfind(priority, *(dels+i), 0);
+        if(min > find){
+            min = find;
+            pos = i;
+        }
+    }
+    trout->symbol = *(dels+pos);
+    //split into left dels & parts and right dels & parts
+    int strlendels = strlen(dels);
+    char *leftdels = arena_alloc(trash, pos+1);
+    char *rightdels = arena_alloc(trash, strlendels-pos);
+    char **leftparts = arena_alloc(trash, sizeof(void*)*((!pos)? 2*(pos+1): 2*pos+1));
+    char **rightparts = arena_alloc(trash, sizeof(void*)*((!(strlendels-pos))?2*(strlendels-pos+1): 2*(strlendels-pos)+1));
+    for(int i = 0; *(dels+i); i++)
+        if(i < pos)
+            *(leftdels+i) = *(dels+i);
+        else if(i == pos)
+            *(leftdels+i++) = '\0';
+        else
+            *(rightdels+i-pos-1) = *(dels+i);
+    *(rightdels+strlendels-pos-1) = '\0';
+
+    int i;
+    for(i = 0; strcmp(*(parts+i), ""); i++){
+        if( 2*i < 2*pos+1){ //symbols are in between the parts
+            *(leftparts+i) = arena_alloc(trash, 256);
+            strcpy(*(leftparts+i), *(parts+i)); 
+        } else{
+            if(!(i-pos-1)){
+                *(leftparts+i) = arena_alloc(trash, 1);
+                **(leftparts+i) = '\0';
+            }
+            *(rightparts+i-pos-1) = arena_alloc(trash, 256);
+            strcpy(*(rightparts+i-pos-1), *(parts+i));
+        }
+    }
+    *(rightparts+i-pos-1) = arena_alloc(trash, 1);
+    **(rightparts+i-pos-1) = '\0';
+
+    trout->left = rec_tree_maker(trash, leftparts, leftdels);
+    trout->right = rec_tree_maker(trash, rightparts, rightdels);
+
+    return out;
+}
+
+char *rec_tree_computer(st_Arena *trash, Part *tree, st_Object **input, size_t size, char first){
+    if(tree->isleaf){
+        if(*tree->value->str == '!'){
+            char *out = arena_alloc(((first)? NULL: trash), 2); 
+            *out = boolEval(tree->value->str, input, size)+'0';
+            *(out+1) = '\0';
+            return out;
+        }
+        return evaluate(tree->value->str, input, size);
+    } else {
+        char *out = arena_alloc( ((first)? NULL: trash), 256);
+        Tree *trin = tree->value->tr;
+        switch(trin->symbol){
+            case '&':
+                *out = (boolEval(rec_tree_computer(trash, (Part*)trin->left, input, size, 0), input, size) && boolEval(rec_tree_computer(trash, (Part*)trin->right, input, size, 0), input, size)) +'0';
+                *(out+1) = '\0';
+                break;
+            case '|':
+                *out = (boolEval(rec_tree_computer(trash, (Part*)trin->left, input, size, 0), input, size) || boolEval(rec_tree_computer(trash, (Part*)trin->right, input, size, 0), input, size)) +'0';
+                *(out+1) = '\0';
+                break;
+            case '=':
+                *out = '0' + (!strcmp(rec_tree_computer(trash, (Part*)trin->left, input, size, 0), rec_tree_computer(trash, (Part*)trin->right, input, size, 0)));
+                *(out+1) = '\0';
+                break;
+            case '>':
+                *out = '0' + (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) > atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0)));
+                *(out+1) = '\0';
+                break;
+            case '<':
+                *out = '0' + (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) < atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0)));
+                *(out+1) = '\0';
+                break;
+            case '+':
+                sprintf(out, "%d", (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) + atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0))));
+                break;
+            case '-':
+                sprintf(out, "%d", (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) - atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0))));
+                break;
+            case '*':
+                sprintf(out, "%d", (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) * atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0))));
+                break;
+            case '/':
+                sprintf(out, "%d", (atoi(rec_tree_computer(trash, (Part*)trin->left, input, size, 0)) / atoi(rec_tree_computer(trash, (Part*)trin->right, input, size, 0))));
+                break;
+
+        }
+        return out;
+    }
 }
 
 char *cond(char *condstr_raw, st_Object **input, size_t size){
-    char *condstr = malloc(strlen(condstr_raw));
+    int strlen_raw = strlen(condstr_raw);
+    st_Arena *trash = arena_init(1048*strlen_raw*sizeof(Tree));
+    char *condstr = arena_alloc(trash, strlen(condstr_raw));
     int con = 0;
     for(int i =0; *(condstr_raw+i) != '\0'; i++)
         if(!isspace(*(condstr_raw+i)))
@@ -47,70 +179,20 @@ char *cond(char *condstr_raw, st_Object **input, size_t size){
     *(condstr+con) = '\0';
     //remove subconditions
     char *scl_cond = malloc(COND_STRLEN);
-    int num = 0;
-    char *scl_sub;
+    strcpy(scl_cond, condstr);
+    char *scl_sub, *scl_rep;
     int opfind, clfind;
-    while(strmatch(scl_cond, '(')-1 - num){
-        opfind = strfind(condstr, '(', num++);
+    while(strmatch(scl_cond, '(')){
+        opfind = strfind(condstr, '(', 0);
         clfind = strcompl(condstr, opfind);
-        scl_sub = strsub(scl_cond+1, opfind, clfind);
-        scl_cond = strrep(NULL, scl_cond, cond(scl_sub, input, size), opfind, clfind);
+        scl_sub = arena_strsub(trash, scl_cond, opfind+1, clfind);
+        scl_rep = strrep(scl_cond, cond(scl_sub, input, size), opfind, clfind);
+        free(scl_cond);
+        scl_cond = scl_rep;
     }
-    //compute
-    char *arithmetic_symbols = "+-*/";
-    char *equality_symbols = "=<>";
-    char *logical_symbols = "&|!";
-    if(strcontains(scl_cond, arithmetic_symbols)){
-        char **parts = strsplitm(scl_cond, arithmetic_symbols);
-        int sum = 0;
-        for(int i = 0; strcmp(*(parts+i), ""); i++)
-            sum += atoi(evaluate(*(parts+i), input, size));
-        char *out = malloc(10); 
-        sprintf(out, "%d", sum);
-        return out;
-    } else if(strcontains(scl_cond, equality_symbols)){
-        char **parts = strsplitm(scl_cond, equality_symbols);
-        if(*(parts+1)){
-            if(strcontain(scl_cond, '=')){
-                return (strcmp(evaluate(*parts, input, size), evaluate(*(parts+1), input, size)))? "1": "0";
-            } else if(strcontain(scl_cond, '>')){
-                return (atoi(evaluate(*parts, input, size)) > atoi(evaluate(*(parts+1), input, size)))? "1": "0";
-            } else if(strcontain(scl_cond, '<')){
-                return (atoi(evaluate(*parts, input, size)) < atoi(evaluate(*(parts+1), input, size)))? "1": "0";
-            }
-        }else {
-            fprintf(stderr, "vcb_c/cond.c, cond(): NOT ENOUGH EQUALITY SYMBOLS\n");
-            exit(8);
-        }
-    } else if(strcontains(scl_cond, logical_symbols)){
-        char *out = malloc(1);
-        if(*scl_cond == '!'){
-            *out = boolEval(strsub(scl_cond, 1, strlen(scl_cond)), input, size) + '0';
-            return out;
-        }
-        int currans = -1;
-        int prevspace = 0;
-        char prevsymbol = 0;
-        for(int i = 0; *(scl_cond+i) != '\0'; i++){
-            if(strcontain(logical_symbols, *(scl_cond+i))){
-                if(currans < 0)
-                    currans = boolEval(strsub(scl_cond, 0, i), input, size);
-                else
-                    currans = boolconcat(boolEval(strsub(scl_cond, prevspace, i), input, size), prevsymbol, currans);
-                switch(*(scl_cond+i)){
-                    case '&':
-                        prevsymbol = '&';
-                        break;
-                    case '|':
-                        prevsymbol = '|';
-                        break;
-                }
-                prevspace = i+1;
-            }
-        }
-        *out = currans + '0';
-        return out;
-    }
-    return scl_cond;
+    Part *tree = rec_tree_maker(trash, arena_strsplitm(trash, scl_cond, "&|=<>+-*/"), arena_strorderof(trash, scl_cond, "&|=<>+-*/"));
+    char *out = rec_tree_computer(trash, tree, input, size, 1);
+    arena_free(trash);
+    return out;
 }
 

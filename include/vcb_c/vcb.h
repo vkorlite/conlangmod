@@ -83,20 +83,26 @@ typedef struct {
 /*useful strings and string functions*/
 extern char *path_to_data;
 extern char **strsplit(char *input, char delim); /*split string by char delim*/
-extern char *tolowers(char *input);
-extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
 extern char **strsplits(char *input, char *delim); /*split string by string delim*/
+extern char *tolowers(char *input);
 extern char **strsplitm(char *input, char *delim); /*split string by mulitple delims*/
+extern char *strorderof(char *input, char *delim); /*list the order of appearance of the delims*/
 extern char *strsub(char *input, int start, int end); /*find substring of string*/
-extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*strsub, but with arena*/
 extern int strfind(char *input, char delim, int num); /*find the nth occurence of the delimeter in the str*/
 extern int strcompl(char *input, int num); /*find the compliment brackets in the str*/
 extern int strmatch(char *input, char delim); /*find the num of occurences of a delim in a str*/
+extern int strmatchs(char *input, char *delim);
 extern int strmatchm(char *input, char *delim);
-extern char *strrep(st_Arena *arena, char *input, char *replacement, int start, int end);
-extern char *strinsert(st_Arena *arena, char *input, char *insert, int pos);
 extern int strcontain(char *input, char delim);
 extern int strcontains(char *input, char *delim);
+extern char *strrep(char *input, char *replacement, int start, int end);
+extern char *strinsert(char *input, char *insert, int pos);
+extern char **arena_strsplit(st_Arena *arena, char *input, char delim); /*strsplit, but with arena*/
+extern char **arena_strsplitm(st_Arena *arena, char *input, char *delims);
+extern char *arena_strsub(st_Arena *arena, char *input, int start, int end); /*strsub, but with arena*/
+extern char *arena_strrep(st_Arena *arena, char *input, char *replacement, int start, int end);
+extern char *arena_strinsert(st_Arena *arena, char *input, char *insert, int pos);
+extern char *arena_strorderof(st_Arena *arena, char *input, char *delim);
 
 /*st_Arena functions*/
 extern st_Arena *arena_init(size_t size);
@@ -116,6 +122,7 @@ extern void list_copy(st_List *receiver, st_List *giver);
 extern int(*system_hash)(char*,int);
 extern int hash_sdbm(char *input, int modulo); /*in-built hash function */
 extern st_HashTable *hash_init(int(*hash)(char*,int)); /*initialize a hashtable*/
+extern st_HashTable *sys_hash_init(); /*initialize a hashtable with default hash*/
 extern size_t hash_size(st_HashTable *hashtable); /*get size of hashtable*/
 extern void *hash_get(st_HashTable *hashtable, char *key); /*get value from key*/
 extern void **hash_getAll(st_HashTable *hashtable); /*get all values from hashtable */
