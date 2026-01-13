@@ -72,124 +72,124 @@ include CMakeFiles/clm_vcb_library.dir/flags.make
 CMakeFiles/clm_vcb_library.dir/codegen:
 .PHONY : CMakeFiles/clm_vcb_library.dir/codegen
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o: /home/space/coding/conlangmod/src/vcb_c/arena.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o -c /home/space/coding/conlangmod/src/vcb_c/arena.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o: /home/space/coding/conlangmod/src/vcb/arena.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o -c /home/space/coding/conlangmod/src/vcb/arena.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/arena.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/arena.c > CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/arena.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/arena.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o: /home/space/coding/conlangmod/src/vcb_c/st.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o -c /home/space/coding/conlangmod/src/vcb_c/st.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o: /home/space/coding/conlangmod/src/vcb/st.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o -c /home/space/coding/conlangmod/src/vcb/st.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/st.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/st.c > CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/st.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/st.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o: /home/space/coding/conlangmod/src/vcb_c/list.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o -c /home/space/coding/conlangmod/src/vcb_c/list.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o: /home/space/coding/conlangmod/src/vcb/list.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o -c /home/space/coding/conlangmod/src/vcb/list.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/list.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/list.c > CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/list.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/list.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o: /home/space/coding/conlangmod/src/vcb_c/hashtable.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o -c /home/space/coding/conlangmod/src/vcb_c/hashtable.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o: /home/space/coding/conlangmod/src/vcb/hashtable.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o -c /home/space/coding/conlangmod/src/vcb/hashtable.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/hashtable.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/hashtable.c > CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/hashtable.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/hashtable.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o: /home/space/coding/conlangmod/src/vcb_c/system_hash.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o -c /home/space/coding/conlangmod/src/vcb_c/system_hash.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o: /home/space/coding/conlangmod/src/vcb/system_hash.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o -c /home/space/coding/conlangmod/src/vcb/system_hash.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/system_hash.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/system_hash.c > CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/system_hash.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/system_hash.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o: /home/space/coding/conlangmod/src/vcb_c/cond.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o -c /home/space/coding/conlangmod/src/vcb_c/cond.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o: /home/space/coding/conlangmod/src/vcb/cond.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o -c /home/space/coding/conlangmod/src/vcb/cond.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/cond.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/cond.c > CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/cond.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/cond.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.s
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o: /home/space/coding/conlangmod/src/vcb_c/var.c
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o -c /home/space/coding/conlangmod/src/vcb_c/var.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o: CMakeFiles/clm_vcb_library.dir/flags.make
+CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o: /home/space/coding/conlangmod/src/vcb/var.c
+CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o: CMakeFiles/clm_vcb_library.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o -MF CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o.d -o CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o -c /home/space/coding/conlangmod/src/vcb/var.c
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb_c/var.c > CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.i
+CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/space/coding/conlangmod/src/vcb/var.c > CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.i
 
-CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb_c/var.c -o CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.s
+CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/space/coding/conlangmod/src/vcb/var.c -o CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.s
 
 # Object files for target clm_vcb_library
 clm_vcb_library_OBJECTS = \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o" \
-"CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o"
+"CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o" \
+"CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o"
 
 # External object files for target clm_vcb_library
 clm_vcb_library_EXTERNAL_OBJECTS =
 
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o
-libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o
+libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o
 libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/build.make
 libclm_vcb_library.a: CMakeFiles/clm_vcb_library.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/space/coding/conlangmod/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libclm_vcb_library.a"

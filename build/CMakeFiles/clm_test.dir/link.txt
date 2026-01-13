@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/clm_test.dir/link.d CMakeFiles/clm_test.dir/tests/clm_test.cpp.o -o clm_test  libclm_vcb_library.a libclm_library.a /usr/lib/libsqlite3.so

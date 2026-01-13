@@ -1,5 +1,5 @@
 #ifndef __VCB_INCL
-#include "vcb_c/vcb.h"
+#include "vcb/vcb.h"
 #endif
 
 typedef struct{
@@ -197,10 +197,11 @@ int test_6(){//test cond
         }
         i++;
     }
+    arena_free(trash);
     return out;
 }
 
-int test_7(){
+int test_7(){ //com test
     return 0;
 }
 

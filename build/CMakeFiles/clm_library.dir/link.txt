@@ -1,0 +1,2 @@
+/usr/bin/ar qc libclm_library.a CMakeFiles/clm_library.dir/src/clm/phonetics.cpp.o
+/usr/bin/ranlib libclm_library.a

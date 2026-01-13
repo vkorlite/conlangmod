@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named clm_vcb_test
+# Target rules for targets named clm_test
 
 # Build rule for target.
-clm_vcb_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clm_vcb_test
-.PHONY : clm_vcb_test
+clm_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clm_test
+.PHONY : clm_test
 
 # fast build rule for target.
-clm_vcb_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_test.dir/build.make CMakeFiles/clm_vcb_test.dir/build
-.PHONY : clm_vcb_test/fast
+clm_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_test.dir/build.make CMakeFiles/clm_test.dir/build
+.PHONY : clm_test/fast
 
 #=============================================================================
 # Target rules for targets named clm_vcb_library
@@ -142,197 +142,234 @@ clm_vcb_library/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/build
 .PHONY : clm_vcb_library/fast
 
-src/vcb_c/arena.o: src/vcb_c/arena.c.o
-.PHONY : src/vcb_c/arena.o
+#=============================================================================
+# Target rules for targets named clm_library
+
+# Build rule for target.
+clm_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clm_library
+.PHONY : clm_library
+
+# fast build rule for target.
+clm_library/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_library.dir/build.make CMakeFiles/clm_library.dir/build
+.PHONY : clm_library/fast
+
+src/clm/phonetics.o: src/clm/phonetics.cpp.o
+.PHONY : src/clm/phonetics.o
 
 # target to build an object file
-src/vcb_c/arena.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.o
-.PHONY : src/vcb_c/arena.c.o
+src/clm/phonetics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_library.dir/build.make CMakeFiles/clm_library.dir/src/clm/phonetics.cpp.o
+.PHONY : src/clm/phonetics.cpp.o
 
-src/vcb_c/arena.i: src/vcb_c/arena.c.i
-.PHONY : src/vcb_c/arena.i
+src/clm/phonetics.i: src/clm/phonetics.cpp.i
+.PHONY : src/clm/phonetics.i
 
 # target to preprocess a source file
-src/vcb_c/arena.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.i
-.PHONY : src/vcb_c/arena.c.i
+src/clm/phonetics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_library.dir/build.make CMakeFiles/clm_library.dir/src/clm/phonetics.cpp.i
+.PHONY : src/clm/phonetics.cpp.i
 
-src/vcb_c/arena.s: src/vcb_c/arena.c.s
-.PHONY : src/vcb_c/arena.s
+src/clm/phonetics.s: src/clm/phonetics.cpp.s
+.PHONY : src/clm/phonetics.s
 
 # target to generate assembly for a file
-src/vcb_c/arena.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/arena.c.s
-.PHONY : src/vcb_c/arena.c.s
+src/clm/phonetics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_library.dir/build.make CMakeFiles/clm_library.dir/src/clm/phonetics.cpp.s
+.PHONY : src/clm/phonetics.cpp.s
 
-src/vcb_c/cond.o: src/vcb_c/cond.c.o
-.PHONY : src/vcb_c/cond.o
+src/vcb/arena.o: src/vcb/arena.c.o
+.PHONY : src/vcb/arena.o
 
 # target to build an object file
-src/vcb_c/cond.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.o
-.PHONY : src/vcb_c/cond.c.o
+src/vcb/arena.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.o
+.PHONY : src/vcb/arena.c.o
 
-src/vcb_c/cond.i: src/vcb_c/cond.c.i
-.PHONY : src/vcb_c/cond.i
+src/vcb/arena.i: src/vcb/arena.c.i
+.PHONY : src/vcb/arena.i
 
 # target to preprocess a source file
-src/vcb_c/cond.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.i
-.PHONY : src/vcb_c/cond.c.i
+src/vcb/arena.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.i
+.PHONY : src/vcb/arena.c.i
 
-src/vcb_c/cond.s: src/vcb_c/cond.c.s
-.PHONY : src/vcb_c/cond.s
+src/vcb/arena.s: src/vcb/arena.c.s
+.PHONY : src/vcb/arena.s
 
 # target to generate assembly for a file
-src/vcb_c/cond.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/cond.c.s
-.PHONY : src/vcb_c/cond.c.s
+src/vcb/arena.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/arena.c.s
+.PHONY : src/vcb/arena.c.s
 
-src/vcb_c/hashtable.o: src/vcb_c/hashtable.c.o
-.PHONY : src/vcb_c/hashtable.o
+src/vcb/cond.o: src/vcb/cond.c.o
+.PHONY : src/vcb/cond.o
 
 # target to build an object file
-src/vcb_c/hashtable.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.o
-.PHONY : src/vcb_c/hashtable.c.o
+src/vcb/cond.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.o
+.PHONY : src/vcb/cond.c.o
 
-src/vcb_c/hashtable.i: src/vcb_c/hashtable.c.i
-.PHONY : src/vcb_c/hashtable.i
+src/vcb/cond.i: src/vcb/cond.c.i
+.PHONY : src/vcb/cond.i
 
 # target to preprocess a source file
-src/vcb_c/hashtable.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.i
-.PHONY : src/vcb_c/hashtable.c.i
+src/vcb/cond.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.i
+.PHONY : src/vcb/cond.c.i
 
-src/vcb_c/hashtable.s: src/vcb_c/hashtable.c.s
-.PHONY : src/vcb_c/hashtable.s
+src/vcb/cond.s: src/vcb/cond.c.s
+.PHONY : src/vcb/cond.s
 
 # target to generate assembly for a file
-src/vcb_c/hashtable.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/hashtable.c.s
-.PHONY : src/vcb_c/hashtable.c.s
+src/vcb/cond.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/cond.c.s
+.PHONY : src/vcb/cond.c.s
 
-src/vcb_c/list.o: src/vcb_c/list.c.o
-.PHONY : src/vcb_c/list.o
+src/vcb/hashtable.o: src/vcb/hashtable.c.o
+.PHONY : src/vcb/hashtable.o
 
 # target to build an object file
-src/vcb_c/list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.o
-.PHONY : src/vcb_c/list.c.o
+src/vcb/hashtable.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.o
+.PHONY : src/vcb/hashtable.c.o
 
-src/vcb_c/list.i: src/vcb_c/list.c.i
-.PHONY : src/vcb_c/list.i
+src/vcb/hashtable.i: src/vcb/hashtable.c.i
+.PHONY : src/vcb/hashtable.i
 
 # target to preprocess a source file
-src/vcb_c/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.i
-.PHONY : src/vcb_c/list.c.i
+src/vcb/hashtable.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.i
+.PHONY : src/vcb/hashtable.c.i
 
-src/vcb_c/list.s: src/vcb_c/list.c.s
-.PHONY : src/vcb_c/list.s
+src/vcb/hashtable.s: src/vcb/hashtable.c.s
+.PHONY : src/vcb/hashtable.s
 
 # target to generate assembly for a file
-src/vcb_c/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/list.c.s
-.PHONY : src/vcb_c/list.c.s
+src/vcb/hashtable.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/hashtable.c.s
+.PHONY : src/vcb/hashtable.c.s
 
-src/vcb_c/st.o: src/vcb_c/st.c.o
-.PHONY : src/vcb_c/st.o
+src/vcb/list.o: src/vcb/list.c.o
+.PHONY : src/vcb/list.o
 
 # target to build an object file
-src/vcb_c/st.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.o
-.PHONY : src/vcb_c/st.c.o
+src/vcb/list.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.o
+.PHONY : src/vcb/list.c.o
 
-src/vcb_c/st.i: src/vcb_c/st.c.i
-.PHONY : src/vcb_c/st.i
+src/vcb/list.i: src/vcb/list.c.i
+.PHONY : src/vcb/list.i
 
 # target to preprocess a source file
-src/vcb_c/st.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.i
-.PHONY : src/vcb_c/st.c.i
+src/vcb/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.i
+.PHONY : src/vcb/list.c.i
 
-src/vcb_c/st.s: src/vcb_c/st.c.s
-.PHONY : src/vcb_c/st.s
+src/vcb/list.s: src/vcb/list.c.s
+.PHONY : src/vcb/list.s
 
 # target to generate assembly for a file
-src/vcb_c/st.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/st.c.s
-.PHONY : src/vcb_c/st.c.s
+src/vcb/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/list.c.s
+.PHONY : src/vcb/list.c.s
 
-src/vcb_c/system_hash.o: src/vcb_c/system_hash.c.o
-.PHONY : src/vcb_c/system_hash.o
+src/vcb/st.o: src/vcb/st.c.o
+.PHONY : src/vcb/st.o
 
 # target to build an object file
-src/vcb_c/system_hash.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.o
-.PHONY : src/vcb_c/system_hash.c.o
+src/vcb/st.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.o
+.PHONY : src/vcb/st.c.o
 
-src/vcb_c/system_hash.i: src/vcb_c/system_hash.c.i
-.PHONY : src/vcb_c/system_hash.i
+src/vcb/st.i: src/vcb/st.c.i
+.PHONY : src/vcb/st.i
 
 # target to preprocess a source file
-src/vcb_c/system_hash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.i
-.PHONY : src/vcb_c/system_hash.c.i
+src/vcb/st.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.i
+.PHONY : src/vcb/st.c.i
 
-src/vcb_c/system_hash.s: src/vcb_c/system_hash.c.s
-.PHONY : src/vcb_c/system_hash.s
+src/vcb/st.s: src/vcb/st.c.s
+.PHONY : src/vcb/st.s
 
 # target to generate assembly for a file
-src/vcb_c/system_hash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/system_hash.c.s
-.PHONY : src/vcb_c/system_hash.c.s
+src/vcb/st.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/st.c.s
+.PHONY : src/vcb/st.c.s
 
-src/vcb_c/var.o: src/vcb_c/var.c.o
-.PHONY : src/vcb_c/var.o
+src/vcb/system_hash.o: src/vcb/system_hash.c.o
+.PHONY : src/vcb/system_hash.o
 
 # target to build an object file
-src/vcb_c/var.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.o
-.PHONY : src/vcb_c/var.c.o
+src/vcb/system_hash.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.o
+.PHONY : src/vcb/system_hash.c.o
 
-src/vcb_c/var.i: src/vcb_c/var.c.i
-.PHONY : src/vcb_c/var.i
+src/vcb/system_hash.i: src/vcb/system_hash.c.i
+.PHONY : src/vcb/system_hash.i
 
 # target to preprocess a source file
-src/vcb_c/var.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.i
-.PHONY : src/vcb_c/var.c.i
+src/vcb/system_hash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.i
+.PHONY : src/vcb/system_hash.c.i
 
-src/vcb_c/var.s: src/vcb_c/var.c.s
-.PHONY : src/vcb_c/var.s
+src/vcb/system_hash.s: src/vcb/system_hash.c.s
+.PHONY : src/vcb/system_hash.s
 
 # target to generate assembly for a file
-src/vcb_c/var.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb_c/var.c.s
-.PHONY : src/vcb_c/var.c.s
+src/vcb/system_hash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/system_hash.c.s
+.PHONY : src/vcb/system_hash.c.s
 
-tests/vcb_test.o: tests/vcb_test.c.o
-.PHONY : tests/vcb_test.o
+src/vcb/var.o: src/vcb/var.c.o
+.PHONY : src/vcb/var.o
 
 # target to build an object file
-tests/vcb_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_test.dir/build.make CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.o
-.PHONY : tests/vcb_test.c.o
+src/vcb/var.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.o
+.PHONY : src/vcb/var.c.o
 
-tests/vcb_test.i: tests/vcb_test.c.i
-.PHONY : tests/vcb_test.i
+src/vcb/var.i: src/vcb/var.c.i
+.PHONY : src/vcb/var.i
 
 # target to preprocess a source file
-tests/vcb_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_test.dir/build.make CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.i
-.PHONY : tests/vcb_test.c.i
+src/vcb/var.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.i
+.PHONY : src/vcb/var.c.i
 
-tests/vcb_test.s: tests/vcb_test.c.s
-.PHONY : tests/vcb_test.s
+src/vcb/var.s: src/vcb/var.c.s
+.PHONY : src/vcb/var.s
 
 # target to generate assembly for a file
-tests/vcb_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_test.dir/build.make CMakeFiles/clm_vcb_test.dir/tests/vcb_test.c.s
-.PHONY : tests/vcb_test.c.s
+src/vcb/var.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_vcb_library.dir/build.make CMakeFiles/clm_vcb_library.dir/src/vcb/var.c.s
+.PHONY : src/vcb/var.c.s
+
+tests/clm_test.o: tests/clm_test.cpp.o
+.PHONY : tests/clm_test.o
+
+# target to build an object file
+tests/clm_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_test.dir/build.make CMakeFiles/clm_test.dir/tests/clm_test.cpp.o
+.PHONY : tests/clm_test.cpp.o
+
+tests/clm_test.i: tests/clm_test.cpp.i
+.PHONY : tests/clm_test.i
+
+# target to preprocess a source file
+tests/clm_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_test.dir/build.make CMakeFiles/clm_test.dir/tests/clm_test.cpp.i
+.PHONY : tests/clm_test.cpp.i
+
+tests/clm_test.s: tests/clm_test.cpp.s
+.PHONY : tests/clm_test.s
+
+# target to generate assembly for a file
+tests/clm_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clm_test.dir/build.make CMakeFiles/clm_test.dir/tests/clm_test.cpp.s
+.PHONY : tests/clm_test.cpp.s
 
 # Help Target
 help:
@@ -342,32 +379,36 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... clm_library"
+	@echo "... clm_test"
 	@echo "... clm_vcb_library"
-	@echo "... clm_vcb_test"
-	@echo "... src/vcb_c/arena.o"
-	@echo "... src/vcb_c/arena.i"
-	@echo "... src/vcb_c/arena.s"
-	@echo "... src/vcb_c/cond.o"
-	@echo "... src/vcb_c/cond.i"
-	@echo "... src/vcb_c/cond.s"
-	@echo "... src/vcb_c/hashtable.o"
-	@echo "... src/vcb_c/hashtable.i"
-	@echo "... src/vcb_c/hashtable.s"
-	@echo "... src/vcb_c/list.o"
-	@echo "... src/vcb_c/list.i"
-	@echo "... src/vcb_c/list.s"
-	@echo "... src/vcb_c/st.o"
-	@echo "... src/vcb_c/st.i"
-	@echo "... src/vcb_c/st.s"
-	@echo "... src/vcb_c/system_hash.o"
-	@echo "... src/vcb_c/system_hash.i"
-	@echo "... src/vcb_c/system_hash.s"
-	@echo "... src/vcb_c/var.o"
-	@echo "... src/vcb_c/var.i"
-	@echo "... src/vcb_c/var.s"
-	@echo "... tests/vcb_test.o"
-	@echo "... tests/vcb_test.i"
-	@echo "... tests/vcb_test.s"
+	@echo "... src/clm/phonetics.o"
+	@echo "... src/clm/phonetics.i"
+	@echo "... src/clm/phonetics.s"
+	@echo "... src/vcb/arena.o"
+	@echo "... src/vcb/arena.i"
+	@echo "... src/vcb/arena.s"
+	@echo "... src/vcb/cond.o"
+	@echo "... src/vcb/cond.i"
+	@echo "... src/vcb/cond.s"
+	@echo "... src/vcb/hashtable.o"
+	@echo "... src/vcb/hashtable.i"
+	@echo "... src/vcb/hashtable.s"
+	@echo "... src/vcb/list.o"
+	@echo "... src/vcb/list.i"
+	@echo "... src/vcb/list.s"
+	@echo "... src/vcb/st.o"
+	@echo "... src/vcb/st.i"
+	@echo "... src/vcb/st.s"
+	@echo "... src/vcb/system_hash.o"
+	@echo "... src/vcb/system_hash.i"
+	@echo "... src/vcb/system_hash.s"
+	@echo "... src/vcb/var.o"
+	@echo "... src/vcb/var.i"
+	@echo "... src/vcb/var.s"
+	@echo "... tests/clm_test.o"
+	@echo "... tests/clm_test.i"
+	@echo "... tests/clm_test.s"
 .PHONY : help
 
 
